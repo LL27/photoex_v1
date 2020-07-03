@@ -14,32 +14,48 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <h1
-        className="has-text-weight-bold is-size-1"
+   <div className="container">
+    <div className="columns" style={{marginTop: '0.25rem'}}>
+      <div className="column is-one-third">
+        <h1
+        className="has-text-weight-bold is-size-1 is-size-3-mobile"
         style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
+          boxShadow: '0.5rem 0 0 grey, -0.5rem 0 0 grey',
+          backgroundColor: 'grey',
           color: 'white',
           padding: '1rem',
+          marginBottom: '0rem',
         }}
-      >
-        {title}
-      </h1>
-      <p>{description}</p>
+        >
+          {title}
+        </h1>
+        <p style={{
+          boxShadow: '0.5rem 0 0 grey, -0.5rem 0 0 grey',
+          backgroundColor: 'grey',
+          marginTop: '.75rem',
+          color: 'white',
+          padding: '1rem',
+        }}>{description}</p>
+      </div>
+      <div className="column" >
+            <div
+              style={{
+                backgroundImage: `url(${
+                  !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+                })`, height: 480, backgroundSize: "cover", backgroundPosition: "center center"
+      }}
+    >
+
     </div>
+      </div>
+    </div>
+</div>
+
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-12">
               <Features gridItems={intro.blurbs} />
 
               <Testimonials testimonials={testimonials} />

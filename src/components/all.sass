@@ -4,11 +4,11 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$site-red: rgb(233, 107, 103)
+$site-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: $site-red
+$primary-invert: $site-red-invert
 $body-color: #333
 $background: #F5F7F8
 $black: #2b2523
@@ -17,7 +17,13 @@ body
   background-color: $background
 
 .navbar .navbar-menu
-  box-shadow:none !important
+  //box-shadow:none !important
+.navbar-top
+  padding: 10px 15px
+.navbar-bottom
+  padding: 0px 15px;
+.logo-svg
+  max-height: 3rem !important
 
 .content .taglist
   list-style: none
@@ -73,19 +79,35 @@ body
     box-shadow: inset 0 0 0 2px #f40
     -webkit-transition: all .15s ease
     transition: all .15s ease
-
+.heading
+  margin-bottom: 0 !important
+  letter-spacing: 0 !important
 .margin-top-0
   margin-top: 0 !important
+
+.margin-bottom-0
+  margin-bottom: 0 !important
+.margin-left-1
+  margin-left: 1.25rem !important
+
+.no-flex
+  display: block !important
 
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
+.icon
+  width: 1rem
+  height: 1rem
+  margin-right: .25rem
+  vertical-align: top
 .icon svg
-  width: 1.5rem
-  height: 1.5rem
+  width: 1rem
+  height: 1rem
   fill: currentColor
 .navbar-brand .navbar-item.logo
-  padding: 0 1rem
+  max-height: 2.75rem;
+  padding: 2rem 1rem
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
@@ -94,9 +116,9 @@ footer.footer
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $site-red-invert
+$menu-item-active-background-color:	$site-red-invert
+$menu-list-border-left: 1px solid $site-red-invert
 $menu-label-color: $white-ter
 
 

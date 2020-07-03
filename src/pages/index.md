@@ -1,7 +1,7 @@
 ---
 templateKey: "index-page"
-title: Our Coffee
-image: /img/jumbotron.jpg
+title: VOTRE STUDIO & LABORATOIRE PHOTO  À PARIS 12
+image: /img/storefront_site.png
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
