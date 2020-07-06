@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 @import "bulma/bulma.sass"
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 // Config vars
-// Kaldi logo brand color: #FD461E
+
 $site-red: rgb(233, 107, 103)
 $site-red-invert: #fff
 
@@ -13,8 +13,15 @@ $body-color: #333
 $background: #F5F7F8
 $black: #2b2523
 
+$family-primary: 'Noto Sans JP', sans-serif;
+$family-secondary: 'Roboto', sans-serif;
+
 body
   background-color: $background
+  font-family: $family-primary
+
+h1, h2, h3, h4, h5, h6
+  font-family: $family-secondary
 
 .navbar .navbar-menu
   //box-shadow:none !important

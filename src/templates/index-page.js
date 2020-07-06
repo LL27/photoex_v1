@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Img from "gatsby-image"
+import Layout from "../components/Layout";
+import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
 
 export const IndexPageTemplate = ({
   title,
@@ -13,43 +13,69 @@ export const IndexPageTemplate = ({
   intro,
   testimonials,
 }) => (
-  <div className="content">
-   <div className="container">
-    <div className="columns" style={{marginTop: '0.25rem'}}>
-      <div className="column is-one-third">
-        <h1
-        className="has-text-weight-bold is-size-1 is-size-3-mobile"
-        style={{
-          boxShadow: '0.5rem 0 0 grey, -0.5rem 0 0 grey',
-          backgroundColor: 'grey',
-          color: 'white',
-          padding: '1rem',
-          marginBottom: '0rem',
-        }}
-        >
-          {title}
-        </h1>
-        <p style={{
-          boxShadow: '0.5rem 0 0 grey, -0.5rem 0 0 grey',
-          backgroundColor: 'grey',
-          marginTop: '.75rem',
-          color: 'white',
-          padding: '1rem',
-        }}>{description}</p>
-      </div>
-      <div className="column" >
-            <div
-              style={{
-                backgroundImage: `url(${
-                  !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-                })`, height: 480, backgroundSize: "cover", backgroundPosition: "center center"
-      }}
-    >
 
-    </div>
+  <React.Fragment>
+    <section className="content">
+
+      <div className="columns">
+        <div className="column is-one-third">
+
+              <div className="hero"
+
+              >
+                <div className="hero-body">
+                                            <h1
+                className="is-size-1-desktop"
+                style={{
+                  color: "#555C5C",
+                  marginBottom: '1rem',
+                  fontWeight:'bold',
+                  lineHeight: 1.2
+
+
+                }}
+              >
+                {title}
+              </h1>
+                            <button class="button">NOUS CONTACTER</button>
+
+                </div>
+
+              </div>
+
+
+
+
+
+
+        </div>
+        <div className="column is-two-third">
+
+            <Img fluid={!!image.childImageSharp
+                  ? image.childImageSharp.fluid
+                  : image}
+
+                  />
+
+
+
+        </div>
+
       </div>
-    </div>
-</div>
+              <div className="container">
+                <h2
+                className=""
+                style={{
+                  color: "#555C5C",
+
+                }}
+              >
+                {description}
+              </h2>
+        </div>
+    </section>
+
+
 
     <section className="section section--gradient">
       <div className="container">
@@ -59,16 +85,13 @@ export const IndexPageTemplate = ({
               <Features gridItems={intro.blurbs} />
 
               <Testimonials testimonials={testimonials} />
-
-
-
             </div>
           </div>
         </div>
       </div>
     </section>
-  </div>
-)
+  </React.Fragment>
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -78,10 +101,10 @@ IndexPageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
@@ -93,8 +116,8 @@ const IndexPage = ({ data }) => {
         testimonials={frontmatter.testimonials}
       />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -102,9 +125,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -113,7 +136,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -138,5 +161,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
-
+`;
