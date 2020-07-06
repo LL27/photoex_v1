@@ -16,18 +16,18 @@ export const IndexPageTemplate = ({
   <React.Fragment>
     <section className="content">
       <div className="columns is-vcentered">
-        <div className="column is-one-third">
+        <div className="column is-multiline is-one-third">
           <div className="hero">
             <div className="hero-body">
-              <h1 className="is-size-1-desktop maintitle">{title}</h1>
-              <h2
+              <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen">{title}</h1>
+              <p
           className=""
           style={{
             color: "#555C5C",
           }}
         >
           {description}
-        </h2>
+        </p>
               <button class="button is-small btn">
                 NOUS CONTACTER
               </button>
@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
 
-        <div className="column is-two-third">
+        <div className="column is-two-thirds">
           <Img
             fluid={
               !!image.childImageSharp ? image.childImageSharp.fluid : image
@@ -47,7 +47,7 @@ export const IndexPageTemplate = ({
     <section className="section">
       <div className="container">
         <h2
-          className=""
+          className="is-hidden-mobile is-hidden-widescreen-only"
           style={{
             color: "#555C5C",
           }}

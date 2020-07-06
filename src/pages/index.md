@@ -1,12 +1,9 @@
 ---
 templateKey: "index-page"
-title: VOTRE STUDIO & LABORATOIRE PHOTO  À PARIS 12
+title: VOTRE STUDIO & LABO PHOTO  À PARIS 12
 image: /img/storefront_site.png
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  depuis plus de 30 ans, le studio Photo Expression réalise des photos d'identité et des portraits pour les particuliers comme pour les professionnels. 
 intro:
   blurbs:
     - image: /img/coffee.png
