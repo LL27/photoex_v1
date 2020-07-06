@@ -9,10 +9,10 @@ $site-red-invert: #fff
 
 $primary: $site-red
 $primary-invert: $site-red-invert
-$body-color: #333
-$background: #F5F7F8
-$black: #2b2523
+$body-color: $grey-darker
+$background: $grey-lightest
 
+$button-border-color: $site-red
 $family-primary: 'Noto Sans JP', sans-serif;
 $family-secondary: 'Roboto', sans-serif;
 
@@ -27,8 +27,12 @@ h1, h2, h3, h4, h5, h6
   //box-shadow:none !important
 .navbar-top
   padding: 10px 15px
-.navbar-bottom
-  padding: 0px 15px;
+.navbar.navbar-bottom
+  padding: 0px 15px
+  color: white;
+.navbar
+  min-height: 2.25rem !important
+  max-height: 2.25rem !important
 .logo-svg
   max-height: 3rem !important
 
@@ -71,24 +75,26 @@ h1, h2, h3, h4, h5, h6
     align-items: center
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
+
+    background-color: $site-red
+    border-radius: .0
     text-decoration: none
     font-weight: 700
-    color: #CC3700
+    color: $site-red-invert
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+
     -webkit-transition: all .15s ease
     transition: all .15s ease
 .heading
   margin-bottom: 0 !important
   letter-spacing: 0 !important
+
+.maintitle
+  color: #555C5C
+  margin-bottom: 1rem
+  font-weight: bold
+.hero-col
+  align-items: center
 .margin-top-0
   margin-top: 0 !important
 
@@ -99,7 +105,13 @@ h1, h2, h3, h4, h5, h6
 
 .no-flex
   display: block !important
-
+.navbar-item
+  color: $primary-invert !important
+  font-size: 11px
+  font-weight: 800
+  letter-spacing: .5px
+  &:hover
+    color: $grey-dark !important
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
@@ -124,7 +136,7 @@ $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
 $menu-item-active-color: $site-red-invert
-$menu-item-active-background-color:	$site-red-invert
+$menu-item-active-background-color: $site-red-invert
 $menu-list-border-left: 1px solid $site-red-invert
 $menu-label-color: $white-ter
 
@@ -158,6 +170,9 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0;
 
 // responsiveness
++desktop
+  .maintitle
+    width: 270px
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;

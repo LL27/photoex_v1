@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
@@ -13,70 +13,41 @@ export const IndexPageTemplate = ({
   intro,
   testimonials,
 }) => (
-
   <React.Fragment>
     <section className="content">
-
-      <div className="columns">
+      <div className="columns is-vcentered">
         <div className="column is-one-third">
-
-              <div className="hero"
-
-              >
-                <div className="hero-body">
-                                            <h1
-                className="is-size-1-desktop"
-                style={{
-                  color: "#555C5C",
-                  marginBottom: '1rem',
-                  fontWeight:'bold',
-                  lineHeight: 1.2
-
-
-                }}
-              >
-                {title}
-              </h1>
-                            <button class="button">NOUS CONTACTER</button>
-
-                </div>
-
-              </div>
-
-
-
-
-
-
+          <div className="hero">
+            <div className="hero-body">
+              <h1 className="is-size-1-desktop maintitle">{title}</h1>
+              <button class="button is-small btn">
+                NOUS CONTACTER
+              </button>
+            </div>
+          </div>
         </div>
+
         <div className="column is-two-third">
-
-            <Img fluid={!!image.childImageSharp
-                  ? image.childImageSharp.fluid
-                  : image}
-
-                  />
-
-
-
+          <Img
+            fluid={
+              !!image.childImageSharp ? image.childImageSharp.fluid : image
+            }
+          />
         </div>
-
       </div>
-              <div className="container">
-                <h2
-                className=""
-                style={{
-                  color: "#555C5C",
-
-                }}
-              >
-                {description}
-              </h2>
-        </div>
     </section>
-
-
-
+    <section className="section">
+      <div className="container">
+        <h2
+          className=""
+          style={{
+            color: "#555C5C",
+          }}
+        >
+          {description}
+        </h2>
+      </div>
+    </section>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">

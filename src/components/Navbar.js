@@ -94,7 +94,7 @@ const Navbar = class extends React.Component {
         </div>
 
         <nav
-          className="navbar navbar-bottom is-transparent"
+          className="navbar navbar-bottom has-background-grey-dark has-text-light"
           role="navigation"
           aria-label="main-navigation"
         >
