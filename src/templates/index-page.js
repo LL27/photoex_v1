@@ -44,30 +44,27 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="section">
-      <div className="container">
-        <h2
-          className="is-hidden-mobile is-hidden-widescreen-only"
-          style={{
-            color: "#555C5C",
-          }}
-        >
-          {description}
-        </h2>
-      </div>
-    </section>
-    <section className="section section--gradient">
+    <section className="section section--gradient has-background-grey-darker">
       <div className="container">
         <div className="section">
-          <div className="columns">
-            <div className="column is-12">
+
               <Features gridItems={intro.blurbs} />
+
+            </div>
+          </div>
+
+    </section>
+     <section className="section section--gradient has-background-grey-darker">
+      <div className="container">
+        <div className="section">
+          <div className="columns is-mobile">
+
 
               <Testimonials testimonials={testimonials} />
             </div>
           </div>
         </div>
-      </div>
+
     </section>
   </React.Fragment>
 );
