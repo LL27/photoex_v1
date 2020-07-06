@@ -20,6 +20,14 @@ export const IndexPageTemplate = ({
           <div className="hero">
             <div className="hero-body">
               <h1 className="is-size-1-desktop maintitle">{title}</h1>
+              <h2
+          className=""
+          style={{
+            color: "#555C5C",
+          }}
+        >
+          {description}
+        </h2>
               <button class="button is-small btn">
                 NOUS CONTACTER
               </button>
