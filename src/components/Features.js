@@ -10,9 +10,9 @@ const FeatureGrid = ({ gridItems }) => (
             <div className="card-image">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
-            <div className="card-content">
-              <p className="title is-6">{item.title}</p>
-            <p>{item.text}</p>
+            <div className="card-content" style={{height: 180, display: 'flex', flexDirection: 'column', verticalAlign: 'center' }}>
+              <p className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop" style={{marginBottom:'.5rem'}}>{item.title}</p>
+            <p className="subheading">{item.text}</p>
             </div>
 
         </div>

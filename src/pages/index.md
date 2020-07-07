@@ -9,27 +9,27 @@ intro:
     - image: /img/photoID.png
       title: PHOTO  D’IDENTITÉ
       text: >
-        Faites le choix d’un photographe agréé pour des photos garanties aux toutes normes, tous pays.
-    - image: /img/coffee-gear.png
+        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+    - image: /img/portrait.jpg
       title: PORTRAIT  D’ART
       text: >
-        Photos individuelles ou de groupe,  retouchés pour CV et réseaux sociaux en adéquation avec votre profil.
-    - image: /img/portrait.jpg
+        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
+    - image: /img/pellicule.jpg
       title: LABORATOIRE
       text: >
-        Tirages immediats sur borne photo ou developpement sur du véritable papier photo argentique.
+        Tirages immediats sur borne photo ou developpement sur du papier photo argentique.
     - image: /img/encadrement.jpg
       title: ENCADREMENT
       text: >
-        Photos officielles agréées service en ligne ANTS pour tous vos documents légaux.
+        Plus de 200 baguettes, cadres, caches et passe partout standards et sur-mesures.
     - image: /img/videotransfer.jpg
       title: TRANSFER  VIDEO
       text: >
-        Photos officielles agréées service en ligne ANTS pour tous vos documents légaux.
-    - image: /img/encadrement.jpg
+        Nous réalisons des transferts vidéo et audio vers CD de tout modèle de cassettes.
+    - image: /img/boutique.jpeg
       title: EN BOUTIQUE
       text: >
-        photos officielles agréées service en ligne ANTS pour tous vos documents légaux.
+        Conseils et vente d'appareils photos, films couleurs et N&B et des accessoires.
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-
