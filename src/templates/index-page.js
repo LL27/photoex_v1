@@ -48,10 +48,12 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="section">
 
+
               <Features gridItems={intro.blurbs} />
 
-            </div>
+
           </div>
+        </div>
 
     </section>
      <section className="section section--gradient has-background-grey-darker">
@@ -127,6 +129,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            title
             text
           }
         }
