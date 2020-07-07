@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClock,
+  faPhone,
+  faMapMarker,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,26 +42,20 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <div className="full-width-container">
-
         <div className="navbar-top level is-mobile margin-bottom-0">
-
           <div className="level-left">
             <div className="navbar-item logo">
-              <Link
-                to="/"
-                title="Logo"
-              >
+              <Link to="/" title="Logo">
                 <img src={logo} alt="Photo Expression" className="logo-svg" />
               </Link>
             </div>
           </div>
 
           <div className="level-right">
-
             <div className="level-item is-narrow no-flex">
               <p className="heading">
                 <span className="icon">
-                  <img src={github} alt="Github" />
+                  <FontAwesomeIcon icon={faPhone} />
                 </span>
                 Nous contacter
               </p>
@@ -64,32 +65,28 @@ const Navbar = class extends React.Component {
             <div className="level-item is-narrow no-flex">
               <p className="heading">
                 <span className="icon">
-                  <img src={github} alt="Github" />
+                  <FontAwesomeIcon icon={faClock} />
                 </span>
-                Horaires:
+                Mardi-Samedi
               </p>
-              <p className="heading margin-left-1"> Mar-Sam 9h15-13h et 14h-19h </p>
+              <p className="heading margin-left-1"> 9h15-13h et 14h-19h </p>
             </div>
 
             <div className="level-item is-narrow no-flex">
-
               <Link
                 to="/"
                 style={{ borderRight: 5, marginRight: 15 }}
                 className="heading"
               >
-
-                  <span className="icon">
-                    <img src={github} alt="Github" />
-                  </span>
-                  2 rue Beccaria
-
+                <span className="icon">
+                  <FontAwesomeIcon icon={faMapMarker} />
+                </span>
+                2 rue Beccaria
                 <p className="heading margin-left-1">75012 Paris</p>
               </Link>
             </div>
 
             <p className="level-item is-narrow heading"></p>
-
           </div>
         </div>
 
@@ -98,52 +95,44 @@ const Navbar = class extends React.Component {
           role="navigation"
           aria-label="main-navigation"
         >
-
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
+          {/* Hamburger menu */}
+          <div
+            className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+            data-target="navMenu"
+            onClick={() => this.toggleHamburger()}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
+          <div
+            id="navMenu"
+            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+            <div className="navbar-start has-text-centered">
+              <Link className="navbar-item" to="/about">
+                STUDIO
+              </Link>
+              <Link className="navbar-item" to="/products">
+                LABORATOIRE
+              </Link>
+              <Link className="navbar-item" to="/blog">
+                ENCADREMENT
+              </Link>
+              <Link className="navbar-item" to="/contact">
+                TRANSDER VIDEO
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                EN BOUTIQUE
+              </Link>
             </div>
-            <div
-              id="navMenu"
-              className={`navbar-menu ${this.state.navBarActiveClass}`}
-            >
-              <div className="navbar-start has-text-centered">
-                <Link className="navbar-item" to="/about">
-                  STUDIO
-                </Link>
-                <Link className="navbar-item" to="/products">
-                  LABORATOIRE
-                </Link>
-                <Link className="navbar-item" to="/blog">
-                  ENCADREMENT
-                </Link>
-                <Link className="navbar-item" to="/contact">
-                  TRANSDER VIDEO
-                </Link>
-                <Link className="navbar-item" to="/contact/examples">
-                  EN BOUTIQUE
-                </Link>
-              </div>
-              <div className="navbar-end has-text-centered">
-                <a
-                  className="navbar-item"
-                  href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="icon">
-                    <img src={github} alt="Github" />
-                  </span> INFO PRATIQUE
-                </a>
-              </div>
-            </div>
+            <div className="navbar-end">
+              <Link className="navbar-item" to="/contact/examples">
 
+                  <FontAwesomeIcon icon={faInfoCircle} style={{marginRight:5}}/>{" "} INFO PRATIQUE
+              </Link>
+            </div>
+          </div>
         </nav>
       </div>
     );
