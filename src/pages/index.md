@@ -6,7 +6,7 @@ description: >-
   depuis plus de 30 ans, le studio Photo Expression réalise des photos d'identité et des portraits pour les particuliers comme pour les professionnels. 
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/photoID.png
       title: PHOTO  D’IDENTITÉ
       text: >
         Faites le choix d’un photographe agréé pour des photos garanties aux toutes normes, tous pays.
@@ -14,19 +14,19 @@ intro:
       title: PORTRAIT  D’ART
       text: >
         Photos individuelles ou de groupe,  retouchés pour CV et réseaux sociaux en adéquation avec votre profil.
-    - image: /img/tutorials.png
+    - image: /img/portrait.jpg
       title: LABORATOIRE
       text: >
         Tirages immediats sur borne photo ou developpement sur du véritable papier photo argentique.
-    - image: /img/meeting-space.png
+    - image: /img/encadrement.jpg
       title: ENCADREMENT
       text: >
         Photos officielles agréées service en ligne ANTS pour tous vos documents légaux.
-    - image: /img/meeting-space.png
+    - image: /img/videotransfer.jpg
       title: TRANSFER  VIDEO
       text: >
         Photos officielles agréées service en ligne ANTS pour tous vos documents légaux.
-    - image: /img/meeting-space.png
+    - image: /img/encadrement.jpg
       title: EN BOUTIQUE
       text: >
         photos officielles agréées service en ligne ANTS pour tous vos documents légaux.
