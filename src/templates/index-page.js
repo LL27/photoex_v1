@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <React.Fragment>
-    <section className="content">
+    <section className="content pb-0 mb-0">
       <div className="columns is-vcentered">
         <div className="column is-multiline is-one-third">
           <div className="hero">
@@ -45,7 +45,8 @@ export const IndexPageTemplate = ({
       </div>
     </section>
     <section className="section">
-      <div className="container">
+      <div className="content">
+       <p className="title is-5-mobile is-5-desktop is-3-widescreen has-text-centered">NOS SERVICES</p>
 
 
 

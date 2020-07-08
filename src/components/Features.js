@@ -5,6 +5,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
+
     {gridItems.map((item) => (
       <div key={item.title} className="column is-4">
         <div className="card">
