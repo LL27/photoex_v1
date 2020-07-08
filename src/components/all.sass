@@ -10,7 +10,7 @@ $site-red-invert: #fff
 $primary: $site-red
 $primary-invert: $site-red-invert
 $body-color: $grey-darker
-$background: $grey-lightest
+$background: $white-ter
 
 $button-border-color: $site-red
 $family-primary: 'Lato', sans-serif;
@@ -26,7 +26,13 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
 .navbar .navbar-menu
   //box-shadow:none !important
 .navbar-top
-  padding: 10px 15px
+.navbar-burger
+  color: $white-ter
+  height: inherit
+.navbar-menu.is-active .navbar-start .navbar-item
+  color: $body-color !important
+.navbar-menu.is-active .navbar-end .navbar-item
+  color: $body-color !important
 .navbar.navbar-bottom
   padding: 0px 15px
   color: white;
@@ -112,14 +118,16 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   letter-spacing: .5px
   &:hover
     color: $grey-dark !important
-  [aria-current]:not([aria-current="false"])
-    background-color: white !important
-    color: $grey-dark !important
+
+a[aria-current]:not([aria-current="false"]).navbar-item
+  background-color: white !important
+  color: $body-color !important
 
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
-
+.address:hover
+  text-decoration: underline
 
 .icon
   width: 1rem
@@ -130,6 +138,8 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   width: 1rem
   height: 1rem
   fill: currentColor
+.navbar-brand
+  min-height: inherit
 .navbar-brand .navbar-item.logo
   max-height: 2.75rem;
   padding: 2rem 1rem
@@ -138,15 +148,19 @@ footer.footer
   background-color: transparent
 
 //Menu overrides
-$menu-item-color: $white-ter
+$menu-item-color: $body-color
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
 $menu-item-active-color: $site-red-invert
-$menu-item-active-background-color: $site-red-invert
+$menu-item-active-background-color: $site-red
 $menu-list-border-left: 1px solid $site-red-invert
 $menu-label-color: $white-ter
 
-
+.card
+  border-radius: $radius-large
+.card-image img
+  border-top-left-radius: $radius-large
+  border-top-right-radius: $radius-large
 .menu-label
   font-size: 1em !important
   text-align: left

@@ -51,8 +51,8 @@ const Navbar = class extends React.Component {
             </div>
           </div>
 
-          <div className="level-right">
-            <div className="level-item is-narrow no-flex">
+          <div className="level-right is-hidden-mobile">
+            <div className="level-item no-flex">
               <p className="heading">
                 <span className="icon">
                   <FontAwesomeIcon icon={faPhone} />
@@ -62,7 +62,7 @@ const Navbar = class extends React.Component {
               <p className="heading margin-left-1">01 46 28 65 16</p>
             </div>
 
-            <div className="level-item is-narrow no-flex">
+            <div className="level-item no-flex">
               <p className="heading">
                 <span className="icon">
                   <FontAwesomeIcon icon={faClock} />
@@ -72,12 +72,11 @@ const Navbar = class extends React.Component {
               <p className="heading margin-left-1"> 9h15-13h et 14h-19h </p>
             </div>
 
-            <div className="level-item is-narrow no-flex">
-              <Link
-                to="/"
-                style={{ borderRight: 5, marginRight: 15 }}
-                className="heading"
-              >
+            <div
+              className="level-item no-flex address"
+              style={{ borderRight: 5, marginRight: 25 }}
+            >
+              <Link to="/" className="heading has-text-grey-dark">
                 <span className="icon">
                   <FontAwesomeIcon icon={faMapMarker} />
                 </span>
@@ -86,7 +85,7 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
 
-            <p className="level-item is-narrow heading"></p>
+            <p className="level-item heading"></p>
           </div>
         </div>
 
@@ -96,15 +95,19 @@ const Navbar = class extends React.Component {
           aria-label="main-navigation"
         >
           {/* Hamburger menu */}
-          <div
-            className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-            data-target="navMenu"
-            onClick={() => this.toggleHamburger()}
-          >
-            <span />
-            <span />
-            <span />
+          <div className="navbar-brand">
+            <div></div>
+            <div
+              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              data-target="navMenu"
+              onClick={() => this.toggleHamburger()}
+            >
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
+
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
@@ -126,13 +129,55 @@ const Navbar = class extends React.Component {
                 EN BOUTIQUE
               </Link>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end has-text-centered">
               <Link className="navbar-item" to="/contact/examples">
-
-                  <FontAwesomeIcon icon={faInfoCircle} style={{marginRight:5}}/>{" "} INFO PRATIQUE
+                <FontAwesomeIcon
+                  icon={faInfoCircle}
+                  style={{ marginRight: 5 }}
+                />{" "}
+                INFO PRATIQUE
               </Link>
+
+                <div className="level is-hidden-tablet has-text-centered">
+                  <hr/>
+
+                  <div className="level-item has-text-grey-dark no-flex">
+                    <p className="heading has-text-grey-dark">
+                      <span className="icon">
+                        <FontAwesomeIcon icon={faPhone} />
+                      </span>
+                      01 46 28 65 16
+                    </p>
+
+                  </div>
+
+                  <div className="level-item has-text-grey-dark no-flex">
+                    <p className="heading">
+                      <span className="icon">
+                        <FontAwesomeIcon icon={faClock} />
+                      </span>
+                      Mar-Sam 9h15-13h et 14h-19h  (sans RDV)
+                    </p>
+                    <p className="heading">
+                      {" "}
+
+                    </p>
+                  </div>
+
+                  <div
+                    className="level-item no-flex has-text-grey-dark address">
+                    <Link to="/" className="heading has-text-grey-dark">
+                      <span className="icon">
+                        <FontAwesomeIcon icon={faMapMarker} />
+                      </span>
+                      2 rue Beccaria, 75012 Paris
+                    </Link>
+                  </div>
+
+                  <p className="level-item heading"></p>
+                </div>
+              </div>
             </div>
-          </div>
         </nav>
       </div>
     );

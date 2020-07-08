@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="section has-background-grey-darker">
+    <section className="section">
       <div className="container">
 
 
@@ -131,6 +131,7 @@ export const pageQuery = graphql`
             }
             title
             text
+            path
           }
         }
         testimonials {

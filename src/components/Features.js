@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "gatsby"
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
@@ -11,7 +12,7 @@ const FeatureGrid = ({ gridItems }) => (
               <PreviewCompatibleImage imageInfo={item} />
             </div>
             <div className="card-content" style={{height: 180, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <p className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop" style={{marginBottom:'.5rem'}}>{item.title}</p>
+              <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop" style={{marginBottom:'.5rem'}}>{item.title}</Link>
             <p className="subheading">{item.text}</p>
             </div>
 
@@ -26,6 +27,7 @@ FeatureGrid.propTypes = {
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       title: PropTypes.string,
+      path: PropTypes.string,
       text: PropTypes.string,
     })
   ),
