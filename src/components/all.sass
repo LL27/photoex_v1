@@ -8,20 +8,21 @@
 $white-ter: hsl(0, 0%, 96%)
 $grey-dark: hsl(0, 0%, 29%)
 $grey-darker: hsl(0, 0%, 21%)
-
 $radius-large: 6px
-
-
 $site-red: rgb(233, 107, 103)
 $site-red-invert: hsl(0, 0%, 96%)
+$tablet: 769px
+$navbar-height: 2rem
+
+
 
 $link: $site-red !important
 $navbar-item-hover-color: $site-red
 $navbar-burger-color: $white-ter
 $navbar-background-color: $grey-dark
+$navbar-breakpoint: $tablet
 $primary: $site-red
 $primary-invert: $site-red-invert
-
 
 $body-color: $grey-dark
 $background: $white-ter
@@ -107,17 +108,17 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
 
 .icon
   width: 1rem
-  height: 1rem
+  height: auto
   margin-right: .25rem
-  vertical-align: top
+  vertical-align: center
 .icon svg
   width: 1rem
-  height: 1rem
+  height: auto
   fill: currentColor
 
 .navbar-brand .navbar-item.logo
   max-height: 2.75rem;
-  padding: 2rem 1rem
+
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
@@ -126,6 +127,12 @@ footer.footer
 .info-tile
   display: flex
   margin-left: 24px
+.info-tile > a.heading, p.heading
+  color: $grey-dark !important
+.info-tile > .icon
+  justify-content: start
+  height: auto
+
 .card
   border-radius: $radius-large
 .card-image img
@@ -165,7 +172,8 @@ footer.footer
   //box-shadow:none !important
 
 .navbar-brand
-  min-height: inherit
+  min-height: $navbar-height
+  max-height: $navbar-height
 .navbar-item
   color: $white-ter !important
   font-size: 11px
@@ -174,23 +182,27 @@ footer.footer
   &:hover
     color: $grey-dark !important
 
-a[aria-current]:not([aria-current="false"]).navbar-item
-  background-color: white !important
-  color: $body-color !important
+.navbar-menu.is-active .navbar-item:hover, .navbar-menu.is-active .navbar-link:hover, .navbar-menu.is-active .navbar-dropdown .navbar-item:hover
+   background-color: $grey-dark
+
+.navbar > .container
+  min-height: $navbar-height
+  max-height: $navbar-height
 .navbar-burger
   height: inherit
 .navbar-menu.is-active .navbar-start .navbar-item
-  color: $body-color !important
+  color: $white-ter !important
 .navbar-menu.is-active .navbar-end .navbar-item
-  color: $body-color !important
+  color: $white-ter !important
+
 .navbar.navbar-bottom
   padding: 0px 15px
-  color: white;
+  color: $white-ter
 .navbar
-  min-height: 2rem !important
-  max-height: 2rem !important
+  min-height: $navbar-height !important
+  max-height: $navbar-height !important
 .navbar-top
-  padding-top: 24px
+  padding: 24px 0
 .logo-svg
   max-height: 3rem !important
 
