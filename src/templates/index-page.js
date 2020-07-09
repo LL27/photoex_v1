@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
         >
           {description}
         </p>
-              <button class="button is-small btn">
+              <button class="button is-small">
                 NOUS CONTACTER
               </button>
             </div>
