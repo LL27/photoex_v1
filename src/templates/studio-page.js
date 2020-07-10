@@ -1,82 +1,43 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { Link } from "gatsby";
+import Features from "../components/Features";
+
 import Layout from "../components/Layout";
+import PageHeader from "../components/PageHeader";
 
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const StudioPageTemplate = ({
-  image,
   title,
+  image,
   heading,
   description,
-  main,
+  studioIntro,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: "0.5rem 0 0 rgb(233, 107, 103), -0.5rem 0 0 rgb(233, 107, 103)",
-          backgroundColor: "rgb(233, 107, 103)",
-          color: "white",
-          padding: "1rem",
-        }}
-      >
-        {title}
-      </h2>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+    <PageHeader image={image} title={title} />
+
+    <section className="section">
+      <div className="columns">
+        <div className="column is-one-third">
+          <div className="container">
+            <div className="content">
+              <h2>{heading}</h2>
               <p>{description}</p>
             </div>
           </div>
+        </div>
+        <div className="column">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
+
           </div>
         </div>
-      </div>
+
+        </div>
+
     </section>
   </div>
 );
@@ -86,12 +47,8 @@ StudioPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  studioIntro: PropTypes.shape({
+    blurbs: PropTypes.array,
   }),
 };
 
@@ -105,7 +62,7 @@ const StudioPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
-        main={frontmatter.main}
+        studioIntro={frontmatter.studioIntro}
       />
     </Layout>
   );
@@ -126,50 +83,30 @@ export const StudioPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        description
+        heading
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        heading
-        description
-        main {
-          heading
-          description
-          image1 {
-            alt
+        studioIntro {
+          blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 240, quality: 64) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            title
+            text
+            path
           }
         }
       }
     }
   }
-  `;
+`;

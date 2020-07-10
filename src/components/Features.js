@@ -3,18 +3,20 @@ import { Link } from "gatsby"
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-const FeatureGrid = ({ gridItems }) => (
+const FeatureGrid = ({ gridItems, columnSize }) => (
   <div className="columns is-multiline">
 
     {gridItems.map((item) => (
-      <div key={item.title} className="column is-4">
+      <div key={item.title} className={`column is-multiline ${columnSize}`}>
 
         <div className="card">
             <div className="card-image">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
             <div className="card-content" style={{height: 180, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop" style={{marginBottom:'.5rem'}}>{item.title}</Link>
+                 <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop" style={{marginBottom:'.5rem'}}>{item.title}</Link>
+
+
             <p className="subheading">{item.text}</p>
             </div>
 

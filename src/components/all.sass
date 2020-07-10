@@ -14,6 +14,10 @@ $site-red-invert: hsl(0, 0%, 96%)
 $tablet: 769px
 $navbar-height: 2rem
 
+$scheme-main: $grey-dark
+$scheme-invert: $white-ter
+
+$animate: all 0.2s ease-in-out;
 
 
 $link: $site-red !important
@@ -27,12 +31,15 @@ $primary-invert: $site-red-invert
 $body-color: $grey-dark
 $background: $white-ter
 
-$button-border-color: $site-red
+$button-color: $site-red-invert
+$button-border-color: $site-red-invert
+$button-background-color: $site-red
 $family-primary: 'Lato', sans-serif;
 $family-secondary: 'Roboto', sans-serif;
 //Menu overrides
 
-
+$card-background-color: #fff
+$card-color: $scheme-main
 
 
 body
@@ -54,7 +61,7 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   background-size: cover
   background-position: bottom
   display: flex
-  justify-content: center
+  justify-content: flex-start
   align-items: center
 .full-width-map-container
   width: 100vw
@@ -62,7 +69,12 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   position: relative
   background-size: cover
   background-position: bottom
-
+.triangle
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 40px 30px;
+  border-color: transparent transparent transparent #007bff;
 .banner
   background-size: cover
   background-position: center
@@ -149,9 +161,20 @@ footer.footer
 
 .card
   border-radius: $radius-large
+
 .card-image img
   border-top-left-radius: $radius-large
   border-top-right-radius: $radius-large
+
+
+
+
+.card-content a.title
+  color: $body-color !important
+  max-width: fit-content
+  height: 2.5rem
+  &:hover
+    border-bottom: 3px $body-color solid
 .menu-label
   font-size: 1em !important
   text-align: left
