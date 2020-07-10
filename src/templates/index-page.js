@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import mapbg from "../img/map-bg.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMapMarker} from "@fortawesome/free-solid-svg-icons";
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -70,6 +73,36 @@ export const IndexPageTemplate = ({
         </div>
 
     </section>
+      <div className="full-width-map-container" style={{ backgroundImage: `url(${mapbg})` }}>
+
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  backgroundColor: "white",
+                  opacity: 0.7,
+                  maxWidth: "100%",
+                  padding: "1rem",
+                }}
+              >
+                <div className="level is-mobile">
+                  <span className="map-icon level-item">
+                    <FontAwesomeIcon icon={faMapMarker} />
+                  </span>
+                  <p className="level-item footer-nav-item-inverse">
+                    {" "}
+                    Le studio se situe en face du 128 rue de Charenton,
+                    <br />
+                    entre les sorties de métro Gare de Lyon et Reuilly-Diderot.
+                  </p>
+                </div>
+              </div>
+               </div>
+
+
+
+
   </React.Fragment>
 );
 
