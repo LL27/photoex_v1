@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <div className="full-width-container">
-        <div className="">
+
           <div className="navbar-top level is-mobile">
             <div className="level-left">
               <div className="navbar-item logo">
@@ -88,7 +88,7 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
           </div>
-        </div>
+
 
         <nav
           className="navbar navbar-bottom has-background-grey-dark has-text-light"
@@ -158,7 +158,7 @@ const Navbar = class extends React.Component {
                   <div className="level-item no-flex has-text-white-ter address">
                     <Link
                       to="/"
-                      className="heading has-text-white-ter"
+                      className="info-tile-mobile"
                       style={{ lineHeight: 2.2 }}
                     >
                       <span className="icon">
@@ -167,10 +167,10 @@ const Navbar = class extends React.Component {
                       2 rue Beccaria, 75012 Paris
                     </Link>
                   </div>
-                  <div className="level-item has-text-white-ter no-flex address">
+                  <div className="level-item no-flex address">
                     <a
                       href="tel:0146286516"
-                      className="heading has-text-white-ter"
+                      className="info-tile-mobile"
                       style={{ lineHeight: 2.2 }}
                     >
                       <span className="icon">
@@ -180,17 +180,16 @@ const Navbar = class extends React.Component {
                     </a>
                   </div>
 
-                  <div className="level-item has-text-white-ter no-flex">
-                    <p className="heading" style={{ lineHeight: 2.2 }}>
+                  <div className="level-item no-flex">
+                    <p className="info-tile-mobile" style={{ lineHeight: 2.2 }}>
                       <span className="icon">
                         <FontAwesomeIcon icon={faClock} />
                       </span>
                       Mar-Sam 9h15-13h et 14h-19h  (sans RDV)
                     </p>
-                    <p className="heading"> </p>
                   </div>
 
-                  <p className="level-item heading"></p>
+                  <p className="level-item info-tile-mobile"></p>
                 </div>
               </div>
             </div>

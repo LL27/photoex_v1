@@ -1,18 +1,51 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMapMarker} from "@fortawesome/free-solid-svg-icons";
+
 import logo from "../img/logo.svg";
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
-import twitter from "../img/social/twitter.svg";
-import vimeo from "../img/social/vimeo.svg";
+import mapbg from "../img/map-bg.png";
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div class="columns">
-          <div class="column is-one-third">
+      <footer id="footer" className="footer has-background-black has-text-white-ter">
+       <div className="full-width-image-container" style={{ backgroundImage: `url(${mapbg})` }}>
+
+
+            <div style={{position: 'relative', height: '100%', width: '100%'}}>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  backgroundColor: "white",
+                  opacity: 0.7,
+                  maxWidth: "100%",
+                  padding: "1rem",
+                }}
+              >
+                <div className="level is-mobile">
+                  <span className="map-icon level-item">
+                    <FontAwesomeIcon icon={faMapMarker} />
+                  </span>
+                  <p className="level-item footer-nav-item-inverse">
+                    {" "}
+                    Le studio se situe en face du 128 rue de Charenton,
+                    <br />
+                    entre les sorties de métro Gare de Lyon et Reuilly-Diderot.
+                  </p>
+                </div>
+              </div>
+               </div>
+
+               </div>
+
+
+
+        <div className="columns">
+          <div className="column is-one-third">
             <div className="content">
               <img src={logo} alt="Photo Expression" />
               <p className="footer-nav-item">
@@ -31,7 +64,7 @@ const Footer = class extends React.Component {
               </a>
             </div>
           </div>
-          <div class="column">
+          <div className="column">
             <div className="content">
               <ul className="footer-nav" style={{ marginLeft: 0 }}>
                 <h4>SERVICES</h4>
@@ -69,7 +102,7 @@ const Footer = class extends React.Component {
               </ul>
             </div>
           </div>
-          <div class="column">
+          <div className="column">
             <div className="content">
               <ul className="footer-nav">
                 <h4>HORAIRES</h4>
@@ -81,7 +114,7 @@ const Footer = class extends React.Component {
               </ul>
             </div>
           </div>
-          <div class="column">
+          <div className="column">
             <div className="content">
               <ul className="footer-nav">
                 <h4>{`MOYEN D'ACCÈS`}</h4>

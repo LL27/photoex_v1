@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Photo Expression',
     description:
-      'Le site web de Photo Expression',
+      "Le studio Photo Expression est implanté au 2 rue Beccaria en face du 128 rue de Charenton à Paris 12, pour vos photos d'identité, photographe de portrait etc. ",
+    keywords: "portrait, photo d'identité, Paris 12",
   },
   plugins: [
     'gatsby-plugin-react-helmet',

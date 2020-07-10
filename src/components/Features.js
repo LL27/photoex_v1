@@ -8,6 +8,7 @@ const FeatureGrid = ({ gridItems }) => (
 
     {gridItems.map((item) => (
       <div key={item.title} className="column is-4">
+
         <div className="card">
             <div className="card-image">
               <PreviewCompatibleImage imageInfo={item} />
@@ -21,6 +22,7 @@ const FeatureGrid = ({ gridItems }) => (
       </div>
     ))}
   </div>
+
 )
 
 FeatureGrid.propTypes = {

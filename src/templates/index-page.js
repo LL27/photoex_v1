@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
         >
           {description}
         </p>
-              <button class="button is-small">
+              <button className="button is-small">
                 NOUS CONTACTER
               </button>
             </div>
@@ -48,9 +48,11 @@ export const IndexPageTemplate = ({
       <div className="content">
        <p className="title is-5-mobile is-5-desktop is-3-widescreen has-text-centered">NOS SERVICES</p>
 
+        <div className="container">
+           <Features gridItems={intro.blurbs} />
+        </div>
 
 
-              <Features gridItems={intro.blurbs} />
 
 
 
@@ -61,7 +63,6 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="section">
           <div className="columns is-mobile">
-
 
               <Testimonials testimonials={testimonials} />
             </div>

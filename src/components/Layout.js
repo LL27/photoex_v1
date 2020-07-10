@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import Navbar2 from '../components/Navbar2'
 
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
@@ -10,13 +9,14 @@ import { withPrefix } from 'gatsby'
 
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, keywords } = useSiteMetadata()
   return (
     <div>
       <Helmet>
         <html lang="fr" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
 
         <link
           rel="apple-touch-icon"
@@ -45,6 +45,7 @@ const TemplateWrapper = ({ children }) => {
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
