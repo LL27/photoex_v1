@@ -9,10 +9,12 @@ $white-ter: hsl(0, 0%, 96%)
 $grey-dark: hsl(0, 0%, 29%)
 $grey-darker: hsl(0, 0%, 21%)
 $radius-large: 6px
+$radius-small: 2px
 $site-red: rgb(233, 107, 103)
 $site-red-invert: hsl(0, 0%, 96%)
 $tablet: 769px
 $navbar-height: 2rem
+
 
 $scheme-main: $grey-dark
 $scheme-invert: $white-ter
@@ -61,14 +63,16 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   background-size: cover
   background-position: bottom
   display: flex
-  justify-content: flex-start
-  align-items: center
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
 .full-width-map-container
   width: 100vw
   height: 400px
   position: relative
   background-size: cover
   background-position: bottom
+
 .triangle
   width: 0;
   height: 0;
@@ -160,11 +164,11 @@ footer.footer
   height: auto
 
 .card
-  border-radius: $radius-large
+  border-radius: $radius-small
 
 .card-image img
-  border-top-left-radius: $radius-large
-  border-top-right-radius: $radius-large
+  border-top-left-radius: $radius-small
+  border-top-right-radius: $radius-small
 
 
 
@@ -254,7 +258,7 @@ footer.footer
   min-height: $navbar-height !important
   max-height: $navbar-height !important
 .navbar-top
-  padding: 24px 0 0
+  padding: 1rem 0
 .logo-svg
   max-height: 3rem !important
 
@@ -275,13 +279,22 @@ footer.footer
 
 // responsiveness
 +desktop
+  .hero-body
+    padding: 0 !important
   .maintitle
     width: 270px
+  .navbar-item .logo
+    padding-left: 0 !important
+
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
 
+
 +mobile
+  $hero-body-padding: 1rem
+  .hero-body
+    padding: 1rem !important
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail

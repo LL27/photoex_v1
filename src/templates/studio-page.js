@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Link } from "gatsby";
 import Features from "../components/Features";
-
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const StudioPageTemplate = ({
   title,
@@ -16,8 +13,8 @@ export const StudioPageTemplate = ({
   description,
   studioIntro,
 }) => (
-  <div className="content">
-    <PageHeader image={image} title={title} />
+  <div className="container">
+    <PageHeader image={image} title={title} heading={heading} description={description}/>
 
     <section className="section">
       <div className="columns">

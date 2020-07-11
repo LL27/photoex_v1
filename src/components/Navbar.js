@@ -43,6 +43,7 @@ const Navbar = class extends React.Component {
     return (
       <div className="full-width-container">
 
+        <div className="container">
           <div className="navbar-top level is-mobile">
             <div className="level-left">
               <div className="navbar-item logo">
@@ -88,6 +89,14 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
           </div>
+        </div>
+
+
+
+
+
+
+
 
 
         <nav
@@ -96,25 +105,28 @@ const Navbar = class extends React.Component {
           aria-label="main-navigation"
         >
           <div className="container">
-            {/* Hamburger menu */}
-            <div className="navbar-brand">
-              <div></div>
-              <div
-                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-                data-target="navMenu"
-                onClick={() => this.toggleHamburger()}
-              >
-                <span />
-                <span />
-                <span />
-              </div>
-            </div>
+          {/* Hamburger menu */}
 
+          <div className="navbar-brand">
             <div
-              id="navMenu"
-              className={`navbar-menu ${this.state.navBarActiveClass}`}
+              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              data-target="navMenu"
+              onClick={() => this.toggleHamburger()}
             >
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+
+          <div
+            id="navMenu"
+            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+
               <div className="navbar-start has-text-centered">
+
+
                 <div className="navbar-item has-dropdown is-hoverable">
                   <Link className="navbar-link" to="/studio">
                     STUDIO
@@ -122,8 +134,9 @@ const Navbar = class extends React.Component {
 
                   <div className="navbar-dropdown">
                     <Link className="navbar-item" to="/photoID">
-                      Photo d'identité
+                      PHOTO D'IDENTITÉ
                     </Link>
+
                     <Link className="navbar-item" to="/portrait">
                       Portrait
                     </Link>
@@ -143,17 +156,19 @@ const Navbar = class extends React.Component {
                   EN BOUTIQUE
                 </Link>
               </div>
+
               <div className="navbar-end has-text-centered">
+
                 <Link className="navbar-item" to="/contact/examples">
                   <FontAwesomeIcon
                     icon={faInfoCircle}
                     style={{ marginRight: 5 }}
-                  />{" "}
+                  />
                   INFO PRATIQUE
                 </Link>
 
                 <div className="level is-hidden-tablet has-text-centered">
-                  <hr className="" />
+                  <hr />
 
                   <div className="level-item no-flex has-text-white-ter address">
                     <Link
@@ -191,9 +206,9 @@ const Navbar = class extends React.Component {
 
                   <p className="level-item info-tile-mobile"></p>
                 </div>
-              </div>
-            </div>
-          </div>
+           </div>
+           </div>
+</div>
         </nav>
       </div>
     );

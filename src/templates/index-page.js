@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({
   intro,
   testimonials,
 }) => (
-  <React.Fragment>
+  <div className="container">
     <section className="content pb-0 mb-0" style={{borderBottom: '1.5rem solid hsl(0, 0%, 86%)'}}>
       <div className="columns is-vcentered">
         <div className="column is-multiline is-one-third">
@@ -41,6 +41,7 @@ export const IndexPageTemplate = ({
             fluid={
               !!image.childImageSharp ? image.childImageSharp.fluid : image
             }
+            style={{maxHeight: 500}}
           />
         </div>
       </div>
@@ -78,7 +79,7 @@ export const IndexPageTemplate = ({
 
 
 
-  </React.Fragment>
+  </div>
 );
 
 IndexPageTemplate.propTypes = {
