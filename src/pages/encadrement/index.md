@@ -4,5 +4,11 @@ path: /encadrement
 title: Encadrement
 image: /img/encadrement.jpg
 heading:  Spécialiste du portrait
-description: Photo Expression réalise de très beaux portraits artistiques, retouchés pour CV et réseaux sociaux en adéquation avec votre profil.
+description: Cadres sur-mesure et standards
 ---
+* Plus de 200 baguettes
+* Cadres standards et sur-mesures
+* Caisse américaine
+* Caches et passe partout standards et sur-mesures
+* Montage sur châssis de toile
+* Encadrement et cannevas
