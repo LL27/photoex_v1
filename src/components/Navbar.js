@@ -150,7 +150,7 @@ const Navbar = class extends React.Component {
                   ENCADREMENT
                 </Link>
                 <Link className="navbar-item" to="/transfertvideo">
-                  TRANSDER VIDEO
+                  TRANSFERT VIDEO
                 </Link>
                 <Link className="navbar-item" to="/boutique">
                   EN BOUTIQUE
