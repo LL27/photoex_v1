@@ -18,7 +18,7 @@ export const TransfertVideoPageTemplate = ({
    }) => {
   const PageContent = contentComponent || Content
   return (
-    <React.Fragment>
+    <div className="container">
       <PageHeader image={image} title={title} heading={heading} description={description}/>
 
       <section className="section section--gradient">
@@ -35,7 +35,7 @@ export const TransfertVideoPageTemplate = ({
           </div>
         </div>
       </section>
-   </React.Fragment>
+   </div>
   )
 }
 

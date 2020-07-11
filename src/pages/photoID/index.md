@@ -1,8 +1,8 @@
 ---
 templateKey: 'photoID-page'
 path: /photoID
-title: About our values
-image: /img/studio.jpeg
+title: Photo D'Identité
+image: /img/photoID.png
 heading:  Spécialiste du portrait
 description: Photo Expression réalise de très beaux portraits artistiques, retouchés pour CV et réseaux sociaux en adéquation avec votre profil.
 ---
