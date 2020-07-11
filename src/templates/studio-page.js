@@ -14,24 +14,23 @@ export const StudioPageTemplate = ({
   studioIntro,
 }) => (
   <div className="container">
+
     <PageHeader image={image} title={title} heading={heading} description={description}/>
 
     <section className="section">
       <div className="columns">
         <div className="column is-one-third">
-          <div className="container">
             <div className="content">
               <h2>{heading}</h2>
               <p>{description}</p>
             </div>
-          </div>
+
         </div>
-        <div className="column">
-          <div className="columns">
+
+
             <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
 
-          </div>
-        </div>
+
 
         </div>
 

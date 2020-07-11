@@ -40,13 +40,14 @@ $family-primary: 'Lato', sans-serif;
 $family-secondary: 'Roboto', sans-serif;
 //Menu overrides
 
+$text: $family-secondary
 $card-background-color: #fff
 $card-color: $scheme-main
 
 
 body
   background-color: $background
-  font-family: $family-primary
+  font-family: $family-secondary
 
 h1, h2, h3, h4, h5, h6, .title, .subtitle
   font-family: $family-secondary
@@ -283,7 +284,7 @@ footer.footer
     padding: 0 !important
   .maintitle
     width: 270px
-  .navbar-item .logo
+  .navbar-item.logo
     padding-left: 0 !important
 
 +tablet-only

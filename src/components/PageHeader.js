@@ -14,7 +14,7 @@ const PageHeader = ({ image, title, heading, description }) => (
         <div className="hero">
           <div className="hero-body content">
 
-            <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen is-uppercase">
+            <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen">
               {title}
             </h1>
             <p
