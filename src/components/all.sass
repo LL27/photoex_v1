@@ -36,7 +36,8 @@ $background: $white-ter
 $button-color: $site-red-invert
 $button-border-color: $site-red-invert
 $button-background-color: $site-red
-$family-primary: 'Lato', sans-serif;
+$family-navbar: 'Lato', sans-serif
+$family-primary: 'Roboto', sans-serif;
 $family-secondary: 'Roboto', sans-serif;
 //Menu overrides
 
@@ -73,6 +74,8 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   position: relative
   background-size: cover
   background-position: bottom
+  font-family: $family-navbar
+  border-top: 1.5rem solid hsl(0, 0%, 86%)
 
 .triangle
   width: 0;
@@ -146,7 +149,7 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   max-height: 2.75rem;
 
 footer.footer
-
+  font-family: $family-navbar
   background-color: transparent
 .info-container
   margin-right: 24px
@@ -155,6 +158,7 @@ footer.footer
   margin-left: 24px
 .info-tile > a.heading, p.heading
   color: $grey-dark !important
+  font-family: $family-navbar
 .info-tile-mobile, .info-tile-mobile a
   color: $white-ter !important
   font-size: 11px
@@ -166,20 +170,29 @@ footer.footer
 
 .card
   border-radius: $radius-small
+  padding: 1.5rem
 
 .card-image img
-  border-top-left-radius: $radius-small
-  border-top-right-radius: $radius-small
+  border-radius: $radius-small
 
 
+
+.card-content
+  height: 150px
+  padding: 1rem 0 0 !important
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
 
 
 .card-content a.title
   color: $body-color !important
   max-width: fit-content
-  height: 2.5rem
+  height: 2rem
+  margin-bottom: .5rem
   &:hover
     border-bottom: 3px $body-color solid
+
 .menu-label
   font-size: 1em !important
   text-align: left
@@ -218,6 +231,7 @@ footer.footer
   max-height: $navbar-height
 .navbar-item
   color: $white-ter !important
+  font-family: $family-navbar
   font-size: 11px
   font-weight: 800
   letter-spacing: .5px
@@ -260,6 +274,7 @@ footer.footer
   max-height: $navbar-height !important
 .navbar-top
   padding: 1rem 0
+  margin-bottom: 0 !important
 .logo-svg
   max-height: 3rem !important
 
@@ -280,22 +295,23 @@ footer.footer
 
 // responsiveness
 +desktop
-  .hero-body
-    padding: 0 !important
   .maintitle
     width: 270px
-  .navbar-item.logo
-    padding-left: 0 !important
+
 
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
+  .card-content p
+    font-size: 14px
 
 
 +mobile
-  $hero-body-padding: 1rem
+  .card
+    padding: 2rem
+
   .hero-body
-    padding: 1rem !important
+    padding: 2.5rem .75rem !important
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail

@@ -13,7 +13,7 @@ export const StudioPageTemplate = ({
   description,
   studioIntro,
 }) => (
-  <div className="container">
+  <React.Fragment>
 
     <PageHeader image={image} title={title} heading={heading} description={description}/>
 
@@ -35,7 +35,7 @@ export const StudioPageTemplate = ({
         </div>
 
     </section>
-  </div>
+  </React.Fragment>
 );
 
 StudioPageTemplate.propTypes = {

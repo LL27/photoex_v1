@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({
   intro,
   testimonials,
 }) => (
-  <div className="container">
+  <React.Fragment>
     <section className="content pb-0 mb-0" style={{borderBottom: '1.5rem solid hsl(0, 0%, 86%)'}}>
       <div className="columns is-vcentered">
         <div className="column is-multiline is-one-third">
@@ -79,7 +79,7 @@ export const IndexPageTemplate = ({
 
 
 
-  </div>
+  </React.Fragment>
 );
 
 IndexPageTemplate.propTypes = {

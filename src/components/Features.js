@@ -13,8 +13,8 @@ const FeatureGrid = ({ gridItems, columnSize }) => (
             <div className="card-image">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
-            <div className="card-content" style={{height: 180, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                 <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop" style={{marginBottom:'.5rem'}}>{item.title}</Link>
+            <div className="card-content">
+                 <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop">{item.title}</Link>
 
 
             <p className="subheading">{item.text}</p>

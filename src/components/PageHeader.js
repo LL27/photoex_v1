@@ -11,10 +11,11 @@ const PageHeader = ({ image, title, heading, description }) => (
   >
     <div className="columns is-vcentered">
       <div className="column is-one-third">
-        <div className="hero">
+        <div className="hero ml-2">
           <div className="hero-body content">
 
-            <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen">
+                 <div className="container">
+                    <h1 className="is-capitalized is-size-3-tablet is-size-1-desktop is-size-1-widescreen">
               {title}
             </h1>
             <p
@@ -25,6 +26,9 @@ const PageHeader = ({ image, title, heading, description }) => (
             >
               {description}
             </p>
+                 </div>
+
+
            </div>
         </div>
       </div>

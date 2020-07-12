@@ -18,7 +18,7 @@ export const BoutiquePageTemplate = ({
    }) => {
   const PageContent = contentComponent || Content
   return (
-    <div className="container">
+    <React.Fragment>
       <PageHeader image={image} title={title} heading={heading} description={description}/>
 
       <section className="section section--gradient">
@@ -35,7 +35,7 @@ export const BoutiquePageTemplate = ({
           </div>
         </div>
       </section>
-   </div>
+   </React.Fragment>
   )
 }
 

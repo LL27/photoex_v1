@@ -9,7 +9,7 @@ studioIntro:
   blurbs:
     - image: /img/photoID.png
       title: PHOTO  D’IDENTITÉ
-      path: /photoid
+      path: /photoID
       text: >
         Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
     - image: /img/portrait.jpg

@@ -4,5 +4,5 @@ path: /portrait
 title: Portrait
 image: /img/portrait.jpg
 heading:  Spécialiste du portrait
-description: Photo Expression réalise de très beaux portraits artistiques, retouchés pour CV et réseaux sociaux en adéquation avec votre profil.
+description: Portrait Photo Expression, spécialiste du portrait , prend des photos individuelles ou de groupe. Il effectue notamment des photos pour les réseaux sociaux, les CVs, pour les compagnies aériennes ainsi que des photos médicales pour chirurgie esthétique..
 ---
