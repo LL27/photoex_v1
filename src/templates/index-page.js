@@ -15,23 +15,19 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <React.Fragment>
-    <section className="content pb-0 mb-0" style={{borderBottom: '1.5rem solid hsl(0, 0%, 86%)'}}>
+    <section
+      className="content pb-0 mb-0"
+      style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
+    >
       <div className="columns is-vcentered">
         <div className="column is-multiline is-one-third">
           <div className="hero">
             <div className="hero-body">
-              <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen">{title}</h1>
-              <p
-          className=""
-          style={{
-            color: "#555C5C",
-          }}
-        >
-          {description}
-        </p>
-              <button className="button is-small">
-                NOUS CONTACTER
-              </button>
+              <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen">
+                {title}
+              </h1>
+              <p className="hero-description">{description}</p>
+              <button className="button is-small">NOUS CONTACTER</button>
             </div>
           </div>
         </div>
@@ -41,44 +37,35 @@ export const IndexPageTemplate = ({
             fluid={
               !!image.childImageSharp ? image.childImageSharp.fluid : image
             }
-            style={{maxHeight: 500}}
+            style={{ maxHeight: 500 }}
           />
         </div>
       </div>
     </section>
     <section className="section">
       <div className="content">
-       <p className="title is-5-mobile is-5-desktop is-3-widescreen has-text-centered">NOS SERVICES</p>
+        <p className="title is-5-mobile is-5-desktop is-3-widescreen has-text-centered">
+          NOS SERVICES
+        </p>
 
         <div className="container">
-           <div className="columns">
-
-
-           <Features gridItems={intro.blurbs} columnSize="is-4" />
-           </div>
-        </div>
-
-
-
-
-
-        </div>
-
-    </section>
-     <section className="section section--gradient has-background-grey-darker">
-      <div className="container">
-        <div className="section">
-          <div className="columns is-mobile">
-
-              <Testimonials testimonials={testimonials} />
+          <div className="columns">
+            <div className="column">
+              <Features gridItems={intro.blurbs} columnSize="is-4" />
             </div>
           </div>
         </div>
-
+      </div>
     </section>
-
-
-
+    <section className="section section--gradient has-background-grey-darker">
+      <div className="container">
+        <div className="section">
+          <div className="columns is-mobile">
+            <Testimonials testimonials={testimonials} />
+          </div>
+        </div>
+      </div>
+    </section>
   </React.Fragment>
 );
 

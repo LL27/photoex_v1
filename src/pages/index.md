@@ -10,7 +10,7 @@ intro:
       title: PHOTO  D’IDENTITÉ
       path: /photoID
       text: >
-        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+        Photo Expression, un photographe agréé pour des photos aux toutes normes, tous pays.
     - image: /img/portrait.jpg
       title: PORTRAIT  D’ART
       path: /studio
@@ -25,7 +25,7 @@ intro:
       title: ENCADREMENT
       path: /encadrement
       text: >
-        Plus de 200 baguettes, cadres, caches et passe partout standards et sur-mesures.
+        Plus de 200 baguettes, caches et passe partout standards et sur-mesures.
     - image: /img/videotransfer.jpg
       title: TRANSFER  VIDEO
       path: /transfertvideo

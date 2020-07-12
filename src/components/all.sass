@@ -170,7 +170,7 @@ footer.footer
 
 .card
   border-radius: $radius-small
-  padding: 1.5rem
+  padding: 1rem
 
 .card-image img
   border-radius: $radius-small
@@ -302,16 +302,17 @@ footer.footer
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
-  .card-content p
+  .card-content p, .hero-description
     font-size: 14px
+  .card
+    padding: 1rem
 
 
 +mobile
   .card
-    padding: 2rem
-
+    padding: 2.5rem
   .hero-body
-    padding: 2.5rem .75rem !important
+    margin-left: .75rem
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail

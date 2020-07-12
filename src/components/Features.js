@@ -14,7 +14,7 @@ const FeatureGrid = ({ gridItems, columnSize }) => (
               <PreviewCompatibleImage imageInfo={item} />
             </div>
             <div className="card-content">
-                 <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-4-desktop">{item.title}</Link>
+                 <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">{item.title}</Link>
 
 
             <p className="subheading">{item.text}</p>
