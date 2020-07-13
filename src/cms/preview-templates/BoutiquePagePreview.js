@@ -14,9 +14,10 @@ const BoutiquePagePreview = ({ entry, widgetFor }) => (
 BoutiquePagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
+    getAsset: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
-  getAsset: PropTypes.func,
+
 }
 
 export default BoutiquePagePreview
