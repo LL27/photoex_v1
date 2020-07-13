@@ -2,30 +2,35 @@ import React from "react";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-const PhotoFormats = ({ formats }) => (
-  <React.Fragment>
+const PhotoFormats = ({ title, text, formats }) => (
+  <section className="section">
+    <div className="content">
+
+
+    <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+      {title}
+    </h2>
+    <p>{text}</p>
+     </div>
     {formats.map((item) => (
-      <div key={item.heading} className="container">
+      <div key={item.heading} className="container content">
         <div className="columns">
-          <div className="column is-12">
-        <h2 className="title is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">
-            {item.heading}
-          </h2>
+          <div className="column is-two-fifths" style={{ maxWidth: "340px" }}>
+            <PreviewCompatibleImage imageInfo={item} />
+          </div>
+          <div className="column is-three-fifths">
+            <div className="content">
+              <h4 className="title is-size-5">
+                {item.heading}
+              </h4>
+              <p>{item.text}</p>
+            </div>
           </div>
         </div>
-        <div className="columns">
-                   <div className="column is-one-fifth">
-          <PreviewCompatibleImage imageInfo={item} />
         </div>
 
-        <div className="column">
-          <p className="subheading">{item.text}</p>
-        </div>
-        </div>
-
-      </div>
     ))}
-  </React.Fragment>
+  </section>
 );
 
 PhotoFormats.propTypes = {

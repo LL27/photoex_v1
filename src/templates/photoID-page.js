@@ -31,10 +31,7 @@ export const PhotoIDPageTemplate = ({
           <div className="columns">
             <div className="column is-12">
               <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-                <PhotoFormats formats={main.formats} />
+                <PhotoFormats title={main.title} text={main.text} formats={main.formats} />
                 <PageContent className="content" content={content} />
               </div>
             </div>
@@ -53,6 +50,8 @@ PhotoIDPageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   main: PropTypes.shape({
+    title: PropTypes.string,
+    text: PropTypes.string,
     formats: PropTypes.array,
   }),
 };
@@ -67,6 +66,7 @@ const PhotoIDPage = ({ data }) => {
         content={post.html}
         image={post.frontmatter.image}
         heading={post.frontmatter.heading}
+        description={post.frontmatter.description}
         main={post.frontmatter.main}
       />
     </Layout>
@@ -95,6 +95,8 @@ export const photoIDPageQuery = graphql`
           }
         }
         main {
+          title
+          text
           formats {
             image {
               childImageSharp {
