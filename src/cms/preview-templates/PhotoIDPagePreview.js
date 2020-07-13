@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { PhotoIDPageTemplate } from '../../templates/photoID-page'
 
-const PhotoIDPagePreview = ({getAsset, entry, getAsset }) => {
+const PhotoIDPagePreview = ({getAsset, entry }) => {
   const entryFormats = entry.getIn(['data', 'main', 'formats'])
   const formats = entryFormats ? entryFormats.toJS() : []
 
