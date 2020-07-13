@@ -12,7 +12,7 @@ const StudioPagePreview = ({ entry, getAsset }) => {
         title={data.title}
         heading={data.heading}
         description={data.description}
-        studioIntro={data.intro || { blurbs: [] }}
+        studioIntro={data.studioIntro || { blurbs: [] }}
       />
     )
   } else {

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Img from "gatsby-image";
 
 
-const PageHeader = ({ image, title, heading, description }) => (
+const PageHeader = ({ image, title, description }) => (
   <section
     className="content pb-0 mb-0"
     style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
@@ -48,7 +48,6 @@ const PageHeader = ({ image, title, heading, description }) => (
 PageHeader.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   description: PropTypes.string,
 };
 
