@@ -38,12 +38,22 @@ intro:
       text: >
         Conseils et vente d'appareils photos, films couleurs et N&B et des accessoires.
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: Veronique Duroy
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
+      Photographe très aimable et professionnel, qui a réalisé un portrait dont je suis pleinement satisfaite, ce qui ne m'était pas arrivé depuis longtemps. J'y reviendrai sans hésiter!
+  - author: pauline garbiso
     quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
+      Un monsieur adorable, professionnel et arrangeant. Merci encore! Je recommande à 100%.
+  - author: Cath
+    quote: >-
+      Un photographe doué, charmant , qui sait vous mettre à l'aise. Si vous peinez avec votre image, et que vous souhaitez ressortir avec une photo de vous qui vous plaise, même pour une photo officielle, c'est là qu'il faut aller!  Bravo à ce monsieur!
+  - author: Delphine Julhes Deodat
+    quote: >-
+      Très bon photographe. Je le recommande car il met à l'aise et les photos sont superbes. Bravo à lui pour sa gentillesse et son professionnalisme.
+  - author: H Chadya
+    quote: >-
+      Besoin de photo d’identité pour mon fils de 7 mois le photographe est très pro très attentif à l’enfant défi relevé haut la main photo juste parfaite! Compter 25€ pour 6 photos d’identité bébé et 15€ les 6 pour adultes. C’est un peu cher c’est vrai mais son professionnalisme et sa gentillesse les valent largement! Je ne regrette pas le photomaton près de chez moi.
+  - author: Ni Na
+    quote: >-
+      Vraiment excellent ! J'ai été accueillie chaleureusement et je suis repartie avec des photos superbes. Aucun autre photographe n'a réussi à a réaliser d'aussi jolies photos pour documents officiels. Je le recommande très fortement. Ne perdez plus votre argent dans les photomaton ou vous ressortirez gris... Un professionnel de qualité ! À très bientôt!
 ---

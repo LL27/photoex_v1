@@ -57,12 +57,12 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="section section--gradient has-background-grey-darker">
+    <section className="section section--gradient has-background-dark-grey">
       <div className="container">
         <div className="section">
-          <div className="columns is-mobile">
+
             <Testimonials testimonials={testimonials} />
-          </div>
+
         </div>
       </div>
     </section>
