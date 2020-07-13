@@ -3,7 +3,7 @@ templateKey: "index-page"
 title: Votre Studio & Labo Photo  À Paris 12
 image: /img/storefront_site.png
 description: >-
-  Depuis plus de 30 ans, le studio Photo Expression réalise des photos d'identité et des portraits pour les particuliers comme pour les professionnels. 
+  Depuis plus de 30 ans, le studio Photo Expression réalise des photos d'identité et des portraits. 
 intro:
   heading: Nos Services
   blurbs:

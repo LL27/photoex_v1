@@ -17,17 +17,17 @@ export const IndexPageTemplate = ({
   <React.Fragment>
     <section
       className="content pb-0 mb-0"
-      style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
+      style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)", borderTop: ".025rem solid hsl(0, 0%, 86%)" }}
     >
       <div className="columns is-vcentered">
         <div className="column is-multiline is-one-third">
           <div className="hero">
             <div className="hero-body">
-              <h1 className="is-size-4-tablet is-size-1-desktop is-size-1-widescreen">
+              <h1 className="is-size-3-tablet is-size-1-desktop is-size-1-widescreen" style={{marginBottom: '.5rem'}}>
                 {title}
               </h1>
-              <p className="hero-description">{description}</p>
-              <button className="button is-small">NOUS CONTACTER</button>
+              <p className="is-size-6 is-size-5-tablet hero-description">{description}</p>
+              <button className="button is-small-tablet is-fullwidth">NOUS CONTACTER</button>
             </div>
           </div>
         </div>
@@ -42,15 +42,16 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="section">
+    <section className="section" style={{backgroundColor: "rgb(74, 74, 74)", color: "hsl(0, 0%, 86%)"}}>
       <div className="content">
-        <p className="title is-5-mobile is-5-desktop is-3-widescreen has-text-centered">
-          {intro.heading}
-        </p>
+
 
         <div className="container">
           <div className="columns">
             <div className="column">
+               <p className="title is-5-mobile is-5-desktop is-3-widescreen" style={{color: "hsl(0, 0%, 86%)"}}>
+          {intro.heading}
+        </p>
               <Features gridItems={intro.blurbs} columnSize="is-4" />
             </div>
           </div>
@@ -59,12 +60,10 @@ export const IndexPageTemplate = ({
     </section>
     <section className="section section--gradient has-background-dark-grey">
       <div className="container">
-        <div className="section">
 
             <Testimonials testimonials={testimonials} />
 
         </div>
-      </div>
     </section>
   </React.Fragment>
 );
