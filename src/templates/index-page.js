@@ -75,7 +75,6 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
   intro: PropTypes.shape({
     heading: PropTypes.string,
-    description: PropTypes.string,
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
@@ -122,7 +121,6 @@ export const pageQuery = graphql`
         description
         intro {
           heading
-          description
           blurbs {
             image {
               childImageSharp {
