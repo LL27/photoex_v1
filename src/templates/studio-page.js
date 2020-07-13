@@ -15,7 +15,7 @@ export const StudioPageTemplate = ({
 }) => (
   <React.Fragment>
 
-    <PageHeader image={image} title={title} heading={heading} description={description}/>
+    <PageHeader image={image} title={title} description={description}/>
 
     <section className="section section--gradient">
       <div className="columns">

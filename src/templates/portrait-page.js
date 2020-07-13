@@ -9,7 +9,6 @@ import Content, { HTMLContent } from '../components/Content'
 export const PortraitPageTemplate = ({
   title,
   image,
-  heading,
   description,
   content,
   contentComponent
@@ -19,7 +18,7 @@ export const PortraitPageTemplate = ({
   const PageContent = contentComponent || Content
   return (
     <React.Fragment>
-      <PageHeader image={image} title={title} heading={heading} description={description}/>
+      <PageHeader image={image} title={title} description={description}/>
 
       <section className="section section--gradient" style={{paddingTop: 0}}>
         <div className="container">
@@ -42,7 +41,6 @@ export const PortraitPageTemplate = ({
 PortraitPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -58,7 +56,6 @@ const PortraitPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         image={post.frontmatter.image}
-        heading={post.frontmatter.heading}
         description={post.frontmatter.description}
       />
     </Layout>
@@ -78,7 +75,6 @@ export const portraitPageQuery = graphql`
       frontmatter {
         title
         description
-        heading
         image {
           childImageSharp {
             fluid(maxWidth: 1024, quality: 100) {
