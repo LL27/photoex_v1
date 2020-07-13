@@ -5,6 +5,7 @@ image: /img/storefront_site.png
 description: >-
   Depuis plus de 30 ans, le studio Photo Expression réalise des photos d'identité et des portraits pour les particuliers comme pour les professionnels. 
 intro:
+  heading: Nos Services
   blurbs:
     - image: /img/photoID.png
       title: PHOTO  D’IDENTITÉ

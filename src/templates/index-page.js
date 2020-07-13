@@ -45,7 +45,7 @@ export const IndexPageTemplate = ({
     <section className="section">
       <div className="content">
         <p className="title is-5-mobile is-5-desktop is-3-widescreen has-text-centered">
-          NOS SERVICES
+          {intro.heading}
         </p>
 
         <div className="container">
@@ -74,6 +74,8 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
@@ -119,6 +121,8 @@ export const pageQuery = graphql`
         }
         description
         intro {
+          heading
+          description
           blurbs {
             image {
               childImageSharp {
