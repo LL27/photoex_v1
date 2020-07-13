@@ -10,7 +10,6 @@ import Content, { HTMLContent } from "../components/Content";
 export const PhotoIDPageTemplate = ({
   title,
   image,
-  heading,
   description,
   main,
   content,
@@ -22,18 +21,18 @@ export const PhotoIDPageTemplate = ({
       <PageHeader
         image={image}
         title={title}
-        heading={heading}
         description={description}
       />
+      <PhotoFormats heading={main.heading} description={main.description} formats={main.formats} />
 
-      <section className="section section--gradient">
+      <section className="section section--gradient" style={{paddingTop: 0}}>
         <div className="container">
           <div className="columns">
-            <div className="column is-12">
-              <div className="section">
-                <PhotoFormats title={main.title} text={main.text} formats={main.formats} />
+            <div className="column is-10 is-offset-1">
+
+
                 <PageContent className="content" content={content} />
-              </div>
+
             </div>
           </div>
         </div>
@@ -45,13 +44,12 @@ export const PhotoIDPageTemplate = ({
 PhotoIDPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   main: PropTypes.shape({
-    title: PropTypes.string,
-    text: PropTypes.string,
+    heading: PropTypes.string,
+    description: PropTypes.string,
     formats: PropTypes.array,
   }),
 };
@@ -65,7 +63,6 @@ const PhotoIDPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         image={post.frontmatter.image}
-        heading={post.frontmatter.heading}
         description={post.frontmatter.description}
         main={post.frontmatter.main}
       />
@@ -86,7 +83,6 @@ export const photoIDPageQuery = graphql`
       frontmatter {
         title
         description
-        heading
         image {
           childImageSharp {
             fluid(maxWidth: 1024, quality: 100) {
@@ -95,8 +91,8 @@ export const photoIDPageQuery = graphql`
           }
         }
         main {
-          title
-          text
+          heading
+          description
           formats {
             image {
               childImageSharp {

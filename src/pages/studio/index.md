@@ -14,7 +14,7 @@ studioIntro:
         Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
     - image: /img/portrait.jpg
       title: PORTRAIT  D’ART
-      path: /studio
+      path: /portrait
       text: >
         Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
 ---

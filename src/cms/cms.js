@@ -2,15 +2,26 @@ import CMS from 'netlify-cms-app'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 import cloudinary from 'netlify-cms-media-library-cloudinary'
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
+
 import IndexPagePreview from './preview-templates/IndexPagePreview'
+//import StudioPagePreview from './preview-templates/StudioPagePreview'
+import PhotoIDPagePreview from './preview-templates/PhotoIDPagePreview'
+//import PortraitPagePreview from './preview-templates/PortraitPagePreview'
+//import LaboPagePreview from './preview-templates/LaboPagePreview'
+//import EncadrementPagePreview from './preview-templates/EncadrementPagePreview'
+//import TransfertVideoPagePreview from './preview-templates/TransfertVideoPagePreview'
+//import BoutiquePagePreview from './preview-templates/BoutiquePagePreview'
+
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+//CMS.registerPreviewTemplate('studio', AboutPagePreview)
+CMS.registerPreviewTemplate('photoID', PhotoIDPagePreview)
+//CMS.registerPreviewTemplate('portrait', PortraitPagePreview)
+//CMS.registerPreviewTemplate('labo', LaboPagePreview)
+//CMS.registerPreviewTemplate('encadrement', EncadrementPagePreview)
+//CMS.registerPreviewTemplate('transferVideo', TransfertVideoPagePreview)
+//CMS.registerPreviewTemplate('boutique', BoutiquePagePreview)

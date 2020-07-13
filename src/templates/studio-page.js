@@ -17,18 +17,18 @@ export const StudioPageTemplate = ({
 
     <PageHeader image={image} title={title} heading={heading} description={description}/>
 
-    <section className="section">
+    <section className="section section--gradient">
       <div className="columns">
-        <div className="column is-one-third">
+        <div className="column is-10 is-offset-1">
             <div className="content">
               <h2>{heading}</h2>
               <p>{description}</p>
             </div>
-
+ <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
         </div>
 
 
-            <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
+
 
 
 

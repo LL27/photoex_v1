@@ -21,7 +21,7 @@ export const EncadrementPageTemplate = ({
      <React.Fragment>
       <PageHeader image={image} title={title} heading={heading} description={description}/>
 
-      <section className="section section--gradient">
+      <section className="section section--gradient" style={{paddingTop: 0}}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
