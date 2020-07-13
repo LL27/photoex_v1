@@ -2,10 +2,8 @@ import CMS from 'netlify-cms-app'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 import cloudinary from 'netlify-cms-media-library-cloudinary'
 
-import ProductPagePreview from './preview-templates/ProductPagePreview'
-
 import IndexPagePreview from './preview-templates/IndexPagePreview'
-//import StudioPagePreview from './preview-templates/StudioPagePreview'
+import StudioPagePreview from './preview-templates/StudioPagePreview'
 import PhotoIDPagePreview from './preview-templates/PhotoIDPagePreview'
 //import PortraitPagePreview from './preview-templates/PortraitPagePreview'
 //import LaboPagePreview from './preview-templates/LaboPagePreview'
@@ -18,7 +16,7 @@ CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-//CMS.registerPreviewTemplate('studio', AboutPagePreview)
+CMS.registerPreviewTemplate('studio', StudioPagePreview)
 CMS.registerPreviewTemplate('photoID', PhotoIDPagePreview)
 //CMS.registerPreviewTemplate('portrait', PortraitPagePreview)
 //CMS.registerPreviewTemplate('labo', LaboPagePreview)
