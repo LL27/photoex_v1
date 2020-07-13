@@ -3,7 +3,6 @@ templateKey: 'encadrement-page'
 path: /encadrement
 title: Encadrement
 image: /img/encadrement.jpg
-heading:  Spécialiste du portrait
 description: Cadres sur-mesure et standards
 ---
 * Plus de 200 baguettes
