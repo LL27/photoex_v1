@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { PortraitPageTemplate } from '../../templates/portrait-page'
 
-const PortraitPagePreview = ({ entry, widgetFor }) => (
+const PortraitPagePreview = ({ getAsset, entry, widgetFor }) => (
   <PortraitPageTemplate
     image={getAsset(entry.getIn(['data', 'image']))}
     title={entry.getIn(['data', 'title'])}

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { LaboPageTemplate } from '../../templates/labo-page'
 
-const LaboPagePreview = ({ entry, widgetFor }) => (
+const LaboPagePreview = ({ getAsset, entry, widgetFor }) => (
   <LaboPageTemplate
     image={getAsset(entry.getIn(['data', 'image']))}
     title={entry.getIn(['data', 'title'])}

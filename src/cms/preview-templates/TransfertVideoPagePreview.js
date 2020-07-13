@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TransfertVideoPageTemplate } from '../../templates/transfertvideo-page'
 
-const TransfertVideoPagePreview = ({ entry, widgetFor }) => (
+const TransfertVideoPagePreview = ({ getAsset, entry, widgetFor }) => (
   <TransfertVideoPageTemplate
     image={getAsset(entry.getIn(['data', 'image']))}
     title={entry.getIn(['data', 'title'])}

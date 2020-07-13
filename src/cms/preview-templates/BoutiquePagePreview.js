@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BoutiquePageTemplate } from '../../templates/boutique-page'
 
-const BoutiquePagePreview = ({ entry, widgetFor }) => (
+const BoutiquePagePreview = ({ getAsset, entry, widgetFor }) => (
   <BoutiquePageTemplate
     image={getAsset(entry.getIn(['data', 'image']))}
     title={entry.getIn(['data', 'title'])}
@@ -14,9 +14,9 @@ const BoutiquePagePreview = ({ entry, widgetFor }) => (
 BoutiquePagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
-    getAsset: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
+  getAsset: PropTypes.func,
 
 }
 
