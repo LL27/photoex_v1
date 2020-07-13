@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
               <h1 className="is-size-3-tablet is-size-1-desktop is-size-1-widescreen" style={{marginBottom: '.5rem'}}>
                 {title}
               </h1>
-              <p className="is-size-6 is-size-5-tablet hero-description">{description}</p>
+              <p className="is-size-5-mobile is-size-6 is-size-5-desktop hero-description">{description}</p>
               <button className="button is-small-tablet is-fullwidth">NOUS CONTACTER</button>
             </div>
           </div>
