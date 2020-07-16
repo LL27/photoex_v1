@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import GoogleMap from '../components/GoogleMap'
 
 import mapbg from "../img/map-bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,32 +13,22 @@ const Footer = class extends React.Component {
     return (
       <React.Fragment>
 
-        <div className="full-width-map-container" style={{ backgroundImage: `url(${mapbg})` }}>
+        <div className="map-container">
 
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  backgroundColor: "white",
-                  opacity: 0.7,
-                  maxWidth: "100%",
-                  padding: "1rem",
-                }}
-              >
-                <div className="level is-mobile">
-                  <span className="map-icon level-item">
-                    <FontAwesomeIcon icon={faMapMarker} />
-                  </span>
-                  <p className="level-item footer-nav-item-inverse">
-                    {" "}
-                    Le studio se situe en face du 128 rue de Charenton,
-                    <br />
-                    entre les sorties de métro Gare de Lyon et Reuilly-Diderot.
-                  </p>
-                </div>
-              </div>
-               </div>
+            <div className="container" style={{height: 400, minWidth: 320}}>
+              <GoogleMap/>
+            </div>
+
+
+
+
+            <div className="container" style={{height: 400, minWidth: 320}}>
+              <div style={{ backgroundImage: `url(${mapbg}, height: '100%', width: '100%')`}}>  </div>
+            </div>
+          </div>
+
+
+
 
 
 
