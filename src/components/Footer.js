@@ -13,19 +13,12 @@ const Footer = class extends React.Component {
     return (
       <React.Fragment>
 
-        <div className="map-container">
 
-            <div className="container" style={{height: 400, minWidth: 320}}>
-              <GoogleMap/>
+            <div className="full-width-map-container">
+             <GoogleMap />
             </div>
 
 
-
-
-            <div className="container" style={{height: 400, minWidth: 320}}>
-              <div style={{ backgroundImage: `url(${mapbg}, height: '100%', width: '100%')`}}>  </div>
-            </div>
-          </div>
 
 
 
@@ -36,7 +29,7 @@ const Footer = class extends React.Component {
 
       <footer id="footer" className="footer has-background-black has-text-white-ter">
 
-
+      <div className="content">
         <div className="columns">
           <div className="column is-one-third">
             <div className="content">
@@ -127,6 +120,7 @@ const Footer = class extends React.Component {
               </ul>
             </div>
           </div>
+        </div>
         </div>
       </footer>
             </React.Fragment>

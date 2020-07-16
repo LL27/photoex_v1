@@ -9,11 +9,11 @@ const FeatureGrid = ({ gridItems, columnSize }) => (
     {gridItems.map((item) => (
       <div key={item.title} className={`column is-multiline ${columnSize}`}>
 
-        <div className="card">
-            <div className="card-image">
+        <div className="menu-card">
+            <div className="menu-card-image">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
-            <div className="card-content">
+            <div className="menu-card-content">
                  <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">{item.title}</Link>
 
 
