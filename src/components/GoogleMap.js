@@ -64,43 +64,44 @@ export class MapContainer extends React.Component {
           visible={this.state.showingInfoWindow}
           onClose={this.onClose}
         >
-          <div className="card" style={{maxWidth: 180, padding: 0}}>
-            <div className="card-content" style={{padding: 0}}>
-              <div className="media">
-                <div className="media-left">
+          <div className="card" style={{ maxWidth: 180, padding: 0 }}>
+            <div className="card-image">
+              <figure className="image">
+                <img
+                  src={this.state.selectedPlace.image}
+                  alt="Photo Expression"
+                  style={{ maxHeight: 100 }}
+                />
+              </figure>
+            </div>
+            <div className="card-content" style={{ padding: 0, fontSize: 11  }}>
+              <div className="content">
+                <p style={{ margin: "0.5rem 0rem", fontWeight: "600" }}>
+                  {this.state.selectedPlace.name} <br />
+                  <small style={{ fontWeight: "300"}}>
+                    {this.state.selectedPlace.address}
+                  </small>
+                </p>
 
-                  <figure className="image is-48x48">
-                    <img
-                      src={this.state.selectedPlace.image}
-                      alt="Photo Expression"
-                      style={{maxHeight: 100}}
-                    />
-                  </figure>
-                </div>
-                <div className="media-content">
+                <h6
+                  style={{
+                    marginTop: "0rem",
+                    marginBottom: ".5rem",
+                    fontWeight: "200",
+                    fontSize: 10
 
-                  <div className="content">
+                  }}
+                >
+                  {this.state.selectedPlace.instructions}
+                </h6>
 
-   <h5 style={{margin: '0.5rem 0rem', }}>{this.state.selectedPlace.name} <br/><small style={{fontWeight: '300'}}>{this.state.selectedPlace.address}</small></h5>
-
-                  <h6 style={{marginTop: '0rem', marginBottom: '.5rem', fontWeight: 'medium'}}>{this.state.selectedPlace.instructions}</h6>
-
-      <a
-                  style={{ textDecoration: "underline" }}
+                <a
+                  className="pull-right"
+                  style={{ fontWeight: "600" }}
                   href="https://www.google.com/maps/place/Photo+Expression/@48.8462163,2.3795119,15z/data=!4m5!3m4!1s0x0:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119"
                 >
-                  <small>Ouvrir sur Google Maps</small>
+                  <small>Ouvrir dans Google Maps</small>
                 </a>
-
-
-
-
-                   </div>
-                </div>
-              </div>
-              <div className="content">
-
-
               </div>
             </div>
           </div>
