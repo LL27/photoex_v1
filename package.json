@@ -22,7 +22,6 @@
     "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.2.5",
-    "gatsby-source-googlemaps-static": "^1.1.12",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.4.7",
     "google-maps-react": "^2.0.6",

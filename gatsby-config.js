@@ -38,13 +38,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-googlemaps-static",
-      options: {
-        key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
-        center: "48.8462163, 2.3795119",
-      },
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
