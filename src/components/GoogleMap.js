@@ -47,7 +47,7 @@ export class MapContainer extends React.Component {
           lat: 48.8462163,
           lng: 2.3795119,
         }}
-        zoom={16}
+        zoom={15}
         onReady={this.fetchPlaces}
       >
         <Marker
@@ -64,17 +64,18 @@ export class MapContainer extends React.Component {
           visible={this.state.showingInfoWindow}
           onClose={this.onClose}
         >
-          <div className="card" style={{ maxWidth: 180, padding: 0 }}>
+
+          <div className="card" style={{ maxWidth: 240}}>
             <div className="card-image">
               <figure className="image">
                 <img
                   src={this.state.selectedPlace.image}
                   alt="Photo Expression"
-                  style={{ maxHeight: 100 }}
+
                 />
               </figure>
             </div>
-            <div className="card-content" style={{ padding: 0, fontSize: 11  }}>
+            <div className="card-content" style={{ padding: 0 }}>
               <div className="content">
                 <p style={{ margin: "0.5rem 0rem", fontWeight: "600" }}>
                   {this.state.selectedPlace.name} <br />
@@ -88,7 +89,7 @@ export class MapContainer extends React.Component {
                     marginTop: "0rem",
                     marginBottom: ".5rem",
                     fontWeight: "200",
-                    fontSize: 10
+                    fontSize: '11px'
 
                   }}
                 >

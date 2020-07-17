@@ -70,11 +70,12 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
   align-items: flex-start
 .full-width-map-container
   width: 100vw
-  height: 400px
+  height: 500px
   position: relative
   left: 50%
   right: 50%
   margin: 2em -50vw
+  margin-bottom: 0
 .map-container
   height: 400px
   font-family: $family-navbar
@@ -283,10 +284,11 @@ footer.footer
   max-height: $navbar-height
 .navbar-burger
   height: inherit
-.navbar-menu.is-active .navbar-start .navbar-item
-  color: $white-ter !important
+
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active
+  color: $body-color !important
+
 .navbar-menu.is-active .navbar-end .navbar-item
-  color: $white-ter !important
 
 .navbar.navbar-bottom
   padding: 0px 15px
@@ -297,6 +299,7 @@ footer.footer
 .navbar-top
   padding: 1rem 0
   margin-bottom: 0 !important
+  height: 100px
 .logo-svg
   max-height: 3rem !important
 

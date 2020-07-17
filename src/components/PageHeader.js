@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Img from "gatsby-image";
 
 
+
 const PageHeader = ({ image, title, description }) => (
   <section
     className="content pb-0 mb-0"

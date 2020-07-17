@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 import logo from "../img/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -141,13 +142,13 @@ const Navbar = class extends React.Component {
             </div>
 
             <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/contact/examples">
+              <AnchorLink className="navbar-item" to="/#footer" title="INFO PRATIQUE">
                 <FontAwesomeIcon
                   icon={faInfoCircle}
                   style={{ marginRight: 5 }}
                 />
                 INFO PRATIQUE
-              </Link>
+              </AnchorLink>
 
               <div className="level is-hidden-tablet has-text-centered">
                 <hr />

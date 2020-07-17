@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
 
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
@@ -49,12 +51,13 @@ export const IndexPageTemplate = ({
         </div>
 
         <div className="column is-two-thirds">
-          <Img
-            fluid={
-              !!image.childImageSharp ? image.childImageSharp.fluid : image
-            }
-            style={{ maxHeight: 500 }}
-          />
+          <PreviewCompatibleImage
+                        imageInfo={{
+                          image: image,
+                          alt: `Le Magasin Photo Expression`,
+                        }}
+                      />
+
         </div>
       </div>
       </div>
