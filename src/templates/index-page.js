@@ -17,7 +17,8 @@ export const IndexPageTemplate = ({
 }) => (
   <React.Fragment>
     <section
-    className="container is-fullwidth pb-0 mb-0"
+    className="section is-fullwidth pb-0 mb-0"
+     style={{paddingTop:0}}
   >
     <div className="columns is-vcentered">
       <div className="column is-one-third">
