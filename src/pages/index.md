@@ -28,7 +28,7 @@ intro:
       text: >
         Plus de 200 baguettes, caches et passe partout standards et sur-mesures.
     - image: /img/videotransfer.jpg
-      title: TRANSFER  VIDEO
+      title: TRANSFÉR T VIDEO
       path: /transfertvideo
       text: >
         Nous réalisons des transferts vidéo et audio vers CD de tout modèle de cassettes.

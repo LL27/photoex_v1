@@ -17,20 +17,18 @@ export const IndexPageTemplate = ({
 }) => (
   <React.Fragment>
     <section
-    className="content pb-0 mb-0"
-    style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
+    className="container is-fullwidth pb-0 mb-0"
   >
-    <div className="columns is-gapless is-vcentered">
+    <div className="columns is-vcentered">
       <div className="column is-one-third">
-        <div className="hero ml-2">
-          <div className="hero-body content">
+        <div className="hero">
+          <div className="hero-body">
 
-                 <div className="container">
-                    <h1 className="is-capitalized is-size-3-tablet is-size-1-desktop is-size-1-widescreen">
+                 <div className="content">
+                    <h1 className="is-capitalized is-size-3-tablet is-size-1-desktop is-size-1-widescreen" style={{marginBottom:0}}>
               {title}
             </h1>
             <p
-              className=""
               style={{
                 color: "#555C5C",
               }}
@@ -40,7 +38,8 @@ export const IndexPageTemplate = ({
 
                         <a
                   href="tel:0146286516"
-                  className="button btn is-small-tablet is-fullwidth"
+                  className="button btn is-small is-fullwidth"
+                  style={{marginTop:'1.5rem'}}
                 >
                   {" "}
                   NOUS CONTACTER
@@ -53,13 +52,14 @@ export const IndexPageTemplate = ({
       </div>
 
       <div className="column is-two-thirds">
+
+
         <PreviewCompatibleImage
             imageInfo={{
               image: image,
               alt: `Le Magasin Photo Expression`,
             }}
           />
-
       </div>
     </div>
   </section>
@@ -67,9 +67,10 @@ export const IndexPageTemplate = ({
 
     <section
       className="section"
-      style={{ backgroundColor: "rgb(74, 74, 74)", color: "hsl(0, 0%, 86%)" }}
+      style={{ backgroundColor: "rgb(74, 74, 74)", color: "hsl(0, 0%, 86%)", borderTop: "1.5rem solid hsl(0, 0%, 86%)"  }}
+
     >
-      <div className="cont;ainer">
+      <div className="container">
         <div className="columns">
           <div className="column">
             <p
@@ -135,8 +136,9 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 1024, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 900, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }

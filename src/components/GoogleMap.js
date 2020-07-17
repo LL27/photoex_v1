@@ -74,7 +74,7 @@ export class MapContainer extends React.Component {
                 />
               </figure>
             </div>
-            <div className="card-content" style={{ padding: 0 }}>
+            <div className="card-content" style={{ padding: '0  .5rem'}}>
               <div className="content">
                 <p style={{ margin: "0.5rem 0rem", fontWeight: "600" }}>
                   {this.state.selectedPlace.name} <br />

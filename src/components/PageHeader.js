@@ -12,22 +12,27 @@ const PageHeader = ({ image, title, description }) => (
   >
     <div className="columns is-gapless is-vcentered">
       <div className="column is-one-third">
-        <div className="hero ml-2">
-          <div className="hero-body content">
+        <div className="hero">
+          <div className="hero-body">
 
-                 <div className="container">
-                    <h1 className="is-capitalized is-size-3-tablet is-size-1-desktop is-size-1-widescreen">
+                 <section className="section" style={{paddingTop: '1rem', paddingBottom: '1rem'}}>
+                    <div className="content">
+
+
+                    <h1 className="is-capitalized is-size-3-tablet is-size-2-desktop is-size-1-widescreen" style={{marginBottom:0}}>
               {title}
             </h1>
             <p
               className=""
               style={{
                 color: "#555C5C",
+
               }}
             >
               {description}
             </p>
-                 </div>
+                   </div>
+                 </section>
 
 
            </div>
