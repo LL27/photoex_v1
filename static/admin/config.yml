@@ -10,6 +10,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+logo_url: static/img/logo.svg
 
 collections:
   - name: "pages"

@@ -1,6 +1,8 @@
 import CMS from 'netlify-cms-app'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 import cloudinary from 'netlify-cms-media-library-cloudinary'
+import { fr } from 'netlify-cms-locales';
+
 
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import StudioPagePreview from './preview-templates/StudioPagePreview'
@@ -14,6 +16,8 @@ import BoutiquePagePreview from './preview-templates/BoutiquePagePreview'
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
+
+CMS.registerLocale('fr', fr);
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('studio', StudioPagePreview)
