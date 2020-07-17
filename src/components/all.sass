@@ -5,9 +5,16 @@
 
 // colors:
 
-$white-ter: hsl(0, 0%, 96%)
-$grey-dark: hsl(0, 0%, 29%)
 $grey-darker: hsl(0, 0%, 21%)
+$grey-dark: hsl(0, 0%, 29%)
+$grey: hsl(0, 0%, 48%)
+$grey-light: hsl(0, 0%, 71%)
+$grey-lighter: hsl(0, 0%, 86%)
+$grey-lightest: hsl(0, 0%, 93%)
+$white-ter: hsl(0, 0%, 96%)
+$white-bis: hsl(0, 0%, 98%)
+$white: hsl(0, 0%, 100%)
+
 $radius-large: 6px
 $radius-small: 2px
 $site-red: rgb(233, 107, 103)
@@ -33,8 +40,8 @@ $primary-invert: $site-red-invert
 $body-color: $grey-dark
 $background: $white-ter
 
-$button-color: $site-red-invert
-$button-border-color: $site-red-invert
+$button-color: $white-bis !important
+$button-border-color: $white-bis !important
 $button-background-color: $site-red
 $family-navbar: 'Lato', sans-serif
 $family-primary: 'Roboto', sans-serif;
@@ -43,7 +50,7 @@ $family-secondary: 'Roboto', sans-serif;
 
 $text: $family-secondary
 $card-background-color: #fff
-$card-color: $scheme-main
+$card-color: $grey-dark
 
 
 body
@@ -101,14 +108,6 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle
     justify-content: center
     align-items: center
 
-.btn
-
-    background-color: $site-red
-    border-radius: .0
-    text-decoration: none
-    font-weight: 700
-    color: $site-red-invert
-    text-align: center
 
     -webkit-transition: all .15s ease
     transition: all .15s ease
@@ -207,14 +206,18 @@ footer.footer
   flex-direction: column
   justify-content: space-evenly
 
-
 .menu-card-content a.title
-  color: $body-color !important
+  color: $grey-dark !important
   max-width: fit-content
-  height: 2rem
+  height: auto
   margin-bottom: .5rem
+  border-bottom: 4px $grey-lightest solid !important
+  line-height: 2
+  transition: 0.3s
+
   &:hover
-    border-bottom: 3px $body-color solid
+    color: $grey-darker !important
+    border-bottom: 4px $grey-darker solid !important
 
 .menu-label
   font-size: 1em !important
@@ -278,6 +281,7 @@ footer.footer
 
 .navbar-menu.is-active .navbar-item:hover, .navbar-menu.is-active .navbar-link:hover, .navbar-menu.is-active .navbar-dropdown .navbar-item:hover
    background-color: $grey-dark
+   color: $white-ter !important
 
 .navbar > .container
   min-height: $navbar-height

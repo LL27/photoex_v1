@@ -33,7 +33,6 @@ export class MapContainer extends React.Component {
     const mapStyles = {
       width: "100%",
       height: "100%",
-      position: "relative",
       display: "block",
     };
     const containerStyle = { display: "block", width: "100%", height: "100%" };

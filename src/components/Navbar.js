@@ -39,7 +39,6 @@ const Navbar = class extends React.Component {
       }
     );
   };
-
   render() {
     return (
       <div className="full-width-container">
@@ -57,6 +56,7 @@ const Navbar = class extends React.Component {
               <span className="icon">
                 <FontAwesomeIcon icon={faPhone} />
               </span>
+
               <a href="tel:0146286516" className="heading address">
                 Nous contacter
                 <br />
@@ -76,16 +76,18 @@ const Navbar = class extends React.Component {
               <p className="heading"> </p>
             </div>
 
-            <Link to="/" className="info-tile">
+            <AnchorLink className="info-tile" to="/#footer" title="Adresse">
               <span className="icon">
                 <FontAwesomeIcon icon={faMapMarker} />
+
+
               </span>
 
               <p className="heading address">
                 2 rue Beccaria <br />
                 75012 Paris
               </p>
-            </Link>
+            </AnchorLink>
           </div>
         </div>
 
@@ -142,7 +144,11 @@ const Navbar = class extends React.Component {
             </div>
 
             <div className="navbar-end has-text-centered">
-              <AnchorLink className="navbar-item" to="/#footer" title="INFO PRATIQUE">
+              <AnchorLink
+                className="navbar-item"
+                to="/#footer"
+                title="INFO PRATIQUE"
+              >
                 <FontAwesomeIcon
                   icon={faInfoCircle}
                   style={{ marginRight: 5 }}
@@ -154,8 +160,8 @@ const Navbar = class extends React.Component {
                 <hr />
 
                 <div className="level-item no-flex has-text-white-ter address">
-                  <Link
-                    to="/"
+                  <AnchorLink
+                    to="/#footer"
                     className="info-tile-mobile"
                     style={{ lineHeight: 2.2 }}
                   >
@@ -163,7 +169,7 @@ const Navbar = class extends React.Component {
                       <FontAwesomeIcon icon={faMapMarker} />
                     </span>
                     2 rue Beccaria, 75012 Paris
-                  </Link>
+                  </AnchorLink>
                 </div>
                 <div className="level-item no-flex address">
                   <a

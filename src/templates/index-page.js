@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 import Img from "gatsby-image";
 import Layout from "../components/Layout";
@@ -18,72 +17,72 @@ export const IndexPageTemplate = ({
 }) => (
   <React.Fragment>
     <div
-      className="full-width-container pb-0 mb-0"
-      style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)", borderTop: ".025rem solid hsl(0, 0%, 86%)", width: '100vw' }}
+      className="pb-0 mb-0"
+      style={{
+        borderBottom: "1.5rem solid hsl(0, 0%, 86%)",
+        borderTop: ".025rem solid hsl(0, 0%, 86%)",
+        width: "100vw",
+      }}
     >
-
-    <div
-      className="hero-container"
-      style={{display: 'flex'}}
-     >
-      <div className="hero-left">
-
-      </div>
-      <div className="hero-right">
-
-      </div>
-
-    </div>
-
       <div className="columns is-gapless is-vcentered">
         <div className="column is-one-third">
           <div className="hero">
             <div className="hero-body">
               <div className="content">
-              <h1 className="is-size-3-tablet is-size-1-desktop is-size-1-widescreen" style={{marginBottom: '.5rem'}}>
-                {title}
-              </h1>
-              <p className="is-size-5-mobile is-size-6 is-size-5-desktop hero-description">{description}</p>
-              <button className="button is-small-tablet is-fullwidth">NOUS CONTACTER</button>
-            </div>
+                <h1
+                  className="is-size-3-tablet is-size-1-desktop is-size-1-widescreen"
+                  style={{ marginBottom: ".5rem" }}
+                >
+                  {title}
+                </h1>
+                <p className="is-size-5-mobile is-size-6 is-size-5-desktop hero-description">
+                  {description}
+                </p>
+                <a
+                  href="tel:0146286516"
+                  className="button btn is-small-tablet is-fullwidth"
+                >
+                  {" "}
+                  NOUS CONTACTER
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="column is-two-thirds">
           <PreviewCompatibleImage
-                        imageInfo={{
-                          image: image,
-                          alt: `Le Magasin Photo Expression`,
-                        }}
-                      />
-
+            imageInfo={{
+              image: image,
+              alt: `Le Magasin Photo Expression`,
+            }}
+          />
         </div>
       </div>
-      </div>
+    </div>
 
-    <section className="section" style={{backgroundColor: "rgb(74, 74, 74)", color: "hsl(0, 0%, 86%)"}}>
-      <div className="content">
-
-
-        <div className="container">
-          <div className="columns">
-            <div className="column">
-               <p className="title is-5-mobile is-5-desktop is-3-widescreen" style={{color: "hsl(0, 0%, 86%)"}}>
-          {intro.heading}
-        </p>
-              <Features gridItems={intro.blurbs} columnSize="is-4" />
-            </div>
+    <section
+      className="section"
+      style={{ backgroundColor: "rgb(74, 74, 74)", color: "hsl(0, 0%, 86%)" }}
+    >
+      <div className="cont;ainer">
+        <div className="columns">
+          <div className="column">
+            <p
+              className="title is-5-mobile is-5-desktop is-3-widescreen"
+              style={{ color: "hsl(0, 0%, 86%)" }}
+            >
+              {intro.heading}
+            </p>
+            <Features gridItems={intro.blurbs} columnSize="is-4" />
           </div>
         </div>
       </div>
     </section>
-    <section className="section section--gradient has-background-dark-grey">
+    <section className="section">
       <div className="container">
-
-            <Testimonials testimonials={testimonials} />
-
-        </div>
+        <Testimonials testimonials={testimonials} />
+      </div>
     </section>
   </React.Fragment>
 );
