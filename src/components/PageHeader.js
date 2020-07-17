@@ -9,7 +9,7 @@ const PageHeader = ({ image, title, description }) => (
     className="content pb-0 mb-0"
     style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
   >
-    <div className="columns is-vcentered">
+    <div className="columns is-gapless is-vcentered">
       <div className="column is-one-third">
         <div className="hero ml-2">
           <div className="hero-body content">
