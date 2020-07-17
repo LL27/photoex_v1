@@ -16,50 +16,54 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <React.Fragment>
-    <div
-      className="pb-0 mb-0"
-      style={{
-        borderBottom: "1.5rem solid hsl(0, 0%, 86%)",
-        borderTop: ".025rem solid hsl(0, 0%, 86%)",
-        width: "100vw",
-      }}
-    >
-      <div className="columns is-gapless is-vcentered">
-        <div className="column is-one-third">
-          <div className="hero">
-            <div className="hero-body">
-              <div className="content">
-                <h1
-                  className="is-size-3-tablet is-size-1-desktop is-size-1-widescreen"
-                  style={{ marginBottom: ".5rem" }}
-                >
-                  {title}
-                </h1>
-                <p className="is-size-5-mobile is-size-6 is-size-5-desktop hero-description">
-                  {description}
-                </p>
-                <a
+    <section
+    className="content pb-0 mb-0"
+    style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
+  >
+    <div className="columns is-gapless is-vcentered">
+      <div className="column is-one-third">
+        <div className="hero ml-2">
+          <div className="hero-body content">
+
+                 <div className="container">
+                    <h1 className="is-capitalized is-size-3-tablet is-size-1-desktop is-size-1-widescreen">
+              {title}
+            </h1>
+            <p
+              className=""
+              style={{
+                color: "#555C5C",
+              }}
+            >
+              {description}
+            </p>
+
+                        <a
                   href="tel:0146286516"
                   className="button btn is-small-tablet is-fullwidth"
                 >
                   {" "}
                   NOUS CONTACTER
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
+                 </div>
 
-        <div className="column is-two-thirds">
-          <PreviewCompatibleImage
+
+           </div>
+        </div>
+      </div>
+
+      <div className="column is-two-thirds">
+        <PreviewCompatibleImage
             imageInfo={{
               image: image,
               alt: `Le Magasin Photo Expression`,
             }}
           />
-        </div>
+
       </div>
     </div>
+  </section>
+
 
     <section
       className="section"
