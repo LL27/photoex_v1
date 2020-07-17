@@ -15,19 +15,35 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <React.Fragment>
-    <section
-      className="content pb-0 mb-0"
-      style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)", borderTop: ".025rem solid hsl(0, 0%, 86%)" }}
+    <div
+      className="full-width-container pb-0 mb-0"
+      style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)", borderTop: ".025rem solid hsl(0, 0%, 86%)", width: '100vw' }}
     >
-      <div className="columns is-vcentered">
-        <div className="column is-multiline is-one-third">
+
+    <div
+      className="hero-container"
+      style={{display: 'flex'}}
+     >
+      <div className="hero-left">
+
+      </div>
+      <div className="hero-right">
+
+      </div>
+
+    </div>
+
+      <div className="columns is-gapless is-vcentered">
+        <div className="column is-one-third">
           <div className="hero">
             <div className="hero-body">
+              <div className="content">
               <h1 className="is-size-3-tablet is-size-1-desktop is-size-1-widescreen" style={{marginBottom: '.5rem'}}>
                 {title}
               </h1>
               <p className="is-size-5-mobile is-size-6 is-size-5-desktop hero-description">{description}</p>
               <button className="button is-small-tablet is-fullwidth">NOUS CONTACTER</button>
+            </div>
             </div>
           </div>
         </div>
@@ -41,7 +57,8 @@ export const IndexPageTemplate = ({
           />
         </div>
       </div>
-    </section>
+      </div>
+
     <section className="section" style={{backgroundColor: "rgb(74, 74, 74)", color: "hsl(0, 0%, 86%)"}}>
       <div className="content">
 
