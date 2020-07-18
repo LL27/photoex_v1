@@ -16,8 +16,8 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <React.Fragment>
-    <section
-    className="section is-fullwidth pb-0 mb-0"
+    <div
+    className="container is-fullwidth pb-0 mb-0"
      style={{paddingTop:0}}
   >
     <div className="columns is-vcentered">
@@ -63,7 +63,7 @@ export const IndexPageTemplate = ({
           />
       </div>
     </div>
-  </section>
+  </div>
 
 
     <section

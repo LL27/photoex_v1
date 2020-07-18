@@ -15,7 +15,6 @@ const PageHeader = ({ image, title, description }) => (
         <div className="hero">
           <div className="hero-body">
 
-                 <section className="section" style={{paddingTop: '1rem', paddingBottom: '1rem'}}>
                     <div className="content">
 
 
@@ -32,7 +31,6 @@ const PageHeader = ({ image, title, description }) => (
               {description}
             </p>
                    </div>
-                 </section>
 
 
            </div>
