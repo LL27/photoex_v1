@@ -18,22 +18,24 @@ export const PhotoIDPageTemplate = ({
   const PageContent = contentComponent || Content;
   return (
     <React.Fragment>
-      <PageHeader
-        image={image}
-        title={title}
-        description={description}
+      <PageHeader image={image} title={title} description={description} />
+      <PhotoFormats
+        heading={main.heading}
+        description={main.description}
+        formats={main.formats}
       />
-      <PhotoFormats heading={main.heading} description={main.description} formats={main.formats} />
 
-      <section className="section section--gradient" style={{paddingTop: 0}}>
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-
-
-                <PageContent className="content" content={content} />
-
+      <section className="section section--gradient">
+        <div className="columns">
+          <div className="column is-12 is-10-desktop is-offset-1-desktop">
+            <div className="columns">
+              <div className="column is-12">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                  {title}
+                </h2>
+              </div>
             </div>
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </section>

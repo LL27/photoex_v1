@@ -17,7 +17,7 @@ const FeatureGrid = ({ gridItems, columnSize }) => (
                  <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">{item.title}</Link>
 
 
-            <p className="subheading">{item.text}</p>
+            <p className="subtitle" style={{fontSize: '14px'}}>{item.text}</p>
             </div>
 
         </div>

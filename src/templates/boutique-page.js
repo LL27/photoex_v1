@@ -1,42 +1,39 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import Content, { HTMLContent } from '../components/Content'
-
+import Content, { HTMLContent } from "../components/Content";
 
 export const BoutiquePageTemplate = ({
   title,
   image,
   description,
   content,
-  contentComponent
-
-
-   }) => {
-  const PageContent = contentComponent || Content
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content;
   return (
     <React.Fragment>
-      <PageHeader image={image} title={title} description={description}/>
+      <PageHeader image={image} title={title} description={description} />
 
-      <section className="section section--gradient" style={{paddingTop: 0}}>
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
+      <section className="section section--gradient">
+        <div className="columns">
+          <div className="column is-12 is-10-desktop is-offset-1-desktop">
+            <div className="columns">
+              <div className="column is-12">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <PageContent className="content" content={content} />
               </div>
             </div>
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </section>
-   </React.Fragment>
-  )
-}
+    </React.Fragment>
+  );
+};
 
 BoutiquePageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -44,11 +41,10 @@ BoutiquePageTemplate.propTypes = {
   description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-
-}
+};
 
 const BoutiquePage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
   return (
     <Layout>
       <BoutiquePageTemplate
@@ -59,14 +55,14 @@ const BoutiquePage = ({ data }) => {
         description={post.frontmatter.description}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BoutiquePage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default BoutiquePage
+export default BoutiquePage;
 
 export const boutiquePageQuery = graphql`
   query BoutiquePage($id: String!) {
@@ -85,4 +81,4 @@ export const boutiquePageQuery = graphql`
       }
     }
   }
-`
+`;

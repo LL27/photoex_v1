@@ -5,7 +5,9 @@ import Img from "gatsby-image";
 
 
 
-const PageHeader = ({ image, title, description }) => (
+const PageHeader = ({ children, image, title, description, maxHeight }) => {
+
+  return (
   <section
     className="content pb-0 mb-0"
     style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
@@ -32,7 +34,7 @@ const PageHeader = ({ image, title, description }) => (
             </p>
                    </div>
 
-
+            {children}
            </div>
         </div>
       </div>
@@ -42,12 +44,13 @@ const PageHeader = ({ image, title, description }) => (
             fluid={
               !!image.childImageSharp ? image.childImageSharp.fluid : image
             }
-            style={{maxHeight: 340}}
+            style={{maxHeight: maxHeight ? maxHeight : "340px"}}
           />
       </div>
     </div>
   </section>
-);
+  )
+};
 
 PageHeader.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
 
         <footer
           id="footer-bottom"
-          className="footer has-background-black has-text-white-ter"
+          className="footer has-background-black-ter has-text-white-ter"
         >
           <div className="content">
             <div className="columns">
@@ -44,7 +44,7 @@ const Footer = class extends React.Component {
               <div className="column">
                 <div className="content">
                   <ul className="footer-nav" style={{ marginLeft: 0 }}>
-                    <h4>SERVICES</h4>
+                    <h4 className="has-text-white-ter">SERVICES</h4>
                     <li>
                       <Link className="footer-nav-item" to="/photoID">
                         PHOTO D'IDENTITÉ
@@ -82,7 +82,7 @@ const Footer = class extends React.Component {
               <div className="column">
                 <div className="content">
                   <ul className="footer-nav">
-                    <h4>HORAIRES</h4>
+                    <h4 className="has-text-white-ter">HORAIRES</h4>
                     <li className="footer-nav-item">
                       Mardi au samedi  <br />
                       9h15-13h et 14h-19h
@@ -94,7 +94,7 @@ const Footer = class extends React.Component {
               <div className="column">
                 <div className="content">
                   <ul className="footer-nav">
-                    <h4>{`MOYEN D'ACCÈS`}</h4>
+                    <h4 className="has-text-white-ter">{`MOYEN D'ACCÈS`}</h4>
                     <li className="footer-nav-item">
                       Bus ligne 29, arrêt Daumesnil-Diderot
                     </li>

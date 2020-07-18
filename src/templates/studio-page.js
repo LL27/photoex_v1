@@ -5,7 +5,6 @@ import Features from "../components/Features";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 
-
 export const StudioPageTemplate = ({
   title,
   image,
@@ -14,26 +13,23 @@ export const StudioPageTemplate = ({
   studioIntro,
 }) => (
   <React.Fragment>
-
-    <PageHeader image={image} title={title} description={description}/>
+    <PageHeader image={image} title={title} description={description} />
 
     <section className="section section--gradient">
       <div className="columns">
-        <div className="column is-10 is-offset-1">
-            <div className="content">
-              <h2>{heading}</h2>
+        <div className="column is-12 is-10-desktop is-offset-1-desktop">
+          <div className="columns">
+            <div className="column is-12">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
               <p>{description}</p>
             </div>
- <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
+          </div>
+
+          <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
         </div>
-
-
-
-
-
-
-        </div>
-
+      </div>
     </section>
   </React.Fragment>
 );
