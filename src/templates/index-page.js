@@ -21,7 +21,6 @@ export const IndexPageTemplate = ({
       image={image}
       title={title}
       description={description}
-      maxHeight={"480px"}
     >
       {" "}
       <a
@@ -115,15 +114,14 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query IndexPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 900, quality: 100) {
+            fluid(maxWidth: 1024, maxHeight: 600 ,quality: 100) {
               ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }

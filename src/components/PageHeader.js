@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
 
 
 
@@ -40,12 +42,9 @@ const PageHeader = ({ children, image, title, description, maxHeight }) => {
       </div>
 
       <div className="column is-two-thirds">
-        <Img
-            fluid={
-              !!image.childImageSharp ? image.childImageSharp.fluid : image
-            }
-            style={{maxHeight: maxHeight ? maxHeight : "340px"}}
-          />
+
+         <PreviewCompatibleImage imageInfo={image} />
+
       </div>
     </div>
   </section>

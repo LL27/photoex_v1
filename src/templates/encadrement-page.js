@@ -85,7 +85,7 @@ export const encadrementPageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 1024, quality: 100) {
+            fluid(maxWidth: 1024, maxHeight: 400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

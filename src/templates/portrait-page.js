@@ -19,13 +19,7 @@ export const PortraitPageTemplate = ({
   return (
     <React.Fragment>
       <PageHeader image={image} title={title} description={description} />
-      <section className="section section--gradient">
-        <div className="columns">
-          <div className="column is-12 is-10-desktop is-offset-1-desktop">
-             <PageIntro intro={intro.blurbs}/>
-          </div>
-        </div>
-      </section>
+      <PageIntro intro={intro.blurbs}/>
       <section className="section section--gradient">
         <div className="columns">
           <div className="column is-12 is-10-desktop is-offset-1-desktop">
@@ -85,7 +79,7 @@ export const portraitPageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 1024, quality: 100) {
+            fluid(maxWidth: 1024, maxHeight: 400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

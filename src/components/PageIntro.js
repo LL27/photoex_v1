@@ -7,19 +7,26 @@ const PageIntro = ({ intro }) => (
   <div>
 
     {intro.map((item) => (
-      <div key={item.title} className="container">
+      <section key={item.title} className="section">
+        <div className="container">
+          <div className="section">
 
-        <div className="intro-item">
-            <div className="image">
+        <div className="columns">
+          <div className="column is-7">
+             <div className="image">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
-            <div className="content">
+          </div>
+          <div className="column is-5">
+                <div className="content">
                  <p className="title is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">{item.title}</p>
-            <p className="subtitle" style={{fontSize: '14px'}}>{item.text}</p>
+                  <p className="subtitle" style={{fontSize: '14px'}}>{item.text}</p>
             </div>
-
+          </div>
         </div>
-      </div>
+        </div>
+          </div>
+      </section>
     ))}
   </div>
 
