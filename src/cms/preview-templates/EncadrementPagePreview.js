@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import { EncadrementPageTemplate } from '../../templates/encadrement-page'
 
 const EncadrementPagePreview = ({ getAsset, entry, widgetFor }) => (
+
   <EncadrementPageTemplate
     image={getAsset(entry.getIn(['data', 'image']))}
     title={entry.getIn(['data', 'title'])}
     description={entry.getIn(['data', 'description'])}
+    intro={entry.getIn(['data']).toJS().intro || { blurbs: [] }}
     content={widgetFor('body')}
   />
 )

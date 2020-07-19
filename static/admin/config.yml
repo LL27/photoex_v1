@@ -34,6 +34,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: Description, name: description, widget: string}
           - {label: Image, name: image, widget: image}
+          - {label: "Intro", name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Title, name: title, widget: string}]}]}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/studio/index.md"
         label: "Studio"
@@ -62,6 +63,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: Image, name: image, widget: image}
           - {label: Description, name: description, widget: string}
+          - {label: "Intro", name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Title, name: title, widget: string}]}]}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/encadrement/index.md"
         label: "Encadrement"
@@ -71,6 +73,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: Image, name: image, widget: image}
           - {label: Description, name: description, widget: string}
+          - {label: "Intro", name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Title, name: title, widget: string}]}]}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/transfertvideo/index.md"
         label: "Transfert Video"
@@ -80,6 +83,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: Image, name: image, widget: image}
           - {label: Description, name: description, widget: string}
+          - {label: "Intro", name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Title, name: title, widget: string}]}]}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/boutique/index.md"
         label: "En Boutique"
@@ -89,4 +93,5 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: Image, name: image, widget: image}
           - {label: Description, name: description, widget: string}
+          - {label: "Intro", name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Title, name: title, widget: string}]}]}
           - {label: "Body", name: "body", widget: "markdown"}

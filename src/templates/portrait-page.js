@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
+import PageIntro from "../components/PageIntro";
+
 import Content, { HTMLContent } from "../components/Content";
 
 export const PortraitPageTemplate = ({
@@ -11,23 +13,24 @@ export const PortraitPageTemplate = ({
   description,
   content,
   contentComponent,
+  intro
 }) => {
   const PageContent = contentComponent || Content;
   return (
     <React.Fragment>
       <PageHeader image={image} title={title} description={description} />
-
       <section className="section section--gradient">
         <div className="columns">
           <div className="column is-12 is-10-desktop is-offset-1-desktop">
-            <div className="columns">
-              <div className="column is-12">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-              </div>
-            </div>
-            <PageContent className="content" content={content} />
+             <PageIntro intro={intro.blurbs}/>
+          </div>
+        </div>
+      </section>
+      <section className="section section--gradient">
+        <div className="columns">
+          <div className="column is-12 is-10-desktop is-offset-1-desktop">
+      <PageContent className="content" content={content} />
+
           </div>
         </div>
       </section>
@@ -41,6 +44,9 @@ PortraitPageTemplate.propTypes = {
   description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 };
 
 const PortraitPage = ({ data }) => {
@@ -53,13 +59,19 @@ const PortraitPage = ({ data }) => {
         content={post.html}
         image={post.frontmatter.image}
         description={post.frontmatter.description}
+        intro={post.frontmatter.intro}
+
       />
     </Layout>
   );
 };
 
 PortraitPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default PortraitPage;
@@ -76,6 +88,19 @@ export const portraitPageQuery = graphql`
             fluid(maxWidth: 1024, quality: 100) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
           }
         }
       }
