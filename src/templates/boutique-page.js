@@ -18,6 +18,7 @@ export const BoutiquePageTemplate = ({
   const PageContent = contentComponent || Content;
   return (
     <React.Fragment>
+
       <PageHeader image={image} title={title} description={description} />
 
       <PageIntro intro={intro.blurbs}/>

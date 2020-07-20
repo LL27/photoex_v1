@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
@@ -10,6 +12,16 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 const PageHeader = ({ children, image, title, description, maxHeight }) => {
 
   return (
+        <header
+        sx={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          variant: "layout.header",
+        }}
+      >
+
+
   <section
     className="content pb-0 mb-0"
     style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
@@ -48,6 +60,7 @@ const PageHeader = ({ children, image, title, description, maxHeight }) => {
       </div>
     </div>
   </section>
+    </header>
   )
 };
 
