@@ -36,7 +36,11 @@ export const IndexPageTemplate = ({
       <Features gridItems={intro.blurbs} />
     </Container>
 
-    <Testimonials testimonials={testimonials} />
+    <Container variant="sizes.largeContainer">
+
+      <Testimonials testimonials={testimonials} />
+
+    </Container>
   </React.Fragment>
 );
 

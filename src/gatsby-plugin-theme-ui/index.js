@@ -85,6 +85,9 @@ export default {
       letterSpacing: "-0.03em",
       mt: 3,
     },
+    centered: {
+      textAlign: 'center'
+    }
   },
   links: {
     nav:   {
@@ -114,6 +117,14 @@ export default {
       height: "2.75rem",
     },
   },
+  icons: {
+    iconQuote: {
+      display: 'block',
+      height: '3rem',
+      width: '3rem',
+      fontSize: '1.5rem',
+    },
+  },
   styles: {
     root: {
       fontFamily: "body",
@@ -123,6 +134,9 @@ export default {
     container: 'sizes.container',
     largeContainer: 'sizes.largeContainer',
     fullWidthContainer: 'sizes.fullWidthContainer',
+    icons: {
+      iconQuote: 'icons.iconQuote',
+    },
     h1: {
       variant: "textStyles.display",
     },
@@ -151,7 +165,7 @@ export default {
       textDecoration: 'none',
       "&:hover": {
         color: "primary",
-        textDecoration: 'undeline',
+        textDecoration: 'underline',
       },
     },
     pre: {

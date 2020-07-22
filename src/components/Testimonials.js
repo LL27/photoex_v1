@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faStar } from "@fortawesome/free-solid-svg-icons";
+
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import { v4 } from "uuid";
 
 import "slick-carousel/slick/slick.css";
@@ -19,14 +22,37 @@ class Testimonials extends React.Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="testimonials">
-        <Slider {...settings}>
+      <div
+        sx={{
+          paddingTop: 64,
+          paddingBottom: 64,
+        }}
+      >
+        <Slider {...settings} sx={{
+                  marginBottom: 16
+                }}>
           {testimonials.map((testimonial) => (
-            <div key={v4()} className="has-text-centered mb-1">
-              <span className="icon-quote">
+            <div key={v4()} sx={{ textAlign: "center", marginBottom: 16 }}>
+              <span
+                sx={{
+                  display: "inline-block",
+                  fontSize: "1.5rem",
+                  padding: "1.5rem",
+                  textAlign: "center",
+                }}
+              >
                 <FontAwesomeIcon icon={faQuoteLeft} />
               </span>
-              <div className="quote">{testimonial.quote}</div>
+              <div
+                sx={{
+                  fontSize: "1rem",
+                  fontStyle: "italic",
+                  paddingBottom: "1.5rem",
+                  textAlign: "center",
+                }}
+              >
+                {testimonial.quote}
+              </div>
               <div className="content">
                 <div className="icon-five-stars">
                   <FontAwesomeIcon icon={faStar} className="checked" />
