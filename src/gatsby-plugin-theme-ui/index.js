@@ -1,132 +1,210 @@
 export default {
-
-  "space": [
-    0,
-    4,
-    8,
-    16,
-    32,
-    64,
-    128,
-    256,
-    512
-  ],
-  "fonts": {
-    "body": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
-    "heading": "inherit",
-    "monospace": "Menlo, monospace"
+  colors: {
+    text: "hsl(10, 20%, 20%)",
+    background: "hsl(10, 10%, 98%)",
+    primary: "hsl(10, 80%, 50%)",
+    secondary: "hsl(10, 60%, 50%)",
+    highlight: "hsl(10, 40%, 90%)",
+    purple: "hsl(250, 60%, 30%)",
+    muted: "hsl(10, 20%, 94%)",
+    gray: "hsl(10, 20%, 50%)",
   },
-  "fontSizes": [
-    12,
-    14,
-    16,
-    20,
-    24,
-    32,
-    48,
-    64,
-    96
-  ],
-  "fontWeights": {
-    "body": 400,
-    "heading": 700,
-    "bold": 700
+  fonts: {
+    body:
+      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: "inherit",
+    monospace: "Menlo, monospace",
   },
-  "lineHeights": {
-    "body": 1.5,
-    "heading": 1.125
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    display: 900,
   },
-  "colors": {
-    "text": "#000",
-    "background": "#fff",
-    "primary": "#07c",
-    "secondary": "#30c",
-    "muted": "#f6f6f6"
+  lineHeights: {
+    body: 1.5,
+    heading: 1.25,
   },
-  "styles": {
-    "root": {
-      "fontFamily": "body",
-      "lineHeight": "body",
-      "fontWeight": "body"
+  sizes: {
+    container: 768,
+    largeContainer: {
+      maxWidth: 1024,
+      paddingRight: 32,
+      paddingLeft: 32,
     },
-    "h1": {
-      "color": "text",
-      "fontFamily": "heading",
-      "lineHeight": "heading",
-      "fontWeight": "heading",
-      "fontSize": 5
+    fullWidthContainer: {
+      width: "100vh",
+      position: "relative",
+      left: "50%",
+      right: "50%",
+      marginLeft: "-50vw",
+      marginRight: "-50vw",
     },
-    "h2": {
-      "color": "text",
-      "fontFamily": "heading",
-      "lineHeight": "heading",
-      "fontWeight": "heading",
-      "fontSize": 4
+  },
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  cards: {
+     primary: {
+      padding: 2,
+      borderRadius: 4,
+      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+      width: '100%',
+      margin: '0 auto',
+      height: 'auto'
     },
-    "h3": {
-      "color": "text",
-      "fontFamily": "heading",
-      "lineHeight": "heading",
-      "fontWeight": "heading",
-      "fontSize": 3
+    compact: {
+      padding: 1,
+      borderRadius: 2,
+      border: '1px solid',
+      borderColor: 'muted',
     },
-    "h4": {
-      "color": "text",
-      "fontFamily": "heading",
-      "lineHeight": "heading",
-      "fontWeight": "heading",
-      "fontSize": 2
+  },
+  buttons: {
+    secondary: {
+      fontWeight: "bold",
+      color: "white",
+      bg: "primary",
+      "&:hover": {
+        bg: "dark",
+      },
     },
-    "h5": {
-      "color": "text",
-      "fontFamily": "heading",
-      "lineHeight": "heading",
-      "fontWeight": "heading",
-      "fontSize": 1
+  },
+  textStyles: {
+    caps: {
+      textTransform: "uppercase",
+      letterSpacing: ".2em",
     },
-    "h6": {
-      "color": "text",
-      "fontFamily": "heading",
-      "lineHeight": "heading",
-      "fontWeight": "heading",
-      "fontSize": 0
+    heading: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
     },
-    "p": {
-      "color": "text",
-      "fontFamily": "body",
-      "fontWeight": "body",
-      "lineHeight": "body"
+    display: {
+      variant: "textStyles.heading",
+      fontSize: [5, 6],
+      fontWeight: "display",
+      letterSpacing: "-0.03em",
+      mt: 3,
     },
-    "a": {
-      "color": "primary"
+  },
+  links: {
+    nav:   {
+      px: 2,
+      py: 1,
+      fontWeight: "bold",
+      color: "text",
+      textDecoration: "none",
+       "&:hover": {
+        color: "secondary",
+        textDecoration: 'none'
+      },
     },
-    "pre": {
-      "fontFamily": "monospace",
-      "overflowX": "auto",
-      "code": {
-        "color": "inherit"
-      }
+     menu: {
+      fontWeight: "bold",
+      color: "text",
+      textDecoration: "none",
+       "&:hover": {
+        color: "secondary",
+        textDecoration: 'none'
+      },
     },
-    "code": {
-      "fontFamily": "monospace",
-      "fontSize": "inherit"
+  },
+  images: {
+    logo: {
+      width: "auto",
+      height: "2.75rem",
     },
-    "table": {
-      "width": "100%",
-      "borderCollapse": "separate",
-      "borderSpacing": 0
+  },
+  styles: {
+    root: {
+      fontFamily: "body",
+      lineHeight: "body",
+      fontWeight: "body",
     },
-    "th": {
-      "textAlign": "left",
-      "borderBottomStyle": "solid"
+    container: 'sizes.container',
+    largeContainer: 'sizes.largeContainer',
+    fullWidthContainer: 'sizes.fullWidthContainer',
+    h1: {
+      variant: "textStyles.display",
     },
-    "td": {
-      "textAlign": "left",
-      "borderBottomStyle": "solid"
+    h2: {
+      variant: "textStyles.heading",
+      fontSize: 5,
     },
-    "img": {
-      "maxWidth": "100%"
-    }
-  }
-
-}
+    h3: {
+      variant: "textStyles.heading",
+      fontSize: 4,
+    },
+    h4: {
+      variant: "textStyles.heading",
+      fontSize: 3,
+    },
+    h5: {
+      variant: "textStyles.heading",
+      fontSize: 2,
+    },
+    h6: {
+      variant: "textStyles.heading",
+      fontSize: 1,
+    },
+    a: {
+      color: "primary",
+      textDecoration: 'none',
+      "&:hover": {
+        color: "primary",
+        textDecoration: 'undeline',
+      },
+    },
+    pre: {
+      variant: "prism",
+      fontFamily: "monospace",
+      fontSize: 1,
+      p: 3,
+      color: "text",
+      bg: "muted",
+      overflow: "auto",
+      code: {
+        color: "inherit",
+      },
+    },
+    code: {
+      fontFamily: "monospace",
+      color: "secondary",
+      fontSize: 1,
+    },
+    inlineCode: {
+      fontFamily: "monospace",
+      color: "secondary",
+      bg: "muted",
+    },
+    table: {
+      width: "100%",
+      my: 4,
+      borderCollapse: "separate",
+      borderSpacing: 0,
+      "th,td": {
+        textAlign: "left",
+        py: "4px",
+        pr: "4px",
+        pl: 0,
+        borderColor: "muted",
+        borderBottomStyle: "solid",
+      },
+    },
+    th: {
+      verticalAlign: "bottom",
+      borderBottomWidth: "2px",
+    },
+    td: {
+      verticalAlign: "top",
+      borderBottomWidth: "1px",
+    },
+    hr: {
+      border: 0,
+      borderBottom: "1px solid",
+      borderColor: "muted",
+    },
+    img: {
+      maxWidth: "100%",
+    },
+  },
+};

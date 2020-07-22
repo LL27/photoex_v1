@@ -1,31 +1,71 @@
-import React from 'react'
-import { Link } from "gatsby"
-import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import React from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import CardText from "../components/CardText";
 
-const FeatureGrid = ({ gridItems, columnSize }) => (
-  <div className="columns is-multiline">
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { Grid } from "theme-ui";
+import { Box } from "theme-ui";
+import { Card } from "theme-ui";
+import { Text } from "theme-ui";
+import { Heading } from "theme-ui";
 
+const FeatureGrid = ({ gridItems }) => (
+  <div
+    sx={{
+      display: "grid",
+      "grid-template-columns": "1fr 1fr 1fr",
+      "grid-gap": "8px",
+      "@media (min-width: 100px) and (max-width: 575px)": {
+        "grid-template-columns": "1fr",
+      },
+      "@media (min-width: 576px)": {
+        "grid-template-columns": "1fr 1fr",
+      },
+      "@media (min-width: 768px)": {
+        "grid-template-columns": "1fr 1fr",
+      },
+      "@media (min-width: 992px)": {
+        "grid-template-columns": "1fr 1fr 1fr",
+      },
+      "@media (min-width: 1200px)": {
+        "grid-template-columns": "1fr 1fr 1fr",
+      },
+    }}
+  >
     {gridItems.map((item) => (
-      <div key={item.title} className={`column is-multiline ${columnSize}`}>
+      <Box>
+      <Card
+        sx={{
+          variant: "cards.primary",
+        }}
+      >
+        <Link
+          to={item.path}
+          key={item.title}
+          sx={{
+            variant: "links.menu"
+          }}
+        >
+          <PreviewCompatibleImage imageInfo={item} />
 
-        <div className="menu-card">
-            <div className="menu-card-image">
-              <PreviewCompatibleImage imageInfo={item} />
-            </div>
-            <div className="menu-card-content">
-                 <Link to={item.path} className="title is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">{item.title}</Link>
-
-
-            <p className="subtitle" style={{fontSize: '14px'}}>{item.text}</p>
-            </div>
-
-        </div>
-      </div>
+          <Heading
+            pt={2}
+            sx={{
+              variant: "styles.h5",
+            }}
+          >
+            {" "}
+            {item.title}
+          </Heading>
+        </Link>
+      </Card>
+      </Box>
     ))}
   </div>
-
-)
+);
 
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
@@ -36,6 +76,6 @@ FeatureGrid.propTypes = {
       text: PropTypes.string,
     })
   ),
-}
+};
 
-export default FeatureGrid
+export default FeatureGrid;

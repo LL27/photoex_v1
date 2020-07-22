@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PageIntro from "../components/PageIntro";
+import { Container } from "theme-ui";
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -20,17 +21,11 @@ export const BoutiquePageTemplate = ({
     <React.Fragment>
 
       <PageHeader image={image} title={title} description={description} />
+       <Container variant="styles.container">
+          <PageIntro intro={intro.blurbs}/>
+          <PageContent className="content" content={content} />
 
-      <PageIntro intro={intro.blurbs}/>
-
-      <section className="section section--gradient">
-        <div className="columns">
-          <div className="column is-12 is-10-desktop is-offset-1-desktop">
-      <PageContent className="content" content={content} />
-
-          </div>
-        </div>
-      </section>
+       </Container>
     </React.Fragment>
   );
 };

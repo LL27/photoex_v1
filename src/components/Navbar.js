@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Image } from 'theme-ui'
 
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import logo from "../img/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -41,15 +44,57 @@ const Navbar = class extends React.Component {
   };
   render() {
     return (
+      <React.Fragment>
+
+      <header
+  sx={{
+    variant: 'styles.header',
+  }}>
+  <div
+    sx={{
+      maxWidth: '100%',
+      mx: 'auto',
+      px: 3,
+      display: 'flex',
+      alignItems: 'baseline',
+    }}>
+    <Link to='/'
+   sx={{
+    color: 'inherit',
+    '&.active': {
+      color: 'primary',
+    }
+  }}>
+       <Image
+        src={logo}
+        variant='logo'
+/>
+
+    </Link>
+    <div sx={{ mx: 'auto' }} />
+    <Link to='/blog'
+      sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
+      Blog
+    </Link>
+    <Link to='/about'
+      sx={{
+        variant: 'styles.navlink',
+        ml: 3,
+        py: 2,
+      }}>
+      About
+    </Link>
+  </div>
+</header>
+
+
       <div className="full-width-container">
-        <div className="navbar-top level is-mobile">
-          <div className="level-left">
-            <div className="navbar-item logo">
-              <Link to="/" title="Logo">
-                <img src={logo} alt="Photo Expression" className="logo-svg" />
-              </Link>
-            </div>
-          </div>
+        <div className="navbar-top">
+
 
           <div className="level-right is-hidden-mobile info-container">
             <div className="info-tile">
@@ -114,31 +159,59 @@ const Navbar = class extends React.Component {
           >
             <div className="navbar-start has-text-centered">
               <div className="navbar-item has-dropdown is-hoverable">
-                <Link className="navbar-link" to="/studio">
+                <Link to="/studio" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                   STUDIO
                 </Link>
 
                 <div className="navbar-dropdown">
-                  <Link className="navbar-item" to="/photoID">
+                  <Link to="/photoID" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                     PHOTO D'IDENTITÉ
                   </Link>
 
-                  <Link className="navbar-item" to="/portrait">
+                  <Link to="/portrait" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                     PORTRAIT
                   </Link>
                 </div>
               </div>
 
-              <Link className="navbar-item" to="/labo">
+              <Link to="/labo" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                 LABORATOIRE
               </Link>
-              <Link className="navbar-item" to="/encadrement">
+              <Link to="/encadrement" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                 ENCADREMENT
               </Link>
-              <Link className="navbar-item" to="/transfertvideo">
+              <Link to="/transfertvideo" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                 TRANSFERT VIDEO
               </Link>
-              <Link className="navbar-item" to="/boutique">
+              <Link to="/boutique" sx={{
+        variant: 'links.nav',
+        ml: 3,
+        py: 2,
+      }}>
                 EN BOUTIQUE
               </Link>
             </div>
@@ -162,8 +235,10 @@ const Navbar = class extends React.Component {
                 <div className="level-item no-flex has-text-white-ter address">
                   <AnchorLink
                     to="/#footer"
-                    className="info-tile-mobile"
-                    style={{ lineHeight: 2.2 }}
+                    sx={{ variant: 'styles.a',
+        ml: 3,
+        py: 2,
+      }}
                   >
                     <span className="icon">
                       <FontAwesomeIcon icon={faMapMarker} />
@@ -199,6 +274,7 @@ const Navbar = class extends React.Component {
           </div>
         </nav>
       </div>
+      </React.Fragment>
     );
   }
 };
