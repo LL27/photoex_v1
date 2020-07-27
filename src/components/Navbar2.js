@@ -1,73 +1,120 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 
-const Navbar2 = class extends React.Component {
+import logo from "../img/logo.svg";
 
-  render() {
-    return ( <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <Link class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-    </Link>
 
-    <Link role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </Link>
-  </div>
+const Navbar2 = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <Link class="navbar-item">
-        Home
-      </Link>
+  const toggle = () => setIsOpen(!isOpen);
 
-      <Link class="navbar-item">
-        Documentation
-      </Link>
+  return (
+    <div>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <Link class="navbar-link">
-          More
-        </Link>
+      <div className="full-width-container">
+        <div className="navbar-top">
 
-        <div class="navbar-dropdown">
-          <Link class="navbar-item">
-            About
-          </Link>
-          <Link class="navbar-item">
-            Jobs
-          </Link>
-          <Link class="navbar-item">
-            Contact
-          </Link>
-          <hr class="navbar-divider"/>
-          <Link class="navbar-item">
-            Report an issue
-          </Link>
+
+          <div className="level-right is-hidden-mobile info-container">
+            <div className="info-tile">
+              <span className="icon">
+                <FontAwesomeIcon icon={faPhone} />
+              </span>
+
+              <a href="tel:0146286516" className="heading address">
+                Nous contacter
+                <br />
+                01 46 28 65 16
+              </a>
+            </div>
+
+            <div className="info-tile">
+              <span className="icon">
+                <FontAwesomeIcon icon={faClock} />
+              </span>
+              <p className="heading">
+                Mardi-Samedi
+                <br />
+                9h15-13h et 14h-19h 
+              </p>
+              <p className="heading"> </p>
+            </div>
+
+            <AnchorLink className="info-tile" to="/#footer" title="Adresse">
+              <span className="icon">
+                <FontAwesomeIcon icon={faMapMarker} />
+
+
+              </span>
+
+              <p className="heading address">
+                2 rue Beccaria <br />
+                75012 Paris
+              </p>
+            </AnchorLink>
+          </div>
         </div>
+
+
+
+
+
+
+                <div className="level-item no-flex has-text-white-ter address">
+                  <AnchorLink
+                    to="/#footer"
+                    sx={{ variant: 'styles.a',
+        ml: 3,
+        py: 2,
+      }}
+                  >
+                    <span className="icon">
+                      <FontAwesomeIcon icon={faMapMarker} />
+                    </span>
+                    2 rue Beccaria, 75012 Paris
+                  </AnchorLink>
+                </div>
+                <div className="level-item no-flex address">
+                  <a
+                    href="tel:0146286516"
+                    className="info-tile-mobile"
+                    style={{ lineHeight: 2.2 }}
+                  >
+                    <span className="icon">
+                      <FontAwesomeIcon icon={faPhone} />
+                    </span>
+                    01 46 28 65 16
+                  </a>
+                </div>
+
+                <div className="level-item no-flex">
+                  <p className="info-tile-mobile" style={{ lineHeight: 2.2 }}>
+                    <span className="icon">
+                      <FontAwesomeIcon icon={faClock} />
+                    </span>
+                    Mar-Sam 9h15-13h et 14h-19h  (sans RDV)
+                  </p>
+                </div>
+
+                <p className="level-item info-tile-mobile"></p>
+              </div>
       </div>
     </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <Link class="button is-primary">
-            <strong>Sign up</strong>
-          </Link>
-          <Link class="button is-light">
-            Log in
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-    )
-  }
+  );
 }
 
-export default Navbar2
+export default Navbar2;
