@@ -13,11 +13,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
-    { resolve: 'gatsby-plugin-theme-ui',
-      options: {
-        preset: '@theme-ui/preset-swiss'
-      }
-    },
+    `gatsby-plugin-emotion`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",

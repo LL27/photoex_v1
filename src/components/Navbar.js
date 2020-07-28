@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import theme from "../theme.js";
+import styled from '@emotion/styled'
+
 import {
   Collapse,
   Navbar,
@@ -19,10 +22,7 @@ import {
 
 import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { Image } from "theme-ui";
 
-/** @jsx jsx */
-import { jsx } from "theme-ui";
 import logo from "../img/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -31,6 +31,7 @@ import {
   faMapMarker,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
+
 
 const SiteNavigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ const SiteNavigation = (props) => {
       <Navbar>
         <NavbarBrand>
           <Link to="/">
-            <Image src={logo} variant="logo" />
+            <img src={logo} style={{width: 'auto', height: '3rem'}}/>
           </Link>
         </NavbarBrand>
 

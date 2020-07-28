@@ -1,10 +1,11 @@
 import React from "react";
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Footer";
 import SiteNavigation from "../../components/Navbar";
+import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Global, css } from "@emotion/core"
+import styled from "@emotion/styled"
 
 
 
@@ -14,17 +15,17 @@ import './index.scss'
 import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description, keywords } = useSiteMetadata();
-  return (
-    <div
-      sx={{
-        display: "flex",
+const Wrapper = styled.div`
+  display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
         variant: "layout.root",
-      }}
-    >
+`
+
+const TemplateWrapper = ({ children }) => {
+  const { title, description, keywords } = useSiteMetadata();
+  return (
+    <Wrapper>
       <Helmet>
         <html lang="fr" />
         <title>{title}</title>
@@ -65,20 +66,14 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <SiteNavigation />
 
 
 
-      <main
-        sx={{
-          width: "100%",
-          flex: "1 1 auto",
-          variant: "layout.main",
-        }}
-      >
+      <Container fluid="true">
+        <SiteNavigation />
 
           {children}
-      </main>
+      </Container>
       <footer
         sx={{
           width: "100%",
@@ -87,7 +82,7 @@ const TemplateWrapper = ({ children }) => {
       >
         <Footer />
       </footer>
-    </div>
+    </Wrapper>
   );
 };
 

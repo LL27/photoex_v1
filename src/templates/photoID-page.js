@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PhotoFormats from "../components/PhotoFormats";
-import { Container } from "theme-ui";
 
 import Content, { HTMLContent } from "../components/Content";
 

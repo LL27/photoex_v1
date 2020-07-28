@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import { Container } from "theme-ui";
+import { Container } from "reactstrap";
 
 export const StudioPageTemplate = ({
   title,

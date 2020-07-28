@@ -2,69 +2,70 @@ import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import CardText from "../components/CardText";
-
+import theme from "../theme.js";
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Grid } from "theme-ui";
-import { Box } from "theme-ui";
-import { Card } from "theme-ui";
-import { Text } from "theme-ui";
-import { Heading } from "theme-ui";
+import { jsx } from '@emotion/core'
+import facepaint from 'facepaint'
+import styled from "@emotion/styled"
+
+const breakpoints = [576, 768, 992, 1200]
+
+const mq = facepaint(
+  breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+)
+
+
+const Grid = styled.div`
+  display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 8px;
+      @media (min-width: 100px) and (max-width: 575px): {
+        grid-template-columns: 1fr;
+      };
+      @media (min-width: 576px): {
+        grid-template-columns: 1fr 1fr;
+      },
+      @media (min-width: 768px): {
+        grid-template-columns": 1fr 1fr;
+      };
+      @media (min-width: 992px): {
+        grid-template-columns: 1fr 1fr 1fr;
+      };
+      @media (min-width: 1200px): {
+        grid-template-columns: 1fr 1fr 1fr;
+      };
+`
+
+const Card = styled.div`
+   padding: ${theme.space[2]}px;
+   border-radius: 2px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.125);
+   width: '100%';
+`
 
 const FeatureGrid = ({ gridItems }) => (
-  <div
-    sx={{
-      display: "grid",
-      "grid-template-columns": "1fr 1fr 1fr",
-      "grid-gap": "8px",
-      "@media (min-width: 100px) and (max-width: 575px)": {
-        "grid-template-columns": "1fr",
-      },
-      "@media (min-width: 576px)": {
-        "grid-template-columns": "1fr 1fr",
-      },
-      "@media (min-width: 768px)": {
-        "grid-template-columns": "1fr 1fr",
-      },
-      "@media (min-width: 992px)": {
-        "grid-template-columns": "1fr 1fr 1fr",
-      },
-      "@media (min-width: 1200px)": {
-        "grid-template-columns": "1fr 1fr 1fr",
-      },
-    }}
-  >
+  <Grid>
     {gridItems.map((item) => (
-      <Box>
-      <Card
-        sx={{
-          variant: "cards.primary",
-        }}
-      >
+      <Card>
         <Link
           to={item.path}
           key={item.title}
-          sx={{
-            variant: "links.menu"
-          }}
-        >
+         >
           <PreviewCompatibleImage imageInfo={item} />
 
-          <Heading
-            pt={2}
-            sx={{
-              variant: "styles.h5",
-            }}
-          >
-            {" "}
+            <h2
+                 css={mq({
+      'font-size': ['14px', '16px']
+    })}
+
+            >
             {item.title}
-          </Heading>
+          </h2>
+
         </Link>
       </Card>
-      </Box>
     ))}
-  </div>
+  </Grid>
 );
 
 FeatureGrid.propTypes = {

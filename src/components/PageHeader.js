@@ -1,67 +1,72 @@
 import React from "react";
 import { Link } from "gatsby";
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import theme from "../theme.js";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
+import facepaint from "facepaint";
+import styled from "@emotion/styled";
+import { Container } from "reactstrap";
 
+const breakpoints = [576, 768, 992, 1200];
 
+const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
-
-const PageHeader = ({ children, image, title, description, maxHeight }) => {
-
+const PageHeader = ({ children, image, title, description, height }) => {
   return (
-        <header
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          variant: "layout.header",
-        }}
-      >
+    <div>
+
+    <div
+      css={mq({
+        display: ["grid"],
+        gridGap: ["4px"],
+        gridTemplateColumns: ["1fr", "1fr", "1fr", "1fr 3fr"],
+        height: ['auto', 'auto', 'auto', 'auto'],
+        backgroundColor: ['#d7d7d7'],
+        backgroundImage: ['linear-gradient(15deg, #232526 0%, #414345 74%)'],
+        marginBottom: ['32px'],
+      })}
+    >
 
 
-  <section
-    className="content pb-0 mb-0"
-    style={{ borderBottom: "1.5rem solid hsl(0, 0%, 86%)" }}
-  >
-    <div className="columns is-gapless is-vcentered">
-      <div className="column is-one-third">
-        <div className="hero">
-          <div className="hero-body">
 
-                    <div className="content">
-
-
-                    <h1 className="is-capitalized is-size-3-tablet is-size-2-desktop is-size-1-widescreen" style={{marginBottom:0}}>
-              {title}
-            </h1>
-            <p
-              className=""
-              style={{
-                color: "#555C5C",
-
-              }}
+       <div css={mq({
+        display: ["flex"],
+        flexDirection: ["column"],
+        justifyContent: ['center', 'center', 'center', 'flex-start'],
+        width: ['100%'],
+        padding: ['16px 0', '16px 0', '32px 0'],
+        textAlign: ['center', 'center', 'center', 'left'],
+        order: ['2', '2', '2', '1'],
+      })}>
+          <Container>
+            <h2
+              css={mq({
+                "font-size": ["24px", "32px", "32px", "48px"],
+                "color": ["hsl(0, 0%, 96%)"],
+              })}
             >
+              {title}
+            </h2>
+            <p style={{color: 'hsl(0, 0%, 79%'}}>
               {description}
             </p>
-                   </div>
 
             {children}
-           </div>
+          </Container>
         </div>
-      </div>
+        <div  css={mq({
+               order: ['1', '1', '1', '1'],
+              })}>
+                  <PreviewCompatibleImage imageInfo={image} />
 
-      <div className="column is-two-thirds">
-
-         <PreviewCompatibleImage imageInfo={image} />
-
-      </div>
+        </div>
     </div>
-  </section>
-    </header>
-  )
+        </div>
+
+  );
 };
 
 PageHeader.propTypes = {

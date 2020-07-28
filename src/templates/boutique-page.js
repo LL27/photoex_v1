@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PageIntro from "../components/PageIntro";
-import { Container } from "theme-ui";
+import { Container } from "reactstrap";
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -21,7 +21,7 @@ export const BoutiquePageTemplate = ({
     <React.Fragment>
 
       <PageHeader image={image} title={title} description={description} />
-       <Container variant="styles.container">
+       <Container>
           <PageIntro intro={intro.blurbs}/>
           <PageContent className="content" content={content} />
 

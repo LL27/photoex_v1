@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 import Img from "gatsby-image";
-import { Container } from "theme-ui";
+import { Container, Row, Col } from 'reactstrap';
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -30,15 +30,12 @@ export const IndexPageTemplate = ({
         NOUS CONTACTER
       </a>
     </PageHeader>
-
-    <Container variant="sizes.largeContainer">
-      <h3>{intro.heading}</h3>
+    <Container>
+ <h3>{intro.heading}</h3>
       <Features gridItems={intro.blurbs} />
-    </Container>
-
-    <Container variant="sizes.largeContainer">
-
       <Testimonials testimonials={testimonials} />
+
+
 
     </Container>
   </React.Fragment>
