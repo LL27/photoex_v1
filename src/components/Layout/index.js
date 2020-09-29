@@ -68,11 +68,12 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
 
 
-
+<SiteNavigation />
       <Container fluid="true">
-        <SiteNavigation />
 
-          {children}
+                       {children}
+
+
       </Container>
       <footer
         sx={{

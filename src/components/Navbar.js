@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import theme from "../theme.js";
-import styled from '@emotion/styled'
-
+import styled from "@emotion/styled";
+import { jsx, css } from "@emotion/core";
 import {
   Collapse,
   Navbar,
@@ -14,138 +13,80 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
-  Row,
-  Col,
-  Container,
-} from "reactstrap";
+  NavbarText
+} from 'reactstrap';
 
+import theme from "../theme.js";
 import { Link } from "gatsby";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-
 import logo from "../img/logo.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClock,
-  faPhone,
-  faMapMarker,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
-
+import './Navbar.css';
 
 const SiteNavigation = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => setIsOpen(!isOpen);
 
-  return (
+
+    return (
     <div>
-      <Navbar>
-        <NavbarBrand>
-          <Link to="/">
-            <img src={logo} style={{width: 'auto', height: '3rem'}}/>
-          </Link>
-        </NavbarBrand>
+      <Navbar color="faded" light expand="md">
 
-        <NavbarText>
-          <Row>
-            <Col>
-              <div
-                className="d-flex"
-                style={{ fontSize: "12px", lineHeight: "1.4" }}
-              >
-                <span className="icon">
-                  <FontAwesomeIcon icon={faPhone} />
-                </span>
-
-                <a href="tel:0146286516" className="text-body" style={{ fontSize: "12px", marginLeft: "8px" }}>
-                  Nous contacter
-                  <br /> 01 46 28 65 16
-                </a>
-              </div>
-            </Col>
-
-            <Col>
-              <div
-                className="d-flex"
-                style={{ fontSize: "12px", lineHeight: "1.4" }}
-              >
-                <span className="icon">
-                  <FontAwesomeIcon icon={faClock} />
-                </span>
-                <span style={{ fontSize: "12px", marginLeft: "8px" }}>
-                  Mar-Sam <br />
-                  9h15-13h; 14h-19h 
-                </span>
-              </div>
-            </Col>
-            <Col>
-
-                <AnchorLink className="d-flex text-body" to="/#footer" title="Adresse" style={{fontSize: "12px"}}>
-                  <span className="icon" style={{fontSize: "12px"}}>
-                    <FontAwesomeIcon icon={faMapMarker} />
-                  </span>
-                  <span style={{ fontSize: "12px", marginLeft: "8px"}}>
-                    2 rue Beccaria <br />
-                    75012 Paris
-                  </span>
-                </AnchorLink>
-            </Col>
-          </Row>
-        </NavbarText>
-      </Navbar>
-
-      <Navbar color="light" light bgLight expand="sm" style={{ padding: "0" }}>
-        <div></div>
-
+        <Link to="/" className="navbar-brand">
+          <img src={logo} className="navbar-logo" />
+        </Link>
         <NavbarToggler onClick={toggle} />
-
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar style={{ paddingLeft: "1rem" }}>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret className="text-warning">
-                <Link to="/studio" className="text-warning">
-                  Studio
-                </Link>
+
+          <Nav className="mr-auto" navbar>
+
+             <UncontrolledDropdown nav inNavbar>
+
+              <DropdownToggle nav caret>
+                <Link
+                to="/studio" className="dropdown-link">
+                STUDIO
+              </Link>
               </DropdownToggle>
-              <DropdownMenu left color="dark">
+              <DropdownMenu left>
                 <DropdownItem>
-                  <Link to="/photoID" className="nav-link text-body">
-                    Photo D'identité
-                  </Link>
+                  <Link to="/photoID" className="navbar-link">
+                  PHOTO ID
+                </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to="/portrait" className="nav-link text-body">
-                    Portrait
-                  </Link>
+                  <Link to="/portrait"  className="navbar-link">
+                  PORTRAIT
+                </Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <Link to="/labo" className="nav-link">
-                Laboratoire
+              <Link to="/labo" className="navbar-link">
+                LABO
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/encadrement" className="nav-link">
-                Encadrement
+               <Link to="/encadrement" className="navbar-link">
+                ENCADREMENT
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/transfertvideo" className="nav-link">
-                Transfert Vidéo
+               <Link to="/transfertvideo" className="navbar-link">
+                TRANSFER VIDÉO
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/boutique" className="nav-link">
-                En Boutique
+               <Link to="/boutique" className="navbar-link">
+                EN BOUTIQUE
               </Link>
             </NavItem>
+
           </Nav>
         </Collapse>
       </Navbar>
     </div>
   );
-};
+}
+
 
 export default SiteNavigation;

@@ -1,0 +1,52 @@
+:root {
+  --navbar-bg-color: hsl(200, 3%, 18%);
+  --navbar-text-color: hsl(0, 0%, 85%);
+  --navbar-text-color-focus: white;
+  --navbar-bg-contrast: hsl(0, 0%, 25%);
+}
+
+
+.home-link,
+.navbar-link
+ {
+  color: var(--navbar-text-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.dropdown-link {
+  color: var(--navbar-text-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+   align-items: center;
+
+}
+.home-link:focus,
+.home-link:hover {
+  color: var(--navbar-text-color-focus);
+}
+
+.navbar-link {
+  justify-content: center;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+}
+
+.navbar-link:focus,
+.navbar-link:hover,
+.dropdown-link:focus,
+.dropdown-link:hover {
+  color: var(--navbar-text-color-focus);
+  background-color: var(--navbar-bg-contrast);
+}
+
+.navbar-logo {
+  width: auto;
+  height: 3.3rem;
+}
+
+

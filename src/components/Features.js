@@ -16,31 +16,20 @@ const mq = facepaint(
 
 
 const Grid = styled.div`
-  display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 8px;
-      @media (min-width: 100px) and (max-width: 575px): {
-        grid-template-columns: 1fr;
-      };
-      @media (min-width: 576px): {
-        grid-template-columns: 1fr 1fr;
-      },
-      @media (min-width: 768px): {
-        grid-template-columns": 1fr 1fr;
-      };
-      @media (min-width: 992px): {
-        grid-template-columns: 1fr 1fr 1fr;
-      };
-      @media (min-width: 1200px): {
-        grid-template-columns: 1fr 1fr 1fr;
-      };
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
 `
 
 const Card = styled.div`
    padding: ${theme.space[2]}px;
    border-radius: 2px;
    box-shadow: 0 0 8px rgba(0, 0, 0, 0.125);
-   width: '100%';
+   width: 100%;
+   @media (min-width: 768px) {
+     width: 320px;
+   }
+
 `
 
 const FeatureGrid = ({ gridItems }) => (

@@ -9,7 +9,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
-import PageHeader from "../components/PageHeader";
+import HomepageHeader from "../components/HomepageHeader";
 
 export const IndexPageTemplate = ({
   title,
@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
   testimonials,
 }) => (
   <React.Fragment>
-    <PageHeader image={image} title={title} description={description}>
+    <HomepageHeader image={image} title={title} description={description}>
       {" "}
       <a
         href="tel:0146286516"
@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({
         {" "}
         NOUS CONTACTER
       </a>
-    </PageHeader>
+    </HomepageHeader>
     <Container>
  <h3>{intro.heading}</h3>
       <Features gridItems={intro.blurbs} />
