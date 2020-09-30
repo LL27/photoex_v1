@@ -11,44 +11,35 @@ import styled from "@emotion/styled";
 import { Container } from "reactstrap";
 
 const breakpoints = [576, 768, 992, 1200];
-const imageStyle = { borderRadius: '10px' }
+const imageStyle = { borderRadius: "10px" };
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
-const PageHeader = ({ children, image, title, description, height }) => {
+
+const IndexPageHeader = ({ children, image, title, description, height }) => {
   return (
     <div>
+    <Container  style={{ height: 'calc(100vh - 64px)', display: 'flex', 'flex-direction': 'column'}}>
+        <PreviewCompatibleImage imageInfo={image} imageStyle={imageStyle} />
+        <h2
+          css={mq({
+            "font-size": ["24px", "32px", "32px", "48px"],
+            color: ["hsl(0, 0%, 96%)"],
+          })}
+        >
+          {title}
+        </h2>
+        <p style={{ color: "hsl(0, 0%, 79%" }}>{description}</p>
 
-
-
-
-
-
-          <Container style={{}}>
-            <PreviewCompatibleImage imageInfo={image} imageStyle={imageStyle} />
-            <h2
-              css={mq({
-                "font-size": ["24px", "32px", "32px", "48px"],
-                "color": ["hsl(0, 0%, 96%)"],
-              })}
-            >
-              {title}
-            </h2>
-            <p style={{color: 'hsl(0, 0%, 79%'}}>
-              {description}
-            </p>
-
-            {children}
-          </Container>
-
+        {children}
+      </Container>
     </div>
-
   );
 };
 
-PageHeader.propTypes = {
+IndexPageHeader.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
-export default PageHeader;
+export default IndexPageHeader;

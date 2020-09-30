@@ -15,6 +15,9 @@ const breakpoints = [576, 768, 992, 1200];
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 const PageHeader = ({ children, image, title, description, height }) => {
+ let t = title || '';
+ let d = description || '';
+
   return (
     <div>
 
@@ -48,10 +51,10 @@ const PageHeader = ({ children, image, title, description, height }) => {
                 "color": ["hsl(0, 0%, 96%)"],
               })}
             >
-              {title}
+              {t}
             </h2>
             <p style={{color: 'hsl(0, 0%, 79%'}}>
-              {description}
+              {d}
             </p>
 
             {children}
