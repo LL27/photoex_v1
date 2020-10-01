@@ -8,14 +8,12 @@ import styled from "@emotion/styled"
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const Wrapper = styled.div`
-         height: "100vh",
+const Wrapper = styled.div `
 `
-
 const TemplateWrapper = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
   return (
-    <Wrapper>
+      <Wrapper>
       <Helmet>
         <html lang="fr" />
         <title>{title}</title>
@@ -57,14 +55,16 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
 
+<Container fluid="xl">
+  <SiteNavigation />
 
-<SiteNavigation />
+</Container>
 
 
                        {children}
 
 
-    </Wrapper>
+      </Wrapper>
   );
 };
 

@@ -15,7 +15,8 @@ import {
 } from 'reactstrap';
 
 import logo from "../img/logo.svg";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar2 = (props) => {
   const [isOpen, setIsOpen] = useState(false);

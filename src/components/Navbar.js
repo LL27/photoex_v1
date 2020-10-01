@@ -13,9 +13,12 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
+  NavbarText,
+  ListGroup,
+  ListGroupItem
 } from 'reactstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faClock, faMapMarker } from '@fortawesome/free-solid-svg-icons'
 import theme from "../theme.js";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
@@ -29,7 +32,7 @@ const SiteNavigation = (props) => {
 
     return (
     <div>
-      <Navbar color="faded" light expand="md">
+      <Navbar color="faded" light expand="lg">
 
         <Link to="/" className="navbar-brand">
           <img src={logo} className="navbar-logo" />
@@ -81,7 +84,29 @@ const SiteNavigation = (props) => {
               </Link>
             </NavItem>
 
+
+
           </Nav>
+          <NavbarText>
+            <ListGroup horizontal>
+              <ListGroupItem tag="a" href="#"> <span className="icon">
+                <FontAwesomeIcon icon={faPhone} />
+              </span></ListGroupItem>
+              <ListGroupItem tag="a" href="#">  <span className="icon">
+                <FontAwesomeIcon icon={faClock} />
+              </span></ListGroupItem>
+              <ListGroupItem tag="a" href="#">
+              <span className="icon">
+                <FontAwesomeIcon icon={faMapMarker} />
+
+
+              </span></ListGroupItem>
+
+            </ListGroup>
+
+
+
+  </NavbarText>
         </Collapse>
       </Navbar>
     </div>

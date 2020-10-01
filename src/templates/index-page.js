@@ -14,19 +14,8 @@ export const IndexPageTemplate = ({
   description,
   image
 }) => (
-  <React.Fragment>
-    <IndexPageHeader image={image} title={title} description={description}>
-      {" "}
-      <a
-        href="tel:0146286516"
-        className="button btn is-small is-fullwidth"
-        style={{ marginTop: "1.5rem" }}
-      >
-        {" "}
-        NOUS CONTACTER
-      </a>
-    </IndexPageHeader>
-  </React.Fragment>
+    <IndexPageHeader image={image} title={title} description={description} />
+
 );
 
 IndexPageTemplate.propTypes = {

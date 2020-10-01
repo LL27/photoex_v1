@@ -69,7 +69,7 @@ const TemplateWrapper = ({ children }) => {
 
 
 <SiteNavigation />
-      <Container fluid="true">
+      <Container>
 
                        {children}
 
