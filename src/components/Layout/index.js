@@ -1,29 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../../components/Footer";
 import SiteNavigation from "../../components/Navbar";
 import { Container, Row, Col } from 'reactstrap';
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
 
-
-
-//import './all.sass'
-import "./custom.scss";
-import useSiteMetadata from "../SiteMetadata";
+import useSiteMetadata from "../../components/SiteMetadata";
 import { withPrefix } from "gatsby";
+import './index.scss'
 
-const Wrapper = styled.div`
-  display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh",
-        variant: "layout.root",
+const Wrapper = styled.div `
+  background-color: #EDEDE9
 `
-
 const TemplateWrapper = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
   return (
-    <Wrapper>
+      <Wrapper>
       <Helmet>
         <html lang="fr" />
         <title>{title}</title>
@@ -65,23 +57,16 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
 
-
-<SiteNavigation />
-      <Container>
-
+<Container fluid="xl">
+  <SiteNavigation />
                        {children}
 
+</Container>
 
-      </Container>
-      <footer
-        sx={{
-          width: "100%",
-          variant: "layout.footer",
-        }}
-      >
-        <Footer />
-      </footer>
-    </Wrapper>
+
+
+
+      </Wrapper>
   );
 };
 

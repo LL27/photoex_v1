@@ -1,22 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: '1.5';
+  font-family: "Roboto", sans-serif;
+  line-height: "1.5";
 
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.025;
 }
 
 .border-right {
-  border-right: 1px solid rgba(0, 0, 0, 0.125)
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .border-left {
-  border-left: 1px solid rgba(0, 0, 0, 0.125)
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .nav-icon {
   display: inline-block;
 }
+.navbar-light .navbar-toggler, .navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0);
+}
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+
+$navbar-light-color: rgb(85, 92, 92);
+$navbar-light-bg: rgba(0, 0, 0, 0.125);
+$navbar-light-border: darken($navbar-light-bg, 6.5%);
+// Navbar links
+$navbar-light-link-color: $navbar-light-color;
+$navbar-light-link-hover-color: #333;
+$navbar-light-link-hover-bg: transparent;
+$navbar-light-link-active-color: #555;
+$navbar-light-link-active-bg: darken($navbar-light-bg, 6.5%);
+$navbar-light-link-disabled-color: #ccc;
+$navbar-light-link-disabled-bg: transparent;
+
+// Navbar toggle
+
+$navbar-light-toggler-border-color: transparent;
+
+@import "~bootstrap/scss/bootstrap.scss";

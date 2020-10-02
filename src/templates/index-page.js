@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 
-import IndexLayout from "../components/IndexLayout";
+import Layout from "../components/Layout";
 import IndexPageHeader from "../components/IndexPageHeader";
 
 export const IndexPageTemplate = ({
@@ -26,13 +26,13 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <IndexLayout>
+    <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         description={frontmatter.description}
       />
-    </IndexLayout>
+    </Layout>
   );
 };
 

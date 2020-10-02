@@ -30,7 +30,6 @@ import theme from "../theme.js";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
 import "./Navbar.css";
-import "./Layout/custom.scss";
 
 
 const SiteNavigation = (props) => {
