@@ -3,15 +3,13 @@ import { Helmet } from "react-helmet";
 import Footer from "../../components/Footer";
 import SiteNavigation from "../../components/Navbar";
 import { Container, Row, Col } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 
 
 //import './all.sass'
-import './index.scss'
-
+import "./custom.scss";
 import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
 

@@ -8,3 +8,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.025;
 }
+
+.border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+.border-left {
+  border-left: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+.nav-icon {
+  display: inline-block;
+}

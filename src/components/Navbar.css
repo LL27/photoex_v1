@@ -1,7 +1,7 @@
 :root {
-  --navbar-bg-color: hsl(200, 3%, 18%);
-  --navbar-text-color: hsl(0, 0%, 25%);
-  --navbar-focus-color: hsl(51, 100%, 68%);
+  --navbar-focus-color: hsl(200, 3%, 18%);
+  --navbar-text-color: rgba(0,0,0,.5);
+  --navbar-bg-color: hsl(51, 100%, 68%);
 
 }
 
@@ -9,31 +9,35 @@
 .home-link,
 .navbar-link
  {
-  font-size: 1em;
+  font-size: .9em;
   color: var(--navbar-text-color);
   transition: color 0.2s ease-in-out;
   text-decoration: none;
   display: flex;
   font-weight: 400;
   align-items: center;
+  padding: .5rem .5rem;
 }
 .dropdown-link {
+    font-size: .9em;
   color: var(--navbar-text-color);
+    transition: color 0.2s ease-in-out;
+
   text-decoration: none;
   align-items: center;
   align-self: center;
 
+}
+.dropdown-toggle.nav-link {
+  padding: .4rem .5rem;
+    transition: color 0.2s ease-in-out;
 
+;
 }
 .home-link:focus,
 .home-link:hover {
 }
 
-.navbar-link {
-  justify-content: center;
-  margin: 0.5em 0.6em;
-  margin-bottom: 0px;
-}
 
 .navbar-link:focus,
 .navbar-link:hover,
@@ -42,12 +46,9 @@
 .dropdown-link:hover,
 .dropdown-link:active
  {
-  color: var(--navbar-text-color);
+  color: var(--navbar-focus-color);
   text-decoration: none;
-background-image: linear-gradient(311deg, rgba(255,231,92,1) 0%, rgba(255,231,92,1) 100%);
-  background-position: 0 1.4em;
-  background-repeat: repeat-x;
-  background-size: 2px 6px;
+
 }
 
 .navbar-logo {
@@ -56,3 +57,15 @@ background-image: linear-gradient(311deg, rgba(255,231,92,1) 0%, rgba(255,231,92
 }
 
 
+
+.dropdown-menu.show {
+  min-width: 7rem;
+  border-radius: 0;
+}
+.dropdown-item {
+  font-size: .9rem;
+}
+.dropdown-item:hover {
+  background-color: none;
+  color: var(--navbar-focus-color);
+}

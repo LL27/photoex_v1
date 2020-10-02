@@ -1,10 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-import Img from "gatsby-image";
-import { Container, Row, Col } from 'reactstrap';
 
 import IndexLayout from "../components/IndexLayout";
 import IndexPageHeader from "../components/IndexPageHeader";

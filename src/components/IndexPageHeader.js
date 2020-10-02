@@ -11,7 +11,7 @@ import styled from "@emotion/styled";
 import { Container } from "reactstrap";
 
 const breakpoints = [576, 768, 992, 1200];
-const imageStyle = { borderRadius: "10px", margin: '0 auto', height: 'calc(100vh - 64px)' };
+const imageStyle = { borderRadius: "10px", margin: '0 auto', height: 'calc(100vh - 128px)', paddingBottom: '64px' };
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 
