@@ -5,6 +5,9 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import IndexPageHeader from "../components/IndexPageHeader";
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
+
+
 
 export const IndexPageTemplate = ({
   title,
@@ -12,7 +15,6 @@ export const IndexPageTemplate = ({
   image
 }) => (
     <IndexPageHeader image={image} title={title} description={description} />
-
 );
 
 IndexPageTemplate.propTypes = {
@@ -27,11 +29,16 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <PageTransition>
+      <React.Fragment>
+
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         description={frontmatter.description}
       />
+      </React.Fragment>
+      </PageTransition>
     </Layout>
   );
 };

@@ -5,6 +5,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 import Img from "gatsby-image";
 import { Container, Row, Col } from 'reactstrap';
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -43,11 +44,15 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
+              <PageTransition>
+      <React.Fragment>
       <HomePageTemplate
         image={frontmatter.image}
         intro={frontmatter.intro}
         testimonials={frontmatter.testimonials}
       />
+      </React.Fragment>
+      </PageTransition>
     </Layout>
   );
 };

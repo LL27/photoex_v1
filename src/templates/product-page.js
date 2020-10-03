@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 export const ProductPageTemplate = ({
   title,
@@ -89,6 +90,8 @@ const ProductPage = ({ data }) => {
 
   return (
     <Layout>
+              <PageTransition>
+      <React.Fragment>
       <ProductPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -100,6 +103,8 @@ const ProductPage = ({ data }) => {
         fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
       />
+      </React.Fragment>
+      </PageTransition>
     </Layout>
   )
 }

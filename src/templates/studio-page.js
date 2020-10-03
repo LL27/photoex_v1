@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import { Container } from "reactstrap";
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 export const StudioPageTemplate = ({
   title,
@@ -50,6 +51,8 @@ const StudioPage = ({ data }) => {
 
   return (
     <Layout>
+              <PageTransition>
+      <React.Fragment>
       <StudioPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -57,6 +60,8 @@ const StudioPage = ({ data }) => {
         description={frontmatter.description}
         studioIntro={frontmatter.studioIntro}
       />
+      </React.Fragment>
+      </PageTransition>
     </Layout>
   );
 };

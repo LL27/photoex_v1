@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PageIntro from "../components/PageIntro";
 import { Container } from "reactstrap";
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -48,6 +49,9 @@ const TransfertVideoPage = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
     <Layout>
+          <PageTransition>
+      <React.Fragment>
+
       <TransfertVideoPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -57,6 +61,9 @@ const TransfertVideoPage = ({ data }) => {
         intro={post.frontmatter.intro}
 
       />
+
+      </React.Fragment>
+     </PageTransition>
     </Layout>
   );
 };

@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PageIntro from "../components/PageIntro";
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -49,6 +50,8 @@ const LaboPage = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
     <Layout>
+              <PageTransition>
+      <React.Fragment>
       <LaboPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -58,6 +61,8 @@ const LaboPage = ({ data }) => {
         intro={post.frontmatter.intro}
 
       />
+      </React.Fragment>
+      </PageTransition>
     </Layout>
   );
 };

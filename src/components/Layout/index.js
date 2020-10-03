@@ -1,11 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import SiteNavigation from "../../components/Navbar";
+import SiteNavigation from "../Navbar";
 import { Container, Row, Col } from 'reactstrap';
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
 
-import useSiteMetadata from "../../components/SiteMetadata";
+import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
 import './index.scss'
 

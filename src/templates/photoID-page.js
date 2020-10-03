@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PhotoFormats from "../components/PhotoFormats";
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -60,6 +61,8 @@ const PhotoIDPage = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
     <Layout>
+              <PageTransition>
+      <React.Fragment>
       <PhotoIDPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -68,6 +71,8 @@ const PhotoIDPage = ({ data }) => {
         description={post.frontmatter.description}
         main={post.frontmatter.main}
       />
+      </React.Fragment>
+      </PageTransition>
     </Layout>
   );
 };
