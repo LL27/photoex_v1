@@ -8,7 +8,7 @@ export default {
     purple: "hsl(250, 60%, 30%)",
     muted: "hsl(10, 20%, 94%)",
     gray: "hsl(10, 20%, 50%)",
-    yellow: "hsl(51, 100%, 68%)",
+    yellow: "rgb(255, 201, 38)",
     red: "hsl(3, 83%, 63%)"
   },
   fonts: {

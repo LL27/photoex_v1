@@ -68,7 +68,7 @@ const animatedButton = styled.span `
 
 `
 
-const IndexPageHeader = ({ children, image, title, description, height }) => {
+const IndexPageHeader = ({ children, image }) => {
   return (
     <div>
     <Container style={{position: 'relative', padding: '0', height: 'calc(100vh - 64px)' }} fluid="xl">
@@ -87,8 +87,6 @@ const IndexPageHeader = ({ children, image, title, description, height }) => {
 
 IndexPageHeader.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  description: PropTypes.string,
 };
 
 export default IndexPageHeader;

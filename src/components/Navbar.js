@@ -51,7 +51,7 @@ const SiteNavigation = (props) => {
 
   return (
     <div>
-      <Navbar expand="lg" light>
+      <Navbar expand="lg" light fixed>
         <Link to="/" className="navbar-brand">
           <img src={logo} className="navbar-logo" />
         </Link>
@@ -60,7 +60,8 @@ const SiteNavigation = (props) => {
           <Nav className="mr-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                <Link to="/studio" className="dropdown-link">
+                <Link to="/studio" className="dropdown-link"  activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+>
                   STUDIO
                 </Link>
               </DropdownToggle>
@@ -78,22 +79,22 @@ const SiteNavigation = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <Link to="/labo" className="navbar-link">
+              <Link to="/labo" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
                 LABO
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/encadrement" className="navbar-link">
+              <Link to="/encadrement" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
                 ENCADREMENT
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/transfertvideo" className="navbar-link">
+              <Link to="/transfertvideo" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
                 TRANSFER VIDÉO
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/boutique" className="navbar-link">
+              <Link to="/boutique" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
                 EN BOUTIQUE
               </Link>
             </NavItem>

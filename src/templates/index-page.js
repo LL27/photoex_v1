@@ -2,25 +2,72 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
+import { Container, Row, Col } from 'reactstrap';
 
 import Layout from "../components/Layout";
 import IndexPageHeader from "../components/IndexPageHeader";
+import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import styled from "@emotion/styled"
+
+const IntroText = styled.div`
+
+   padding: 34px;
+   margin-bottom: 24px;
+   background-color: #fff;
+    color: #66666;
+
+`
 
 
 
 export const IndexPageTemplate = ({
-  title,
+  title1,
+  title2,
+  title3,
   description,
-  image
+  image,
+  testimonials,
+  intro,
 }) => (
-    <IndexPageHeader image={image} title={title} description={description} />
+   <React.Fragment>
+    <IndexPageHeader image={image} description={description} />
+              <Container>
+
+             <Row style={{backgroundColor: "F8F8F8F8"}}>
+             <Col>
+                    <IntroText>
+        <h1 style={{maxWidth: "350px", fontWeight: 600, fontSize: '3rem'}}><span style={{color: "#66666"}}>{title1}</span> <span style={{color: "hsl(3, 83%, 63%)"}}>{title2}</span> <span style={{color: "#66666"}}>{title3}</span></h1>
+        <p>{description}</p>
+        </IntroText>
+
+             </Col>
+        <Col>
+            <Features gridItems={intro.blurbs} />
+
+        </Col>
+      </Row>
+
+
+    <Testimonials testimonials={testimonials} />
+            </Container>
+
+   </React.Fragment>
+
 );
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
+  intro: PropTypes.shape({
+    heading: PropTypes.string,
+    blurbs: PropTypes.array,
+  }),
+  title1: PropTypes.string,
+  title2: PropTypes.string,
+  title3: PropTypes.string,
   description: PropTypes.string,
+  testimonials: PropTypes.array,
 
 };
 
@@ -34,8 +81,12 @@ const IndexPage = ({ data }) => {
 
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
+        title1={frontmatter.title1}
+        title2={frontmatter.title2}
+        title3={frontmatter.title3}
         description={frontmatter.description}
+        intro={frontmatter.intro}
+        testimonials={frontmatter.testimonials}
       />
       </React.Fragment>
       </PageTransition>
@@ -57,7 +108,9 @@ export const pageQuery = graphql`
   query IndexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
+        title1
+        title2
+        title3
         image {
           childImageSharp {
             fluid(maxWidth: 1024, maxHeight: 600, quality: 100) {
@@ -68,6 +121,25 @@ export const pageQuery = graphql`
           }
         }
         description
+        intro {
+          heading
+          blurbs {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
+            path
+          }
+        }
+        testimonials {
+          author
+          quote
+        }
       }
     }
   }

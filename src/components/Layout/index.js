@@ -10,7 +10,7 @@ import { withPrefix } from "gatsby";
 import './index.scss'
 
 const Wrapper = styled.div `
-  background-color: #EDEDE9
+  background-color: #F6F6F4
 `
 const TemplateWrapper = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
@@ -57,11 +57,9 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
 
-<Container fluid="xl">
   <SiteNavigation />
                        {children}
 
-</Container>
 
 
 

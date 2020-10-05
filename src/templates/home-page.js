@@ -19,13 +19,10 @@ export const HomePageTemplate = ({
 }) => (
   <React.Fragment>
   <PageHeader image={image}/>
-    <Container>
+    <Container fluid="xl">
  <h3>{intro.heading}</h3>
       <Features gridItems={intro.blurbs} />
       <Testimonials testimonials={testimonials} />
-
-
-
     </Container>
   </React.Fragment>
 );
