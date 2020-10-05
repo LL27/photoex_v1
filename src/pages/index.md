@@ -47,11 +47,13 @@ intro:
         cassettes.
 testimonials:
   - author: Veronique Duroy
-    quote: Photographe très aimable et professionnel, qui a réalisé un portrait dont
+    quote: >-
+      Photographe très aimable et professionnel, qui a réalisé un portrait dont
       je suis pleinement satisfaite, ce qui ne m'était pas arrivé depuis
       longtemps. J'y reviendrai sans hésiter!
   - author: pauline garbiso
-    quote: Un monsieur adorable, professionnel et arrangeant. Merci encore! Je
+    quote: >-
+      Un monsieur adorable, professionnel et arrangeant. Merci encore! Je
       recommande à 100%.
   - author: Cath
     quote: Un photographe doué, charmant , qui sait vous mettre à l'aise. Si vous
@@ -59,17 +61,20 @@ testimonials:
       vous qui vous plaise, même pour une photo officielle, c'est là qu'il faut
       aller!  Bravo à ce monsieur!
   - author: Delphine Julhes Deodat
-    quote: Très bon photographe. Je le recommande car il met à l'aise et les photos
+    quote: >-
+      Très bon photographe. Je le recommande car il met à l'aise et les photos
       sont superbes. Bravo à lui pour sa gentillesse et son professionnalisme.
   - author: H Chadya
-    quote: Besoin de photo d’identité pour mon fils de 7 mois le photographe est
+    quote: >-
+      Besoin de photo d’identité pour mon fils de 7 mois le photographe est
       très pro très attentif à l’enfant défi relevé haut la main photo juste
       parfaite! Compter 25€ pour 6 photos d’identité bébé et 15€ les 6 pour
       adultes. C’est un peu cher c’est vrai mais son professionnalisme et sa
       gentillesse les valent largement! Je ne regrette pas le photomaton près de
       chez moi.
   - author: Ni Na
-    quote: Vraiment excellent ! J'ai été accueillie chaleureusement et je suis
+    quote: >-
+      Vraiment excellent ! J'ai été accueillie chaleureusement et je suis
       repartie avec des photos superbes. Aucun autre photographe n'a réussi à a
       réaliser d'aussi jolies photos pour documents officiels. Je le recommande
       très fortement. Ne perdez plus votre argent dans les photomaton ou vous

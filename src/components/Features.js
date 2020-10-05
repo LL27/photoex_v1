@@ -44,12 +44,12 @@ const Card = styled.div`
 
    @media screen and (min-width: 40em) {
 
-        flex: 0 1 calc(50% - 1em);
+        flex: 1 1 calc(50% - 1em);
     }
         @media screen and (min-width: 60em) {
 
 
- flex: 0 1 calc(33.3333% - 1em);
+ flex: 1 1 calc(33.3333% - 1em);
     }
 
 `
@@ -73,9 +73,9 @@ const StyledLink = styled(props => <Link {...props} />)`
 
 const CardText = styled.h5 `
       background: #fff none repeat scroll 0 0;
-    padding: 30px 0;
+    padding: 16px 0;
     text-align: center;
-  font-weight: bold;
+  font-weight: 100;
       font-size: 16px;
 
 `

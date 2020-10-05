@@ -10,7 +10,7 @@ import { withPrefix } from "gatsby";
 import './index.scss'
 
 const Wrapper = styled.div `
-  background-color: #F6F6F4
+  background-color: #FFF;
 `
 const TemplateWrapper = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();

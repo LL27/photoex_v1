@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
@@ -14,7 +13,6 @@ export const ProductPageTemplate = ({
   description,
   intro,
   main,
-  testimonials,
   fullImage,
   pricing,
 }) => (
@@ -76,7 +74,6 @@ ProductPageTemplate.propTypes = {
     heading: PropTypes.string,
     description: PropTypes.string,
   }),
-  testimonials: PropTypes.array,
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   pricing: PropTypes.shape({
     heading: PropTypes.string,
@@ -99,7 +96,6 @@ const ProductPage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
       />
@@ -150,10 +146,6 @@ export const productPageQuery = graphql`
         main {
           heading
           description
-        }
-        testimonials {
-          author
-          quote
         }
         pricing {
           heading

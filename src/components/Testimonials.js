@@ -6,11 +6,15 @@ import { faQuoteLeft, faStar } from "@fortawesome/free-solid-svg-icons";
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { v4 } from "uuid";
+import { Container } from "reactstrap";
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Container = styled.div`
+
+
+const InnerContainer = styled.div`
   margin: 3rem auto;
   max-width: 600px;
   display: flex;
@@ -42,10 +46,12 @@ class Testimonials extends React.Component {
       slidesToScroll: 1,
     };
     return (
+
         <Slider {...settings}>
+
           {testimonials.map((testimonial) => (
             <div key={v4()}>
-                        <Container>
+                        <InnerContainer>
 
               <Icon>
                 <FontAwesomeIcon icon={faQuoteLeft} />
@@ -64,15 +70,18 @@ class Testimonials extends React.Component {
               </div>
 
               <cite> – {testimonial.author}</cite>
-                                    </Container>
+                                    </InnerContainer>
 
             </div>
 
           ))}
+
         </Slider>
+
     );
   }
 }
+
 
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(
@@ -81,6 +90,6 @@ Testimonials.propTypes = {
       author: PropTypes.string,
     })
   ),
-};
+}
 
 export default Testimonials;

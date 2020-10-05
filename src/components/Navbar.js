@@ -31,14 +31,13 @@ import { Link } from "gatsby";
 import logo from "../img/logo.svg";
 import "./Navbar.css";
 
-
 const SiteNavigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [popoverMapOpen, setPopoverMapOpen] = useState(false);
-    const [popoverClockOpen, setPopoverClockOpen] = useState(false);
+  const [popoverClockOpen, setPopoverClockOpen] = useState(false);
 
-    const [popoverPhoneOpen, setPopoverPhoneOpen] = useState(false);
+  const [popoverPhoneOpen, setPopoverPhoneOpen] = useState(false);
 
   const toggleNav = () => setIsOpen(!isOpen);
 
@@ -47,7 +46,6 @@ const SiteNavigation = (props) => {
   const toggleClock = () => setPopoverClockOpen(!popoverClockOpen);
 
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
-
 
   return (
     <div>
@@ -60,8 +58,11 @@ const SiteNavigation = (props) => {
           <Nav className="mr-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                <Link to="/studio" className="dropdown-link"  activeStyle={{ color: "hsl(45, 100%, 58%)" }}
->
+                <Link
+                  to="/studio"
+                  className="dropdown-link"
+                  activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+                >
                   STUDIO
                 </Link>
               </DropdownToggle>
@@ -79,76 +80,93 @@ const SiteNavigation = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <Link to="/labo" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
+              <Link
+                to="/labo"
+                className="navbar-link"
+                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+              >
                 LABO
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/encadrement" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
+              <Link
+                to="/encadrement"
+                className="navbar-link"
+                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+              >
                 ENCADREMENT
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/transfertvideo" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
+              <Link
+                to="/transfertvideo"
+                className="navbar-link"
+                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+              >
                 TRANSFER VIDÉO
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/boutique" className="navbar-link" activeStyle={{ color: "hsl(45, 100%, 58%)" }}>
+              <Link
+                to="/boutique"
+                className="navbar-link"
+                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+              >
                 EN BOUTIQUE
               </Link>
             </NavItem>
           </Nav>
           <NavbarText>
+            <span className="nav-icon pr-3 border-right" id="popphone">
+              <FontAwesomeIcon icon={faPhone} />
+            </span>
+            <Popover
+              placement="bottom"
+              isOpen={popoverPhoneOpen}
+              target="popphone"
+              toggle={togglePhone}
+            >
+              <PopoverBody>
+                <a href="tel:0146286516" className="heading address">
+                  01 46 28 65 16
+                </a>
+              </PopoverBody>
+            </Popover>
 
-                <span className="nav-icon pr-3 border-right" id="popphone" type="button">
-                  <FontAwesomeIcon icon={faPhone} />
-                </span>
-                <Popover
-                  placement="bottom"
-                  isOpen={popoverPhoneOpen}
-                  target="popphone"
-                  toggle={togglePhone}
-                >
-                  <PopoverHeader>Popover Title</PopoverHeader>
-                  <PopoverBody>
-                    Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-                    Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                  </PopoverBody>
-                </Popover>
+            <span className="nav-icon pl-3 pr-3 border-right" id="popclock">
+              <FontAwesomeIcon icon={faClock} />
+            </span>
+            <Popover
+              placement="bottom"
+              isOpen={popoverClockOpen}
+              target="popclock"
+              toggle={toggleClock}
+            >
+              <PopoverBody>
+                <p className="heading">
+                  Mardi-Samedi
+                  <br />
+                  9h15-13h et 14h-19h 
+                </p>
+              </PopoverBody>
+            </Popover>
 
-                <span className="nav-icon pl-3 pr-3 border-right" id="popclock" type="button">
-                  <FontAwesomeIcon icon={faClock} />
-                </span>
-                <Popover
-                  placement="bottom"
-                  isOpen={popoverClockOpen}
-                  target="popclock"
-                  toggle={toggleClock}
-                >
-                  <PopoverHeader>Popover Title</PopoverHeader>
-                  <PopoverBody>
-                    Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-                    Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                  </PopoverBody>
-                </Popover>
-
-                <span className="nav-icon pr-3 pl-3" id="popmap" type="button">
-                  <FontAwesomeIcon icon={faMapMarker} />
-                </span>
-                <Popover
-                  placement="bottom"
-                  isOpen={popoverMapOpen}
-                  target="popmap"
-                  toggle={toggleMap}
-                >
-                  <PopoverHeader>Popover Title</PopoverHeader>
-                  <PopoverBody>
-                    Sed posuere consectetur est at lobortis. Aenean eu leo quam.
-                    Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                  </PopoverBody>
-                </Popover>
-
+            <span className="nav-icon pr-3 pl-3" id="popmap">
+              <FontAwesomeIcon icon={faMapMarker} />
+            </span>
+            <Popover
+              placement="bottom"
+              isOpen={popoverMapOpen}
+              target="popmap"
+              toggle={toggleMap}
+            >
+              <PopoverBody>
+                <p className="heading address">
+                  2 rue Beccaria <br />
+                  75012 Paris
+                </p>
+              </PopoverBody>
+            </Popover>
           </NavbarText>
         </Collapse>
       </Navbar>

@@ -11,7 +11,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={getAsset(data.image)}
         title={data.title}
         description={data.description}
-        intro={data.intro || { blurbs: [] }}
         testimonials={data.testimonials || {}}
       />
     )

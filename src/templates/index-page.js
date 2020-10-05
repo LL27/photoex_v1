@@ -2,25 +2,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 
 import Layout from "../components/Layout";
 import IndexPageHeader from "../components/IndexPageHeader";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
-import PageTransition from 'gatsby-v2-plugin-page-transitions'
-import styled from "@emotion/styled"
+import PageTransition from "gatsby-v2-plugin-page-transitions";
+import styled from "@emotion/styled";
+import reviewBG from "../img/review-bg.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faClock,
+  faMapMarker,
+} from "@fortawesome/free-solid-svg-icons";
 
 const IntroText = styled.div`
-
-   padding: 34px;
-   margin-bottom: 24px;
-   background-color: #fff;
-    color: #66666;
+  padding: 34px;
+  padding-top: 16px;
+  margin-bottom: 24px;
+  color: #66666;
+`;
+const TestimonialsContainer = styled.div`
 
 `
-
-
 
 export const IndexPageTemplate = ({
   title1,
@@ -31,30 +37,40 @@ export const IndexPageTemplate = ({
   testimonials,
   intro,
 }) => (
-   <React.Fragment>
+  <React.Fragment>
     <IndexPageHeader image={image} description={description} />
-              <Container>
+    <Container fluid>
+      <Row style={{ backgroundColor: "#F8F8F8", paddingTop: "30px" }}>
+        <Col sm="12" md="4">
+          <IntroText>
+            <h1
+              style={{ maxWidth: "350px", fontWeight: 600, fontSize: "2.4rem" }}
+            >
+              <span style={{ color: "#66666" }}>{title1}</span>{" "}
+              <span style={{ color: "hsl(3, 83%, 63%)" }}>{title2}</span>{" "}
+              <span style={{ color: "#66666" }}>{title3}</span>
+            </h1>
+            <p>{description}</p>
+                          <FontAwesomeIcon icon={faMapMarker} size="lg" />
 
-             <Row style={{backgroundColor: "F8F8F8F8"}}>
-             <Col>
-                    <IntroText>
-        <h1 style={{maxWidth: "350px", fontWeight: 600, fontSize: '3rem'}}><span style={{color: "#66666"}}>{title1}</span> <span style={{color: "hsl(3, 83%, 63%)"}}>{title2}</span> <span style={{color: "#66666"}}>{title3}</span></h1>
-        <p>{description}</p>
-        </IntroText>
+              <FontAwesomeIcon icon={faClock} size="lg"/>
 
-             </Col>
-        <Col>
-            <Features gridItems={intro.blurbs} />
+              <FontAwesomeIcon icon={faPhone} size="lg"/>
 
+          </IntroText>
+        </Col>
+        <Col sm="12" md="8">
+          <Features gridItems={intro.blurbs} />
         </Col>
       </Row>
+      <TestimonialsContainer>
+
+              <Testimonials testimonials={testimonials} />
 
 
-    <Testimonials testimonials={testimonials} />
-            </Container>
-
-   </React.Fragment>
-
+      </TestimonialsContainer>
+    </Container>
+  </React.Fragment>
 );
 
 IndexPageTemplate.propTypes = {
@@ -68,7 +84,6 @@ IndexPageTemplate.propTypes = {
   title3: PropTypes.string,
   description: PropTypes.string,
   testimonials: PropTypes.array,
-
 };
 
 const IndexPage = ({ data }) => {
@@ -77,18 +92,17 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <PageTransition>
-      <React.Fragment>
-
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title1={frontmatter.title1}
-        title2={frontmatter.title2}
-        title3={frontmatter.title3}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        testimonials={frontmatter.testimonials}
-      />
-      </React.Fragment>
+        <React.Fragment>
+          <IndexPageTemplate
+            image={frontmatter.image}
+            title1={frontmatter.title1}
+            title2={frontmatter.title2}
+            title3={frontmatter.title3}
+            description={frontmatter.description}
+            intro={frontmatter.intro}
+            testimonials={frontmatter.testimonials}
+          />
+        </React.Fragment>
       </PageTransition>
     </Layout>
   );
@@ -116,7 +130,6 @@ export const pageQuery = graphql`
             fluid(maxWidth: 1024, maxHeight: 600, quality: 100) {
               ...GatsbyImageSharpFluid
               ...GatsbyImageSharpFluidLimitPresentationSize
-
             }
           }
         }

@@ -9,20 +9,17 @@ import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import Testimonials from "../components/Testimonials";
 import PageHeader from "../components/PageHeader";
 
 export const HomePageTemplate = ({
   image,
   intro,
-  testimonials,
 }) => (
   <React.Fragment>
   <PageHeader image={image}/>
     <Container fluid="xl">
  <h3>{intro.heading}</h3>
       <Features gridItems={intro.blurbs} />
-      <Testimonials testimonials={testimonials} />
     </Container>
   </React.Fragment>
 );
@@ -32,8 +29,7 @@ HomePageTemplate.propTypes = {
   intro: PropTypes.shape({
     heading: PropTypes.string,
     blurbs: PropTypes.array,
-  }),
-  testimonials: PropTypes.array,
+  })
 };
 
 const HomePage = ({ data }) => {
@@ -46,7 +42,6 @@ const HomePage = ({ data }) => {
       <HomePageTemplate
         image={frontmatter.image}
         intro={frontmatter.intro}
-        testimonials={frontmatter.testimonials}
       />
       </React.Fragment>
       </PageTransition>
@@ -89,10 +84,6 @@ export const pageQuery = graphql`
             text
             path
           }
-        }
-        testimonials {
-          author
-          quote
         }
       }
     }
