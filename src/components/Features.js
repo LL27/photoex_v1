@@ -61,6 +61,7 @@ const StyledLink = styled(props => <Link {...props} />)`
     transition: all 0.3s ease 0s;
   color: rgb(65, 67, 69);
   text-decoration: none;
+  border-radius: 10px;
   &:hover {
     text-decoration: underline;
     color: #262727;
@@ -70,10 +71,11 @@ const StyledLink = styled(props => <Link {...props} />)`
 `;
 
 const CardText = styled.h5 `
-      background: #fffff9 none repeat scroll 0 0;
-    padding: 14px 0;
+      background: #ffffff none repeat scroll 0 0;
+    padding: 12px 0;
     text-align: center;
-      font-size: 14px;
+      font-size: 12px;
+      border-radius: 0 10px 10px;
 
 `
 
@@ -93,6 +95,7 @@ const FeatureGrid = ({ gridItems }) => (
             border: 0,
             width: '100%',
             height: 'auto',
+            'border-radius': '10px 10px 0 0'
 
           }} />
             </CardImage>

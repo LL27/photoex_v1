@@ -31,7 +31,6 @@ const Title = styled.h2`
     padding: 34px;
   padding-top: 16px;
   margin-bottom: 24px;
-  color: #66666;
   min-width: 230px;
   text-align: center;
 `
@@ -59,7 +58,7 @@ class Testimonials extends React.Component {
     };
     return (
       <Container>
-       <Title>Dernier Avis</Title>
+       <Title>Derniers Avis</Title>
         <Slider {...settings}>
 
           {testimonials.map((testimonial) => (
