@@ -22,7 +22,19 @@ const InnerContainer = styled.div`
   align-items: center;
   justify-content: center;
 `
-
+const Title = styled.h2`
+  font-weight: 600;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 auto;
+    padding: 34px;
+  padding-top: 16px;
+  margin-bottom: 24px;
+  color: #66666;
+  min-width: 230px;
+  text-align: center;
+`
 const Icon = styled.span`
   display: inline-block;
                   font-size: 1.5rem;
@@ -39,18 +51,20 @@ class Testimonials extends React.Component {
   render() {
     const { testimonials } = this.props;
     const settings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
     };
     return (
-
+      <Container>
+       <Title>Dernier Avis</Title>
         <Slider {...settings}>
 
           {testimonials.map((testimonial) => (
             <div key={v4()}>
+
                         <InnerContainer>
 
               <Icon>
@@ -77,7 +91,7 @@ class Testimonials extends React.Component {
           ))}
 
         </Slider>
-
+</Container>
     );
   }
 }

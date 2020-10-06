@@ -19,13 +19,34 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const IntroText = styled.div`
-  padding: 34px;
-  padding-top: 16px;
   margin-bottom: 24px;
   color: #66666;
-`;
-const TestimonialsContainer = styled.div`
+  min-width: 230px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  @media (min-width: 768px) {
+      text-align: left;
 
+  }
+`;
+
+const IntroTitle = styled.h1`
+  font-weight: 600;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+
+  font-size: 2.4em;
+
+  }
+
+`
+const TestimonialsContainer = styled.div`
+  padding-top: 10%;
+  padding-bottom: 10%;
 `
 
 export const IndexPageTemplate = ({
@@ -40,28 +61,35 @@ export const IndexPageTemplate = ({
   <React.Fragment>
     <IndexPageHeader image={image} description={description} />
     <Container fluid>
-      <Row style={{ backgroundColor: "#F8F8F8", paddingTop: "30px" }}>
-        <Col sm="12" md="4">
+
+      <Row style={{ backgroundColor: "#1d2528", backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)", paddingTop: "10%", paddingBottom: "10%" }}>
+        <Col>
+                   <Container>
+
           <IntroText>
-            <h1
-              style={{ maxWidth: "350px", fontWeight: 600, fontSize: "2.4rem" }}
+            <IntroTitle
+
             >
-              <span style={{ color: "#66666" }}>{title1}</span>{" "}
+              <span style={{ color: "#fffff0" }}>{title1}</span>{" "}
               <span style={{ color: "hsl(3, 83%, 63%)" }}>{title2}</span>{" "}
-              <span style={{ color: "#66666" }}>{title3}</span>
-            </h1>
-            <p>{description}</p>
-                          <FontAwesomeIcon icon={faMapMarker} size="lg" />
+              <span style={{ color: "#fffff0" }}>{title3}</span>
+            </IntroTitle>
+            <p style={{ color: "#fffff0e2", paddingTop: "30px", lineHeight: "1.8em" }}>{description}</p>
 
-              <FontAwesomeIcon icon={faClock} size="lg"/>
-
-              <FontAwesomeIcon icon={faPhone} size="lg"/>
 
           </IntroText>
+              </Container>
+
         </Col>
-        <Col sm="12" md="8">
+
+        <Col md={{ size: 7}}>
+                             <Container>
+
           <Features gridItems={intro.blurbs} />
+                             </Container>
+
         </Col>
+
       </Row>
       <TestimonialsContainer>
 
@@ -69,7 +97,8 @@ export const IndexPageTemplate = ({
 
 
       </TestimonialsContainer>
-    </Container>
+            </Container>
+
   </React.Fragment>
 );
 

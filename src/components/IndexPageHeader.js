@@ -23,7 +23,7 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const MapLink = styled.a `
     width: 150px;
     height: 80px;
-    background: #EDEDE9;
+    background: #fff;
     position: absolute;
     top: 80px;
     right: 0;
@@ -39,7 +39,7 @@ const MapText = styled.p `
     width: 90px;
     height: 80px;
     font-size: 14px;
-    color: #535353;
+    color: rgb(65, 67, 69);
     margin: 0;
     line-height: 16px;
     text-align: center;

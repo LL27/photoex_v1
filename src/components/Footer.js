@@ -12,9 +12,6 @@ const Footer = class extends React.Component {
   render() {
     return (
       <div id="footer">
-        <div className="full-width-map-container">
-          <GoogleMap />
-        </div>
 
         <footer
           id="footer-bottom"

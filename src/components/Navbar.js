@@ -49,7 +49,7 @@ const SiteNavigation = (props) => {
 
   return (
     <div>
-      <Navbar expand="lg" light fixed>
+      <Navbar expand="lg" light fixed="top" style={{backgroundColor: "#fff", borderBottom: "1px solid #efefef"}}>
         <Link to="/" className="navbar-brand">
           <img src={logo} className="navbar-logo" />
         </Link>

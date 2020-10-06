@@ -1,7 +1,7 @@
 export default {
   colors: {
-    text: "hsl(10, 20%, 20%)",
-    background: "hsl(10, 10%, 98%)",
+    text: "rgb(65, 67, 69)",
+    background: "#FFFFFF",
     primary: "hsl(3, 83%, 63%)",
     secondary: "hsl(10, 60%, 50%)",
     highlight: "hsl(10, 40%, 90%)",

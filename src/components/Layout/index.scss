@@ -3,6 +3,7 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: "1.5";
+  color: rgb(65, 67, 69);
 
 }
 h1,
@@ -35,9 +36,9 @@ h6 {
 
 // Basics of a navbar
 
-$navbar-light-color: rgb(85, 92, 92);
-$navbar-light-bg: rgba(0, 0, 0, 0.125);
-$navbar-light-border: darken($navbar-light-bg, 6.5%);
+$navbar-light-color: rgb(65, 67, 69);
+$navbar-light-bg: #fff;
+$navbar-light-border: #efefef;
 // Navbar links
 $navbar-light-link-color: $navbar-light-color;
 $navbar-light-link-hover-color: #333;

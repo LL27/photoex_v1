@@ -56,27 +56,24 @@ const Card = styled.div`
 
 const StyledLink = styled(props => <Link {...props} />)`
   display: block;
-     background: #FFF;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+     background: #fffff9;
     margin-bottom: 30px;
     transition: all 0.3s ease 0s;
-  color: #262727;
+  color: rgb(65, 67, 69);
   text-decoration: none;
   &:hover {
     text-decoration: underline;
     color: #262727;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
 
 
   }
 `;
 
 const CardText = styled.h5 `
-      background: #fff none repeat scroll 0 0;
-    padding: 16px 0;
+      background: #fffff9 none repeat scroll 0 0;
+    padding: 14px 0;
     text-align: center;
-  font-weight: 100;
-      font-size: 16px;
+      font-size: 14px;
 
 `
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import SiteNavigation from "../Navbar";
+import Footer from "../Footer";
+
 import { Container, Row, Col } from 'reactstrap';
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
@@ -10,7 +12,8 @@ import { withPrefix } from "gatsby";
 import './index.scss'
 
 const Wrapper = styled.div `
-  background-color: #FFF;
+  background-color: #fff;
+  padding-top: 86px;
 `
 const TemplateWrapper = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
@@ -63,7 +66,7 @@ const TemplateWrapper = ({ children }) => {
 
 
 
-
+<Footer/>
       </Wrapper>
   );
 };
