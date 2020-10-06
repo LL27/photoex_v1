@@ -1,117 +1,141 @@
 import React from "react";
 import { Link } from "gatsby";
-import GoogleMap from "../components/GoogleMap";
+import styled from "@emotion/styled";
 
 import mapbg from "../img/map-bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
-
-import logo from "../img/logo.svg";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { Container, Row, Col } from "reactstrap";
 
 const Footer = class extends React.Component {
   render() {
-    return (
-      <div id="footer">
+    const FooterContainer = styled.div`
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      list-style-type: none;
+    `
 
+    const NavItem = styled.li`
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: hsl(0, 0%, 96%);
+      list-style-type: none;
+      padding-left: 0;
+    `;
+    const FooterLink = styled((props) => <Link {...props} />)`
+      transition: all 0.3s ease 0s;
+      font-size: 11px;
+      color: hsl(0, 0%, 96%);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+            padding-left: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    `;
+    const FooterNav = styled.div`
+      list-style-type: none;
+            padding-left: 0;
+
+    `;
+    return (
+      <FooterContainer id="footer">
         <footer
           id="footer-bottom"
-          className="footer has-background-black-ter has-text-white-ter"
+          style={{
+            backgroundColor: "#1d2528",
+            backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)",
+            paddingTop: "5%",
+            paddingBottom: "5%",
+          }}
         >
-          <div className="content">
-            <div className="columns">
-              <div className="column is-one-third">
-                <div className="content">
-                  <img src={logo} alt="Photo Expression" />
-                  <p className="footer-nav-item">
-                    Votre photographe portraitiste au 12ème arr. de Paris
-                  </p>
-                  <p className="footer-nav-item">2 rue Beccaria, 75012 Paris</p>
-                  <p className="footer-nav-item">
+          <Container fluid="lg">
+            <Row>
+              <Col sm="12" md="3">
+                <ul style={{listStyleType: "none", paddingLeft: 0}}>
+                <FontAwesomeIcon icon={faCamera} style={{fontSize: "1.5rem", marginBottom: "1rem", color: "hsl(0, 0%, 96%)", display: "inline"}}/>
+                  <NavItem>
+                    <h6>
+                    Votre photographe portraitiste au 12ème arrondissement de Paris
+                    </h6>
+                  </NavItem>
+                  <NavItem>2 rue Beccaria, 75012 Paris</NavItem>
+                  <NavItem>
                     Tél. : 01 46 28 65 16 <br />
                     Fax : 09 71 70 35 16
-                  </p>
+                  </NavItem>
                   <a
                     href="mailto:photo.expression@orange.fr"
                     className="footer-nav-item"
                   >
                     photo.expression@orange.fr
                   </a>
-                </div>
-              </div>
-              <div className="column">
-                <div className="content">
-                  <ul className="footer-nav" style={{ marginLeft: 0 }}>
-                    <h4 className="has-text-white-ter">SERVICES</h4>
-                    <li>
-                      <Link className="footer-nav-item" to="/photoID">
-                        PHOTO D'IDENTITÉ
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-nav-item" to="/portrait">
-                        PORTRAIT
-                      </Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <Link className="footer-nav-item" to="/labo">
-                        LABORATOIRE
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-nav-item" to="/encadrement">
-                        ENCADREMENT
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-nav-item" to="/transfervideo">
-                        TRANSDER VIDEO
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="footer-nav-item" to="/boutique">
-                        EN BOUTIQUE
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="column">
-                <div className="content">
-                  <ul className="footer-nav">
-                    <h4 className="has-text-white-ter">HORAIRES</h4>
-                    <li className="footer-nav-item">
-                      Mardi au samedi  <br />
-                      9h15-13h et 14h-19h
-                    </li>
-                    <li className="footer-nav-item">Avec ou Sans RDV</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="column">
-                <div className="content">
-                  <ul className="footer-nav">
-                    <h4 className="has-text-white-ter">{`MOYEN D'ACCÈS`}</h4>
-                    <li className="footer-nav-item">
-                      Bus ligne 29, arrêt Daumesnil-Diderot
-                    </li>
-                    <li className="footer-nav-item">
-                      Bus ligne 57, arrêt Daumesnil-Diderot
-                    </li>
-                    <li className="footer-nav-item">
-                      Métro ligne , arrêt Gare de Lyon
-                    </li>
+                </ul>
+              </Col>
 
-                    <li className="footer-nav-item">
-                      Métro ligne , arrêt Reuilly-Diderot
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+              <Col sm="4" md="3">
+                <FooterNav>
+                  <h4 style={{color: "hsl(3, 83%, 63%)"}}>SERVICES</h4>
+                  <li>
+                    <FooterLink to="/photoID">PHOTO D'IDENTITÉ</FooterLink>
+                  </li>
+                  <li>
+                    {" "}
+                    <FooterLink to="/portrait">PORTRAIT</FooterLink>
+                  </li>
+                  <li>
+                    {" "}
+                    <FooterLink to="/labo">LABORATOIRE</FooterLink>
+                  </li>
+                  <li>
+                    {" "}
+                    <FooterLink to="/encadrement">ENCADREMENT</FooterLink>
+                  </li>
+                  <li>
+                    {" "}
+                    <FooterLink to="/transfervideo">TRANSDER VIDEO</FooterLink>
+                  </li>
+                  <li>
+                    {" "}
+                    <FooterLink to="/boutique">EN BOUTIQUE</FooterLink>
+                  </li>
+                </FooterNav>
+              </Col>
+              <Col sm="4" md="3">
+                <FooterNav>
+                  <h4 style={{color: "hsl(3, 83%, 63%)"}}>HORAIRES</h4>
+                  <NavItem>
+                    Mardi au samedi  <br />
+                    9h15-13h et 14h-19h
+                  </NavItem>
+                  <NavItem>Avec ou Sans RDV</NavItem>
+                </FooterNav>
+              </Col>
+
+              <Col sm="4" md="3">
+                <FooterNav>
+                  <h4 style={{color: "hsl(3, 83%, 63%)"}}>{`MOYEN D'ACCÈS`}</h4>
+                  <NavItem>
+                    Bus ligne 29, arrêt Daumesnil-Diderot
+                  </NavItem>
+                  <NavItem>
+                    Bus ligne 57, arrêt Daumesnil-Diderot
+                  </NavItem>
+                  <NavItem >
+                    Métro ligne 1, arrêt Gare de Lyon
+                  </NavItem>
+
+                  <NavItem>
+                    Métro ligne 1, arrêt Reuilly-Diderot
+                  </NavItem>
+                </FooterNav>
+              </Col>
+            </Row>
+          </Container>
         </footer>
-      </div>
+      </FooterContainer>
     );
   }
 };
