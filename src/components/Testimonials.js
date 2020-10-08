@@ -53,7 +53,7 @@ class Testimonials extends React.Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
     };
     return (
@@ -74,11 +74,11 @@ class Testimonials extends React.Component {
               </Quote>
               <div className="content">
                 <div className="icon-five-stars">
-                  <FontAwesomeIcon icon={faStar} className="checked" />
-                  <FontAwesomeIcon icon={faStar} className="checked" />
-                  <FontAwesomeIcon icon={faStar} className="checked" />
-                  <FontAwesomeIcon icon={faStar} className="checked" />
-                  <FontAwesomeIcon icon={faStar} className="checked" />
+                  <FontAwesomeIcon icon={faStar} className="checked" style={{color: "gold"}} />
+                  <FontAwesomeIcon icon={faStar} className="checked" style={{color: "gold"}}/>
+                  <FontAwesomeIcon icon={faStar} className="checked" style={{color: "gold"}}/>
+                  <FontAwesomeIcon icon={faStar} className="checked" style={{color: "gold"}}/>
+                  <FontAwesomeIcon icon={faStar} className="checked" style={{color: "gold"}}/>
                 </div>
               </div>
 

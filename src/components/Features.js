@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import CardLink from "../components/CardLink";
 
 import theme from "../theme.js";
 /** @jsx jsx */
@@ -59,19 +58,16 @@ const StyledLink = styled(props => <Link {...props} />)`
      background: #fffff9;
     margin-bottom: 30px;
     transition: all 0.3s ease 0s;
-  color: rgb(65, 67, 69);
-  text-decoration: none;
   border-radius: 10px;
   &:hover {
-    text-decoration: underline;
-    color: #262727;
+    text-decoration: none;
 
 
   }
 `;
 
 const CardText = styled.h5 `
-      background: #ffffff none repeat scroll 0 0;
+      background: #fffff9 none repeat scroll 0 0;
     padding: 12px 0;
     text-align: center;
       font-size: 12px;

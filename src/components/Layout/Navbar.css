@@ -1,16 +1,8 @@
-:root {
-  --navbar-focus-color: hsl(200, 3%, 18%);
-  --navbar-text-color: rgba(0,0,0,.5);
-  --navbar-bg-color: hsl(51, 100%, 68%);
-
-}
-
-
 .home-link,
 .navbar-link
  {
   font-size: .9em;
-  color: var(--navbar-text-color);
+  color: rgba(0,0,0,.5);
   transition: color 0.2s ease-in-out;
   text-decoration: none;
   display: flex;
@@ -20,7 +12,7 @@
 }
 .dropdown-link {
     font-size: .9em;
-  color: var(--navbar-text-color);
+  color: rgba(0,0,0,.5);
     transition: color 0.2s ease-in-out;
 
   text-decoration: none;
@@ -50,7 +42,7 @@
 .dropdown-link:hover,
 .dropdown-link:active
  {
-  color: var(--navbar-focus-color);
+  color: hsl(200, 3%, 18%);
   text-decoration: none;
 
 }
@@ -71,5 +63,5 @@
 }
 .dropdown-item:hover {
   background-color: none;
-  color: var(--navbar-focus-color);
+  color: hsl(200, 3%, 18%);
 }

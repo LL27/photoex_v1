@@ -10,29 +10,20 @@ import { Container, Row, Col } from "reactstrap";
 const Footer = class extends React.Component {
   render() {
     const FooterContainer = styled.div`
-      font-size: 11px;
-      letter-spacing: 0.5px;
       list-style-type: none;
     `
 
     const NavItem = styled.li`
-      font-size: 11px;
       font-weight: 400;
-      letter-spacing: 0.5px;
-      color: hsl(0, 0%, 96%);
       list-style-type: none;
       padding-left: 0;
     `;
     const FooterLink = styled((props) => <Link {...props} />)`
-      transition: all 0.3s ease 0s;
-      font-size: 11px;
-      color: hsl(0, 0%, 96%);
-      letter-spacing: 0.5px;
       text-decoration: none;
             padding-left: 0;
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     `;
     const FooterNav = styled.div`
@@ -41,12 +32,10 @@ const Footer = class extends React.Component {
 
     `;
     return (
-      <FooterContainer id="footer">
+      <FooterContainer id="footer" dark>
         <footer
           id="footer-bottom"
           style={{
-            backgroundColor: "#1d2528",
-            backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)",
             paddingTop: "5%",
             paddingBottom: "5%",
           }}
@@ -55,7 +44,7 @@ const Footer = class extends React.Component {
             <Row>
               <Col sm="12" md="3">
                 <ul style={{listStyleType: "none", paddingLeft: 0}}>
-                <FontAwesomeIcon icon={faCamera} style={{fontSize: "1.5rem", marginBottom: "1rem", color: "hsl(0, 0%, 96%)", display: "inline"}}/>
+                <FontAwesomeIcon icon={faCamera} style={{fontSize: "1.5rem", marginBottom: "1rem", display: "inline"}}/>
                   <NavItem>
                     <h6>
                     Votre photographe portraitiste au 12ème arrondissement de Paris

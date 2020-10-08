@@ -3,22 +3,19 @@ import { Helmet } from "react-helmet";
 import SiteNavigation from "../Navbar";
 import Footer from "../Footer";
 
-import { Container, Row, Col } from 'reactstrap';
-import { Global, css } from "@emotion/core"
-import styled from "@emotion/styled"
+import { Container, Row, Col } from "reactstrap";
+import { Global, css } from "@emotion/core";
+import styled from "@emotion/styled";
 
 import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
-import './index.scss'
+import "./index.scss";
 
-const Wrapper = styled.div `
-  background-color: #fff;
-  padding-top: 86px;
-`
+const Wrapper = styled.div``;
 const TemplateWrapper = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
   return (
-      <Wrapper>
+    <Wrapper>
       <Helmet>
         <html lang="fr" />
         <title>{title}</title>
@@ -60,14 +57,11 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
 
-  <SiteNavigation />
-                       {children}
+      <SiteNavigation />
+      {children}
 
-
-
-
-<Footer/>
-      </Wrapper>
+      <Footer />
+    </Wrapper>
   );
 };
 

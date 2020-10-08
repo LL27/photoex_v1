@@ -29,6 +29,7 @@ import {
 import theme from "../theme.js";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
+
 import "./Navbar.css";
 
 const SiteNavigation = (props) => {
@@ -49,7 +50,7 @@ const SiteNavigation = (props) => {
 
   return (
     <div>
-      <Navbar expand="lg" light fixed="top" style={{backgroundColor: "#fff", borderBottom: "1px solid #efefef"}}>
+      <Navbar expand="lg" light fixed="top" style={{backgroundColor: "#fff", borderBottom: "1px solid #e5e5e0"}}>
         <Link to="/" className="navbar-brand">
           <img src={logo} className="navbar-logo" />
         </Link>
@@ -127,6 +128,7 @@ const SiteNavigation = (props) => {
               toggle={togglePhone}
             >
               <PopoverBody>
+              <PopoverHeader>Horairess</PopoverHeader>
                 <a href="tel:0146286516" className="heading address">
                   01 46 28 65 16
                 </a>

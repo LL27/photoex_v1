@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import StyledLink from "../components/StyledLink";
 
 import theme from "../theme.js";
 /** @jsx jsx */
@@ -23,7 +22,7 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const MapLink = styled.a `
     width: 150px;
     height: 80px;
-    background: #fff;
+    background: #fffff9;
     position: absolute;
     top: 80px;
     right: 0;
@@ -74,12 +73,11 @@ const IndexPageHeader = ({ children, image }) => {
     <Container style={{position: 'relative', padding: '0', height: 'calc(100vh - 64px)' }} fluid="xl">
         <PreviewCompatibleImage imageInfo={image} imageStyle={imageStyle} />
 
-        <MapLink target="_blank">
+        <MapLink href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119" target="_blank">
           <MapText>Voir sur la carte</MapText>
           <MapIcon><FontAwesomeIcon icon={faMap} /></MapIcon>
         </MapLink>
         {children}
-        <StyledLink/>
       </Container>
     </div>
   );
