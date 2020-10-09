@@ -48,6 +48,7 @@ const SiteNavigation = (props) => {
 
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
 
+  const activeStyleColor = {color: "rgb(239, 90, 82)"}
   return (
     <div>
       <Navbar expand="lg" light fixed="top" style={{backgroundColor: "#fff", borderBottom: "1px solid #e5e5e0"}}>
@@ -62,7 +63,7 @@ const SiteNavigation = (props) => {
                 <Link
                   to="/studio"
                   className="dropdown-link"
-                  activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+                  activeStyle={activeStyleColor}
                 >
                   STUDIO
                 </Link>
@@ -84,7 +85,7 @@ const SiteNavigation = (props) => {
               <Link
                 to="/labo"
                 className="navbar-link"
-                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+                activeStyle={activeStyleColor}
               >
                 LABO
               </Link>
@@ -93,7 +94,7 @@ const SiteNavigation = (props) => {
               <Link
                 to="/encadrement"
                 className="navbar-link"
-                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+                activeStyle={activeStyleColor}
               >
                 ENCADREMENT
               </Link>
@@ -102,7 +103,7 @@ const SiteNavigation = (props) => {
               <Link
                 to="/transfertvideo"
                 className="navbar-link"
-                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+                activeStyle={activeStyleColor}
               >
                 TRANSFER VIDÉO
               </Link>
@@ -111,7 +112,7 @@ const SiteNavigation = (props) => {
               <Link
                 to="/boutique"
                 className="navbar-link"
-                activeStyle={{ color: "hsl(45, 100%, 58%)" }}
+                activeStyle={activeStyleColor}
               >
                 EN BOUTIQUE
               </Link>

@@ -18,9 +18,9 @@ import {
   faMapMarker,
 } from "@fortawesome/free-solid-svg-icons";
 
-const IntroText = styled.div`
+const Hero = styled.div`
   margin-bottom: 24px;
-  color: #66666;
+  color: #fff;
   min-width: 230px;
   text-align: center;
   margin: 0 auto;
@@ -31,15 +31,33 @@ const IntroText = styled.div`
   }
 `;
 
-const IntroTitle = styled.h1`
+const HeroTitle = styled.h1`
   font-weight: 600;
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 0 auto;
+  margin-bottom: 25px;
   @media (min-width: 768px) {
 
   font-size: 2.4em;
+
+  }
+
+`
+const HeroHeading = styled.p`
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 25px;
+  @media (min-width: 768px) {
+
+
+  }
+
+`
+
+const HeroText = styled.p`
+  @media (min-width: 768px) {
+
 
   }
 
@@ -53,6 +71,7 @@ export const IndexPageTemplate = ({
   title1,
   title2,
   title3,
+  heading,
   description,
   image,
   testimonials,
@@ -64,20 +83,21 @@ export const IndexPageTemplate = ({
 
       <Row style={{ backgroundColor: "#1d2528", backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)", paddingTop: "10%", paddingBottom: "10%" }}>
         <Col>
-                   <Container>
+       <Container>
 
-          <IntroText>
-            <IntroTitle
+          <Hero>
+            <HeroTitle
 
             >
               <span style={{ color: "#fffff0" }}>{title1}</span>{" "}
               <span style={{ color: "hsl(3, 83%, 63%)" }}>{title2}</span>{" "}
               <span style={{ color: "#fffff0" }}>{title3}</span>
-            </IntroTitle>
-            <p style={{ color: "#fffff0e2", paddingTop: "30px", lineHeight: "1.8em" }}>{description}</p>
+            </HeroTitle>
+            <HeroHeading>{heading}</HeroHeading>
+            <HeroText>{description}</HeroText>
 
 
-          </IntroText>
+          </Hero>
               </Container>
 
         </Col>
@@ -111,6 +131,7 @@ IndexPageTemplate.propTypes = {
   title1: PropTypes.string,
   title2: PropTypes.string,
   title3: PropTypes.string,
+  heading: PropTypes.string,
   description: PropTypes.string,
   testimonials: PropTypes.array,
 };
@@ -127,6 +148,7 @@ const IndexPage = ({ data }) => {
             title1={frontmatter.title1}
             title2={frontmatter.title2}
             title3={frontmatter.title3}
+            heading={frontmatter.heading}
             description={frontmatter.description}
             intro={frontmatter.intro}
             testimonials={frontmatter.testimonials}
@@ -162,6 +184,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        heading
         description
         intro {
           heading
