@@ -61,8 +61,6 @@ const HeroButtons = styled.div`
 `;
 
 const TestimonialsContainer = styled.div`
-  padding-top: 10%;
-  padding-bottom: 10%;
 `;
 
 export const IndexPageTemplate = ({
@@ -112,9 +110,9 @@ export const IndexPageTemplate = ({
           </Container>
         </Col>
       </Row>
-      <TestimonialsContainer>
+      <Container>
         <Testimonials testimonials={testimonials} />
-      </TestimonialsContainer>
+      </Container>
     </Container>
   </React.Fragment>
 );

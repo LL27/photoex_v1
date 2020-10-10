@@ -9,8 +9,12 @@ import { Container, Row, Col } from "reactstrap";
 
 const Footer = class extends React.Component {
   render() {
-    const FooterContainer = styled.div`
+    const FooterContainer = styled.footer`
+      margin-top: 25px;
       list-style-type: none;
+      background-color: #333331;
+      padding: 30px 0;
+      color: #ccccc7;
     `
 
     const NavItem = styled.li`
@@ -32,14 +36,8 @@ const Footer = class extends React.Component {
 
     `;
     return (
-      <FooterContainer id="footer" dark>
-        <footer
-          id="footer-bottom"
-          style={{
-            paddingTop: "5%",
-            paddingBottom: "5%",
-          }}
-        >
+      <FooterContainer id="footer">
+
           <Container fluid="lg">
             <Row>
               <Col sm="12" md="3">
@@ -123,7 +121,6 @@ const Footer = class extends React.Component {
               </Col>
             </Row>
           </Container>
-        </footer>
       </FooterContainer>
     );
   }

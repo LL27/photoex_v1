@@ -15,12 +15,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const InnerContainer = styled.div`
-  margin: 3rem auto;
+  margin: 1rem auto;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
 `
 const Title = styled.h2`
   font-weight: 600;
@@ -36,12 +36,12 @@ const Title = styled.h2`
 `
 const Icon = styled.span`
   display: inline-block;
-                  font-size: 1.5rem;
+                  font-size: 2rem;
                   padding: 1.5rem;
                   text-align: center;
 `
 const Quote = styled.div`
-       font-size: 1rem;
+       font-size: 1.5rem;
                   font-style: italic;
                   padding-bottom: 1.5rem;
                   text-align: center;
@@ -50,15 +50,14 @@ class Testimonials extends React.Component {
   render() {
     const { testimonials } = this.props;
     const settings = {
-      dots: false,
-      infinite: false,
+      dots: true,
+      infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
     };
     return (
-      <Container>
-       <Title>Derniers Avis</Title>
+      <Container style={{marginBottom: "25px"}}>
         <Slider {...settings}>
 
           {testimonials.map((testimonial) => (
