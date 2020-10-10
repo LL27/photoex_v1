@@ -36,7 +36,7 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-   padding: ${theme.space[2]}px;
+   padding: 6px;
    border-radius: 2px;
    width: 95%;
    transition: all 0.3s ease 0s;
@@ -55,27 +55,32 @@ const Card = styled.div`
 
 const StyledLink = styled(props => <Link {...props} />)`
   display: block;
-     background: #fffff9;
-    margin-bottom: 30px;
+     background: #ffffff;
+    margin-bottom: 0px;
     transition: all 0.3s ease 0s;
   border-radius: 3px;
+     height: 100%;
+
   &:hover {
     text-decoration: none;
+    color: rgb(239, 90, 82);
 
 
   }
 `;
 
-const CardText = styled.h5 `
-      background: #ffffff none repeat scroll 0 0;
-    padding: 12px 0;
-    text-align: center;
+const CardText = styled.div `
+    padding: 24px 14px 0;
       font-size: 12px;
       border-radius: 0 3px 3px;
 
 `
 
 const CardImage = styled.div `
+
+`
+const Divider = styled.hr `
+  border-top: 2px solid #e5e5e0;
 
 `
 const FeatureGrid = ({ gridItems }) => (
@@ -95,9 +100,13 @@ const FeatureGrid = ({ gridItems }) => (
 
           }} />
             </CardImage>
-        <CardText>{item.title}</CardText>
+        <CardText>
+          <h6>{item.title}</h6>
+          <Divider/>
+        <p>{item.text}</p>
 
 
+        </CardText>
         </StyledLink>
       </Card>
     ))}

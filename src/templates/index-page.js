@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
 
 import Layout from "../components/Layout";
 import IndexPageHeader from "../components/IndexPageHeader";
@@ -20,14 +20,13 @@ import {
 
 const Hero = styled.div`
   margin-bottom: 24px;
-  color: #fff;
+  color: #e5e5e0;
   min-width: 230px;
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
   @media (min-width: 768px) {
-      text-align: left;
-
+    text-align: left;
   }
 `;
 
@@ -38,34 +37,33 @@ const HeroTitle = styled.h1`
   letter-spacing: 1px;
   margin-bottom: 25px;
   @media (min-width: 768px) {
-
-  font-size: 2.4em;
-
+    font-size: 2.4em;
   }
-
-`
+`;
 const HeroHeading = styled.p`
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1em;
   margin-bottom: 25px;
   @media (min-width: 768px) {
-
-
   }
-
-`
+`;
 
 const HeroText = styled.p`
+  color: #e5e5e0;
+    font-weight: 100;
+
   @media (min-width: 768px) {
-
-
   }
+`;
+const HeroButtons = styled.div`
+  padding: 55px 0;
+  margin: 0 auto;
+`;
 
-`
 const TestimonialsContainer = styled.div`
   padding-top: 10%;
   padding-bottom: 10%;
-`
+`;
 
 export const IndexPageTemplate = ({
   title1,
@@ -78,47 +76,46 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <React.Fragment>
+
     <IndexPageHeader image={image} description={description} />
+
     <Container fluid>
-
-      <Row style={{ backgroundColor: "#1d2528", backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)", paddingTop: "10%", paddingBottom: "10%" }}>
+      <Row
+        style={{
+          backgroundColor: "#1d2528",
+          backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)",
+          paddingTop: "10%",
+          paddingBottom: "10%",
+        }}
+      >
         <Col>
-       <Container>
-
-          <Hero>
-            <HeroTitle
-
-            >
-              <span style={{ color: "#fffff0" }}>{title1}</span>{" "}
-              <span style={{ color: "hsl(3, 83%, 63%)" }}>{title2}</span>{" "}
-              <span style={{ color: "#fffff0" }}>{title3}</span>
-            </HeroTitle>
-            <HeroHeading>{heading}</HeroHeading>
-            <HeroText>{description}</HeroText>
-
-
-          </Hero>
-              </Container>
-
+          <Container>
+            <Hero>
+              <HeroTitle>
+                <span style={{ color: "#fffff0" }}>{title1}</span>{" "}
+                <span style={{ color: "hsl(3, 83%, 63%)" }}>{title2}</span>{" "}
+                <span style={{ color: "#fffff0" }}>{title3}</span>
+              </HeroTitle>
+              <HeroHeading>{heading}</HeroHeading>
+              <HeroText>{description}</HeroText>
+              <HeroButtons>
+              <Button color="primary" size="lg">Contacter</Button>{' '}
+              <Button color="secondary" size="lg">Voir La Carte</Button>
+              </HeroButtons>
+            </Hero>
+          </Container>
         </Col>
 
-        <Col md={{ size: 7}}>
-                             <Container>
-
-          <Features gridItems={intro.blurbs} />
-                             </Container>
-
+        <Col md={{ size: 7 }}>
+          <Container>
+            <Features gridItems={intro.blurbs} />
+          </Container>
         </Col>
-
       </Row>
       <TestimonialsContainer>
-
-              <Testimonials testimonials={testimonials} />
-
-
+        <Testimonials testimonials={testimonials} />
       </TestimonialsContainer>
-            </Container>
-
+    </Container>
   </React.Fragment>
 );
 

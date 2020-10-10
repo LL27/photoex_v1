@@ -33,9 +33,9 @@ $body-color:                $grey-dark;
 //
 // Style anchor elements.
 
-$link-color:                              $primary;
+$link-color:                              $grey;
 $link-decoration:                         none;
-$link-hover-color:                        darken($link-color, 20%);
+$link-hover-color:                        $primary;
 $link-hover-decoration:                   none;
 
 $navbar-light-color: $grey;

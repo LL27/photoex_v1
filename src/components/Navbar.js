@@ -30,8 +30,6 @@ import theme from "../theme.js";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
 
-import "./Navbar.css";
-
 const SiteNavigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 

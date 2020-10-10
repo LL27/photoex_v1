@@ -23,12 +23,16 @@ const MapLink = styled.a `
     width: 150px;
     height: 80px;
     background: #fffff9;
+    color: #7f7f7c;
     position: absolute;
     top: 80px;
     right: 0;
     border-radius: 10px 0 0 10px;
     background-size: cover;
     cursor: pointer;
+    &:hover {
+      color: rgb(239, 90, 82);
+    }
 }
 `
 const MapText = styled.p `
@@ -38,7 +42,6 @@ const MapText = styled.p `
     width: 90px;
     height: 80px;
     font-size: 14px;
-    color: rgb(65, 67, 69);
     margin: 0;
     line-height: 16px;
     text-align: center;
@@ -46,6 +49,9 @@ const MapText = styled.p `
     cursor: pointer;
     border-radius: 3px 0 0 3px;
     text-transform: uppercase;
+    &:hover {
+      color: #7f7f7c;
+    }
 `
 const MapIcon = styled.span `
     width: 36px;
@@ -54,6 +60,9 @@ const MapIcon = styled.span `
     top: 28px;
     left: 110px;
     cursor: pointer;
+    &:hover {
+      color: rgb(239, 90, 82);
+    }
 `
 const spacer = styled.span `
     display: block;
