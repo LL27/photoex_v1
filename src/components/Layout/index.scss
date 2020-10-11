@@ -45,7 +45,10 @@ $navbar-light-toggler-border-color: rgba($black, .1) !default;
 $emphasized-link-hover-darken-percentage: 20%;
 
 
-
+// Tooltips
+$tooltip-padding-y: 10px;
+ $tooltip-padding-x: 10px;
+$tooltip-color: $grey-lightest;
 
 body {
         padding-top: 86px;
@@ -144,6 +147,11 @@ $navbar-light-toggler-border-color: transparent;
 .dropdown-item:hover {
   background-color: none;
   color: $navbar-light-hover-color;
+}
+
+// Slider
+.slick-dots {
+  padding: 30px !important;
 }
 
 

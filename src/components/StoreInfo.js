@@ -12,6 +12,7 @@ import {
   Row,
   Col,
   Container,
+  Tooltip
 } from "reactstrap";
 
 import { Link } from "gatsby";

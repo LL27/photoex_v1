@@ -14,11 +14,8 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
-  ListGroup,
-  ListGroupItem,
-  Popover,
-  PopoverHeader,
-  PopoverBody,
+  Tooltip,
+  Container
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -116,58 +113,63 @@ const SiteNavigation = (props) => {
               </Link>
             </NavItem>
           </Nav>
+
           <NavbarText>
             <span className="nav-icon pr-3 border-right" id="popphone">
               <FontAwesomeIcon icon={faPhone} />
             </span>
-            <Popover
+
+            <Tooltip
               placement="bottom"
               isOpen={popoverPhoneOpen}
               target="popphone"
               toggle={togglePhone}
+              autohide={false}
             >
-              <PopoverBody>
-              <PopoverHeader>Horairess</PopoverHeader>
-                <a href="tel:0146286516" className="heading address">
+            <Container>
+                <a href="tel:0146286516">
                   01 46 28 65 16
                 </a>
-              </PopoverBody>
-            </Popover>
+                </Container>
+            </Tooltip>
 
             <span className="nav-icon pl-3 pr-3 border-right" id="popclock">
               <FontAwesomeIcon icon={faClock} />
             </span>
-            <Popover
+            <Tooltip
               placement="bottom"
               isOpen={popoverClockOpen}
               target="popclock"
               toggle={toggleClock}
+              autohide={false}
+
             >
-              <PopoverBody>
-                <p className="heading">
+                <Container>
+
                   Mardi-Samedi
                   <br />
                   9h15-13h et 14h-19h 
-                </p>
-              </PopoverBody>
-            </Popover>
+
+                </Container>
+            </Tooltip>
 
             <span className="nav-icon pr-3 pl-3" id="popmap">
               <FontAwesomeIcon icon={faMapMarker} />
             </span>
-            <Popover
+            <Tooltip
               placement="bottom"
               isOpen={popoverMapOpen}
               target="popmap"
               toggle={toggleMap}
+              autohide={false}
+
             >
-              <PopoverBody>
-                <p className="heading address">
-                  2 rue Beccaria <br />
-                  75012 Paris
-                </p>
-              </PopoverBody>
-            </Popover>
+            <Container>
+
+                  <a href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119" target="_blank">2 rue Beccaria <br /> 75012 Paris</a>
+</Container>
+
+            </Tooltip>
           </NavbarText>
         </Collapse>
       </Navbar>

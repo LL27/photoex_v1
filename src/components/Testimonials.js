@@ -81,7 +81,7 @@ class Testimonials extends React.Component {
                 </div>
               </div>
 
-              <cite> – {testimonial.author}</cite>
+              <cite style={{marginBottom: 30}}> – {testimonial.author}</cite>
                                     </InnerContainer>
 
             </div>
