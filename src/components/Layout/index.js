@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet";
 import SiteNavigation from "../Navbar";
 import Footer from "../Footer";
 
-import { Container, Row, Col } from "reactstrap";
-import { Global, css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 import useSiteMetadata from "../SiteMetadata";

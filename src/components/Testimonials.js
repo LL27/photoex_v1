@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faStar } from "@fortawesome/free-solid-svg-icons";
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 import { v4 } from "uuid";
 import { Container } from "reactstrap";
 

@@ -1,21 +1,17 @@
 import React, { useState } from "react";
-import styled from "@emotion/styled";
-import { jsx, css } from "@emotion/core";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   NavbarText,
   Tooltip,
-  Container
+  Container,
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,7 +19,6 @@ import {
   faClock,
   faMapMarker,
 } from "@fortawesome/free-solid-svg-icons";
-import theme from "../theme.js";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
 
@@ -43,10 +38,15 @@ const SiteNavigation = (props) => {
 
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
 
-  const activeStyleColor = {color: "rgb(239, 90, 82)"}
+  const activeStyleColor = { color: "rgb(239, 90, 82)" };
   return (
     <div>
-      <Navbar expand="lg" light fixed="top" style={{backgroundColor: "#fff", borderBottom: "1px solid #e5e5e0"}}>
+      <Navbar
+        expand="lg"
+        light
+        fixed="top"
+        style={{ backgroundColor: "#fff", borderBottom: "1px solid #e5e5e0" }}
+      >
         <Link to="/" className="navbar-brand">
           <img src={logo} className="navbar-logo" />
         </Link>
@@ -126,11 +126,9 @@ const SiteNavigation = (props) => {
               toggle={togglePhone}
               autohide={false}
             >
-            <Container>
-                <a href="tel:0146286516">
-                  01 46 28 65 16
-                </a>
-                </Container>
+              <Container>
+                <a href="tel:0146286516">01 46 28 65 16</a>
+              </Container>
             </Tooltip>
 
             <span className="nav-icon pl-3 pr-3 border-right" id="popclock">
@@ -142,15 +140,12 @@ const SiteNavigation = (props) => {
               target="popclock"
               toggle={toggleClock}
               autohide={false}
-
             >
-                <Container>
-
-                  Mardi-Samedi
-                  <br />
-                  9h15-13h et 14h-19h 
-
-                </Container>
+              <Container>
+                Mardi-Samedi
+                <br />
+                9h15-13h et 14h-19h 
+              </Container>
             </Tooltip>
 
             <span className="nav-icon pr-3 pl-3" id="popmap">
@@ -162,13 +157,16 @@ const SiteNavigation = (props) => {
               target="popmap"
               toggle={toggleMap}
               autohide={false}
-
             >
-            <Container>
-
-                  <a href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119" target="_blank">2 rue Beccaria <br /> 75012 Paris</a>
-</Container>
-
+              <Container>
+                <a
+                  href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  2 rue Beccaria <br /> 75012 Paris
+                </a>
+              </Container>
             </Tooltip>
           </NavbarText>
         </Collapse>

@@ -11,12 +11,6 @@ import Testimonials from "../components/Testimonials";
 import PageTransition from "gatsby-v2-plugin-page-transitions";
 import styled from "@emotion/styled";
 import reviewBG from "../img/review-bg.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faClock,
-  faMapMarker,
-} from "@fortawesome/free-solid-svg-icons";
 
 const Hero = styled.div`
   margin-bottom: 24px;
@@ -60,8 +54,6 @@ const HeroButtons = styled.div`
   margin: 0 auto;
 `;
 
-const TestimonialsContainer = styled.div`
-`;
 
 export const IndexPageTemplate = ({
   title1,
