@@ -7,17 +7,19 @@ description: Photo Expression réalise de très beaux portraits artistiques, ret
 intro:
   blurbs:
     - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
+      title: Conseils et vente d'appareils photos numériques
       text: >
-        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+        Un grand choix d'appareils, cartes mémoire, batteries et chargeurs
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
+      title: Appareils photo jetables
       text: >
-        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
+        Films couleurs et N&B
+    - image: /img/portrait.jpg
+      title: Appareils photo instantanés
+      text: >
+        Instax, Polaroid
+    - image: /img/portrait.jpg
+      title: Albums photos
+      text: >
+        un choix des tailles et couleurs
 ---
-- Conseils et vente d'appareils photos numériques
-- Toutes sortes de cartes mémoire
-- Films couleurs et N&B
-- Albums photos
-- Toutes sortes de piles
-- Batteries et chargeurs
