@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import PageIntro from "../components/PageIntro";
-import { Container } from "reactstrap";
+import PageContent from "../components/PageContent";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Content, { HTMLContent } from "../components/Content";
@@ -17,16 +16,14 @@ export const BoutiquePageTemplate = ({
   contentComponent,
   intro
 }) => {
-  const PageContent = contentComponent || Content;
+  const PageCMSContent = contentComponent || Content;
   return (
     <React.Fragment>
 
       <PageHeader image={image} title={title} description={description} />
-       <Container>
-          <PageIntro intro={intro.blurbs}/>
-          <PageContent className="content" content={content} />
+          <PageContent intro={intro.blurbs}/>
+          <PageCMSContent className="content" content={content} />
 
-       </Container>
     </React.Fragment>
   );
 };

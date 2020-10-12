@@ -8,7 +8,6 @@ import { jsx } from "@emotion/core";
 import facepaint from "facepaint";
 import styled from "@emotion/styled";
 
-import { Container } from "reactstrap";
 const breakpoints = [576, 768, 992, 1200];
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));

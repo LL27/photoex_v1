@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import { Container } from "reactstrap";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 export const StudioPageTemplate = ({

@@ -50,7 +50,7 @@ const HeroText = styled.p`
   }
 `;
 const HeroButtons = styled.div`
-  padding: 55px 0;
+  padding: 30px 0;
   margin: 0 auto;
 `;
 
@@ -89,8 +89,8 @@ export const IndexPageTemplate = ({
               <HeroHeading>{heading}</HeroHeading>
               <HeroText>{description}</HeroText>
               <HeroButtons>
-              <Button color="primary" size="lg">Contacter</Button>{' '}
-              <Button color="secondary" size="lg">Voir La Carte</Button>
+              <Button color="primary" size="md">Contacter</Button>{' '}
+              <Button color="secondary" size="md">Voir La Carte</Button>
               </HeroButtons>
             </Hero>
           </Container>

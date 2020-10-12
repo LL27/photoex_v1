@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import PageIntro from "../components/PageIntro";
+import PageContent from "../components/PageContent";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
-
 import Content, { HTMLContent } from "../components/Content";
 
 export const EncadrementPageTemplate = ({
@@ -16,25 +15,13 @@ export const EncadrementPageTemplate = ({
   contentComponent,
   intro
 }) => {
-  const PageContent = contentComponent || Content;
+  const PageCMSContent = contentComponent || Content;
   return (
     <React.Fragment>
       <PageHeader image={image} title={title} description={description} />
-      <section className="section section--gradient">
-        <div className="columns">
-          <div className="column is-12 is-10-desktop is-offset-1-desktop">
-             <PageIntro intro={intro.blurbs}/>
-          </div>
-        </div>
-      </section>
-      <section className="section section--gradient">
-        <div className="columns">
-          <div className="column is-12 is-10-desktop is-offset-1-desktop">
-      <PageContent className="content" content={content} />
 
-          </div>
-        </div>
-      </section>
+             <PageContent intro={intro.blurbs}/>
+      <PageCMSContent className="content" content={content} />
     </React.Fragment>
   );
 };

@@ -1,10 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import Img from "gatsby-image";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-import theme from "../theme.js";
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import facepaint from "facepaint";
@@ -63,17 +60,6 @@ const MapIcon = styled.span `
     &:hover {
       color: rgb(239, 90, 82);
     }
-`
-const spacer = styled.span `
-    display: block;
-    width: 10px;
-    height: 80px;
-    float: right;
-    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.1));
-`
-
-const animatedButton = styled.span `
-
 `
 
 const IndexPageHeader = ({ children, image }) => {

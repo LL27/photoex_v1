@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import PageIntro from "../components/PageIntro";
+import PageContent from "../components/PageContent";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
 import Content, { HTMLContent } from "../components/Content";
@@ -20,7 +20,7 @@ export const PortraitPageTemplate = ({
   return (
     <React.Fragment>
       <PageHeader image={image} title={title} description={description} />
-      <PageIntro intro={intro.blurbs}/>
+      <PageContent intro={intro.blurbs}/>
       <section className="section section--gradient">
         <div className="columns">
           <div className="column is-12 is-10-desktop is-offset-1-desktop">

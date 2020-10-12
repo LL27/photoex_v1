@@ -1,13 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import Img from "gatsby-image";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import theme from "../theme.js";
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import facepaint from "facepaint";
-import styled from "@emotion/styled";
 import { Container } from "reactstrap";
 
 const breakpoints = [576, 768, 992, 1200];
