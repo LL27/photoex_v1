@@ -9,24 +9,31 @@ const ContainerImageLeft = styled.section`
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #fffff9;
+  color: rgb(239, 90, 82);
   width: 100%;
+
 `
 const ContainerImageRight = styled(ContainerImageLeft)`
 
   flex-direction: row;
 
+    background-color: rgb(239, 90, 82);
+  color: #fffff9;
+
+
 `
 
 
 const AlternatingContainer = (props) => {
- const direction = props.direction;
+ const {direction, bgcolor, children} = props;
 
  if (direction === "photoright") {
-  return <ContainerImageRight >{props.children}</ContainerImageRight>;
+  return <ContainerImageRight>{children}</ContainerImageRight>;
  } else if (direction === "photoleft") {
- return <ContainerImageLeft>{props.children}</ContainerImageLeft>
+ return <ContainerImageLeft>{children}</ContainerImageLeft>
 } else {
-   return <ContainerImageLeft>{props.children}</ContainerImageLeft>
+   return <ContainerImageLeft>{children}</ContainerImageLeft>
 }
 }
 export default AlternatingContainer;

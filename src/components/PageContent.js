@@ -7,71 +7,56 @@ import { Container } from "reactstrap";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 
-const alternatingContainer = ["photoright", "photoleft"]
 
-
+const alternatingContainer = ["photoright", "photoleft"];
 const ItemImage = styled.div`
   height: auto;
   width: 100%;
-  @media (min-width: 500px) {
-     width: calc(50% - 2rem);
-
+  @media (min-width: 670px) {
+    width: 50%;
   }
-`
+`;
 const ItemText = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-    margin: 2rem;
+  margin: 1.5rem 2rem;
 
   width: 100%;
   height: 100%;
 
-  @media (min-width: 500px) {
-         flex-direction: column;
-         width: calc(50% - 2rem);
-          justify-content: flex-start;
-
-
-
+  @media (min-width: 670px) {
+    flex-direction: column;
+    width: calc(50% - 4rem);
+    justify-content: flex-start;
   }
-`
-const ItemHeader = styled.h3`
-  margin-bottom: 1rem;
+`;
+const ItemHeader = styled.p`
+  margin-bottom: .2rem;
+  font-weight: 600;
+  line-height: 1.2;
   align-self: flex-start;
-  @media (min-width: 500px) {
+  @media (min-width: 670px) {
+    font-size: 2rem;
   }
-`
+`;
 const PageContent = ({ intro }) => (
   <div>
     {intro.map((item, index) => (
-      <section
-  key={item.title}
-      >
-      <AlternatingContainer
-              direction={
-                alternatingContainer[index % alternatingContainer.length]
-              }
-
-      >
-
-        <ItemImage>
+      <section key={item.title}>
+        <AlternatingContainer
+          direction={alternatingContainer[index % alternatingContainer.length]}
+        >
+          <ItemImage>
             <PreviewCompatibleImage imageInfo={item} />
-        </ItemImage>
+          </ItemImage>
 
-        <ItemText>
-          <ItemHeader>
-                          {item.title}
-
-
-          </ItemHeader>
-              <p className="" style={{ fontSize: "14px" }}>
+          <ItemText>
+            <ItemHeader>{item.title}</ItemHeader>
+            <p className="" style={{ fontSize: "14px" }}>
               {item.text}
             </p>
-
-        </ItemText>
-
-
+          </ItemText>
         </AlternatingContainer>
       </section>
     ))}
