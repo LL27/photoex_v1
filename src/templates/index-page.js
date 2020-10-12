@@ -97,9 +97,7 @@ export const IndexPageTemplate = ({
         </Col>
 
         <Col md={{ size: 7 }}>
-          <Container>
             <Features gridItems={intro.blurbs} />
-          </Container>
         </Col>
       </Row>
       <Container>

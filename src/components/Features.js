@@ -66,9 +66,6 @@ const Divider = styled.hr`
   border-top: 2px solid #e5e5e0;
 `;
 const FeatureGrid = ({ gridItems }) => (
-    <Container>
-    <Row>
-      <Col sm="12" md={{ size: 10, offset: 1 }}>
   <Grid>
     {gridItems.map((item) => (
       <Card>
@@ -94,9 +91,7 @@ const FeatureGrid = ({ gridItems }) => (
       </Card>
     ))}
   </Grid>
-  </Col>
-  </Row>
-  </Container>
+
 );
 
 FeatureGrid.propTypes = {
