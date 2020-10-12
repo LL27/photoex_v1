@@ -2,51 +2,62 @@ import React from "react";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import AlternatingContainer from "../components/AlternatingContainer";
-import { Container } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 
-const alternatingContainer = ["photoright", "photoleft"];
-const ItemImage = styled.div`
-  height: auto;
-  width: 100%;
-  @media (min-width: 670px) {
-    width: 50%;
+const Items = styled.section`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (min-width: 40em) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 60em) {
+  }
+`
+
+const Item = styled.div`
+  padding: 6px;
+  border-radius: 2px;
+  width: 95%;
+  transition: all 0.3s ease 0s;
+
+  @media screen and (min-width: 40em) {
+    flex: 1 1 calc(50% - 1em);
+  }
+  @media screen and (min-width: 60em) {
   }
 `;
+const ItemImage = styled.div`
+  height: auto;
+
+`;
 const ItemText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 1.5rem 2rem;
-
-  width: 100%;
-  height: 100%;
-
-  @media (min-width: 670px) {
-    flex-direction: column;
-    width: calc(50% - 4rem);
-    justify-content: flex-start;
-  }
+  margin: 1.5rem 0rem;
 `;
 const ItemHeader = styled.p`
   margin-bottom: .2rem;
   font-weight: 600;
   line-height: 1.2;
-  align-self: flex-start;
   @media (min-width: 670px) {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 `;
 const PageContent = ({ intro }) => (
-  <div>
+  <Container>
+    <Row>
+      <Col sm="12" md={{ size: 10, offset: 1 }}>
+
+
+  <Items>
     {intro.map((item, index) => (
-      <section key={item.title}>
-        <AlternatingContainer
-          direction={alternatingContainer[index % alternatingContainer.length]}
-        >
+
+          <Item key={item.title}>
           <ItemImage>
             <PreviewCompatibleImage imageInfo={item} />
           </ItemImage>
@@ -57,10 +68,13 @@ const PageContent = ({ intro }) => (
               {item.text}
             </p>
           </ItemText>
-        </AlternatingContainer>
-      </section>
+          </Item>
     ))}
-  </div>
+  </Items>
+  </Col>
+    </Row>
+    </Container>
+
 );
 
 PageContent.propTypes = {

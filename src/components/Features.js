@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import { Container, Row, Col } from "reactstrap";
 
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
@@ -65,6 +66,9 @@ const Divider = styled.hr`
   border-top: 2px solid #e5e5e0;
 `;
 const FeatureGrid = ({ gridItems }) => (
+    <Container>
+    <Row>
+      <Col sm="12" md={{ size: 10, offset: 1 }}>
   <Grid>
     {gridItems.map((item) => (
       <Card>
@@ -90,6 +94,9 @@ const FeatureGrid = ({ gridItems }) => (
       </Card>
     ))}
   </Grid>
+  </Col>
+  </Row>
+  </Container>
 );
 
 FeatureGrid.propTypes = {

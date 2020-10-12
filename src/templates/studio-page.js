@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import { Container, Row, Col, Button } from "reactstrap";
 
 export const StudioPageTemplate = ({
   title,
@@ -16,22 +17,10 @@ export const StudioPageTemplate = ({
   <React.Fragment>
     <PageHeader image={image} title={title} description={description} />
 
-    <section className="section section--gradient">
-      <div className="columns">
-        <div className="column is-12 is-10-desktop is-offset-1-desktop">
-          <div className="columns">
-            <div className="column is-12">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <p>{description}</p>
-            </div>
-          </div>
 
+        <Container>
           <Features gridItems={studioIntro.blurbs} columnSize="is-half" />
-        </div>
-      </div>
-    </section>
+        </Container>
   </React.Fragment>
 );
 

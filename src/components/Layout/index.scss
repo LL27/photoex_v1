@@ -43,7 +43,8 @@ $navbar-light-hover-color: $site-red;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 20%;
-
+$jumbotron-color: $body-color;
+$jumbotron-bg: $body-bg;
 
 // Tooltips
 $tooltip-padding-y: 10px;
@@ -51,7 +52,7 @@ $tooltip-padding-y: 10px;
 $tooltip-color: $grey-lightest;
 
 body {
-        padding-top: 86px;
+        padding-top: 80px;
 
   margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

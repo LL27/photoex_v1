@@ -2,69 +2,36 @@ import React from "react";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
+import styled from "@emotion/styled";
+
 import facepaint from "facepaint";
-import { Container } from "reactstrap";
+import { Container, Jumbotron } from "reactstrap";
 
 const breakpoints = [576, 768, 992, 1200];
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
 const PageHeader = ({ children, image, title, description, height }) => {
- let t = title || '';
- let d = description || '';
+  let t = title || "";
+  let d = description || "";
 
   return (
-    <div>
-
-    <div
-      css={mq({
-        display: ["grid"],
-        gridGap: ["4px"],
-        gridTemplateColumns: ["1fr", "1fr", "1fr", "1fr 3fr"],
-        height: ['auto', 'auto', 'auto', 'auto'],
-        backgroundColor: ['#d7d7d7'],
-        backgroundImage: ['linear-gradient(15deg, #232526 0%, #414345 74%)'],
-        marginBottom: ['32px'],
-      })}
-    >
-
-
-
-       <div css={mq({
-        display: ["flex"],
-        flexDirection: ["column"],
-        justifyContent: ['center', 'center', 'center', 'flex-start'],
-        width: ['100%'],
-        padding: ['16px 0', '16px 0', '16px 0', '32px 0'],
-        textAlign: ['center', 'center', 'center', 'left'],
-        order: ['2', '2', '2', '1'],
-      })}>
-          <Container>
-            <h2
-              css={mq({
-                "font-size": ["24px", "32px", "32px", "48px"],
-                "color": ["hsl(0, 0%, 96%)"],
-              })}
-            >
-              {t}
-            </h2>
-            <p style={{color: 'hsl(0, 0%, 79%'}}>
-              {d}
-            </p>
-
-            {children}
-          </Container>
-        </div>
-        <div  css={mq({
-               order: ['1', '1', '1', '1'],
-              })}>
-                  <PreviewCompatibleImage imageInfo={image} />
-
-        </div>
-    </div>
-        </div>
-
+    <Jumbotron>
+      <h2
+        css={mq({
+          "font-size": ["24px", "32px", "32px", "48px"],
+          "text-align": ["center"],
+          width: "fit-content",
+          "margin": "0 auto",
+          "padding-bottom": "10px",
+          "border-bottom": "3px solid #e5e5e0",
+        })}
+      >
+        {t}
+      </h2>
+      {children}
+    </Jumbotron>
   );
 };
 
