@@ -1,33 +1,78 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col } from "reactstrap";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import AlternatingContainer from "../components/AlternatingContainer";
+import { Container } from "reactstrap";
 
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
+
+const alternatingContainer = ["photoright", "photoleft"]
+
+
+const ItemImage = styled.div`
+  height: auto;
+  width: 100%;
+  @media (min-width: 500px) {
+     width: calc(50% - 2rem);
+
+  }
+`
+const ItemText = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+    margin: 2rem;
+
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 500px) {
+         flex-direction: column;
+         width: calc(50% - 2rem);
+          justify-content: flex-start;
+
+
+
+  }
+`
+const ItemHeader = styled.h3`
+  margin-bottom: 1rem;
+  align-self: flex-start;
+  @media (min-width: 500px) {
+  }
+`
 const PageContent = ({ intro }) => (
   <div>
-    {intro.map((item) => (
+    {intro.map((item, index) => (
       <section
-        key={item.title}
-        className="section"
-        style={{
-          paddingBottom: 0,
-          paddingTop: 0,
-          borderBottom: ".25rem solid hsl(0, 0%, 86%)",
-        }}
+  key={item.title}
       >
-        <Row>
-          <Col>
+      <AlternatingContainer
+              direction={
+                alternatingContainer[index % alternatingContainer.length]
+              }
+
+      >
+
+        <ItemImage>
             <PreviewCompatibleImage imageInfo={item} />
-          </Col>
-          <Col>
-            <p className="is-size-4-mobile is-size-6-tablet is-size-5-desktop is-size-4-widescreen">
-              {item.title}
-            </p>
-            <p className="" style={{ fontSize: "14px" }}>
+        </ItemImage>
+
+        <ItemText>
+          <ItemHeader>
+                          {item.title}
+
+
+          </ItemHeader>
+              <p className="" style={{ fontSize: "14px" }}>
               {item.text}
             </p>
-          </Col>
-        </Row>
+
+        </ItemText>
+
+
+        </AlternatingContainer>
       </section>
     ))}
   </div>

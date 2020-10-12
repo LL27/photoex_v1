@@ -16,7 +16,7 @@ export const PortraitPageTemplate = ({
   contentComponent,
   intro
 }) => {
-  const PageContent = contentComponent || Content;
+  const PageCMSContent = contentComponent || Content;
   return (
     <React.Fragment>
       <PageHeader image={image} title={title} description={description} />
@@ -24,7 +24,7 @@ export const PortraitPageTemplate = ({
       <section className="section section--gradient">
         <div className="columns">
           <div className="column is-12 is-10-desktop is-offset-1-desktop">
-      <PageContent className="content" content={content} />
+      <PageCMSContent className="content" content={content} />
 
           </div>
         </div>

@@ -47,6 +47,7 @@
     "react-transition-group": "^4.4.1",
     "reactstrap": "^8.5.1",
     "slick-carousel": "^1.8.1",
+    "styled-media-queries": "^1.0.1",
     "uuid": "^7.0.0"
   },
   "keywords": [
