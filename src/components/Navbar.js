@@ -39,6 +39,7 @@ const SiteNavigation = (props) => {
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
 
   const activeStyleColor = { color: "#e86f58" };
+
   return (
     <div>
       <Navbar
@@ -116,7 +117,7 @@ const SiteNavigation = (props) => {
 
           <NavbarText>
             <span className="nav-icon pr-3 border-right" id="popphone">
-              <FontAwesomeIcon icon={faPhone} />
+              <FontAwesomeIcon icon={faPhone} style={activeStyleColor}/>
             </span>
 
             <Tooltip
@@ -132,7 +133,7 @@ const SiteNavigation = (props) => {
             </Tooltip>
 
             <span className="nav-icon pl-3 pr-3 border-right" id="popclock">
-              <FontAwesomeIcon icon={faClock} />
+              <FontAwesomeIcon icon={faClock} style={activeStyleColor}/>
             </span>
             <Tooltip
               placement="bottom"
@@ -149,7 +150,7 @@ const SiteNavigation = (props) => {
             </Tooltip>
 
             <span className="nav-icon pr-3 pl-3" id="popmap">
-              <FontAwesomeIcon icon={faMapMarker} />
+              <FontAwesomeIcon icon={faMapMarker} style={activeStyleColor}/>
             </span>
             <Tooltip
               placement="bottom"

@@ -28,7 +28,7 @@ const MapLink = styled.a `
     background-size: cover;
     cursor: pointer;
     &:hover {
-      color: rgb(239, 90, 82);
+      color: #e86f58;
     }
 }
 `
@@ -47,7 +47,7 @@ const MapText = styled.p `
     border-radius: 3px 0 0 3px;
     text-transform: uppercase;
     &:hover {
-      color: #7f7f7c;
+      color: #e86f58;
     }
 `
 const MapIcon = styled.span `
@@ -58,7 +58,7 @@ const MapIcon = styled.span `
     left: 110px;
     cursor: pointer;
     &:hover {
-      color: rgb(239, 90, 82);
+      color: #e86f58;
     }
 `
 

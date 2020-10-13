@@ -63,7 +63,7 @@ const CardText = styled.div`
 
 const CardImage = styled.div``;
 const Divider = styled.hr`
-  border-top: 2px solid #e5e5e0;
+  border-top: 2px solid;
 `;
 const FeatureGrid = ({ gridItems }) => (
   <Grid>
