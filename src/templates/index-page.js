@@ -27,8 +27,6 @@ const Hero = styled.div`
 const HeroTitle = styled.h1`
   font-weight: 600;
   font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin-bottom: 25px;
   @media (min-width: 768px) {
     font-size: 2.4em;
@@ -44,7 +42,7 @@ const HeroHeading = styled.p`
 
 const HeroText = styled.p`
   color: #e5e5e0;
-    font-weight: 100;
+    font-weight: 200;
 
   @media (min-width: 768px) {
   }
@@ -82,9 +80,9 @@ export const IndexPageTemplate = ({
           <Container>
             <Hero>
               <HeroTitle>
-                <span style={{ color: "#fffff0" }}>{title1}</span>{" "}
-                <span style={{ color: "hsl(3, 83%, 63%)" }}>{title2}</span>{" "}
-                <span style={{ color: "#fffff0" }}>{title3}</span>
+                <span style={{ color: "rgb(250, 250, 250)" }}>{title1}</span>{" "}
+                <span style={{ color: "#e86f58" }}>{title2}</span>{" "}
+                <span style={{ color: "rgb(250, 250, 250)" }}>{title3}</span>
               </HeroTitle>
               <HeroHeading>{heading}</HeroHeading>
               <HeroText>{description}</HeroText>

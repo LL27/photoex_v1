@@ -19,7 +19,7 @@ const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 const MapLink = styled.a `
     width: 150px;
     height: 80px;
-    background: #fffff9;
+    background: rgb(250, 250, 250);
     color: #7f7f7c;
     position: absolute;
     top: 80px;

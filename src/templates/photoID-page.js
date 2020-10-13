@@ -4,14 +4,15 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PhotoFormats from "../components/PhotoFormats";
-import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import PageTransition from "gatsby-v2-plugin-page-transitions";
+import { Container, Row, Col } from "reactstrap";
 
 import Content, { HTMLContent } from "../components/Content";
 
 export const PhotoIDPageTemplate = ({
   title,
-  image,
   description,
+  image,
   main,
   content,
   contentComponent,
@@ -20,26 +21,14 @@ export const PhotoIDPageTemplate = ({
   return (
     <React.Fragment>
       <PageHeader image={image} title={title} description={description} />
-      <PhotoFormats
-        heading={main.heading}
-        description={main.description}
-        formats={main.formats}
-      />
-
-      <section className="section section--gradient">
-        <div className="columns">
-          <div className="column is-12 is-10-desktop is-offset-1-desktop">
-            <div className="columns">
-              <div className="column is-12">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-              </div>
-            </div>
+      <Container>
+        <PhotoFormats heading={main.heading} formats={main.formats} />
+        <Row>
+          <Col>
             <PageContent className="content" content={content} />
-          </div>
-        </div>
-      </section>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   );
 };
@@ -52,7 +41,6 @@ PhotoIDPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   main: PropTypes.shape({
     heading: PropTypes.string,
-    description: PropTypes.string,
     formats: PropTypes.array,
   }),
 };
@@ -61,17 +49,17 @@ const PhotoIDPage = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
     <Layout>
-              <PageTransition>
-      <React.Fragment>
-      <PhotoIDPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-        image={post.frontmatter.image}
-        description={post.frontmatter.description}
-        main={post.frontmatter.main}
-      />
-      </React.Fragment>
+      <PageTransition>
+        <React.Fragment>
+          <PhotoIDPageTemplate
+            contentComponent={HTMLContent}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            content={post.html}
+            image={post.frontmatter.image}
+            main={post.frontmatter.main}
+          />
+        </React.Fragment>
       </PageTransition>
     </Layout>
   );
@@ -99,7 +87,6 @@ export const photoIDPageQuery = graphql`
         }
         main {
           heading
-          description
           formats {
             image {
               childImageSharp {

@@ -38,7 +38,7 @@ const SiteNavigation = (props) => {
 
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
 
-  const activeStyleColor = { color: "rgb(239, 90, 82)" };
+  const activeStyleColor = { color: "#e86f58" };
   return (
     <div>
       <Navbar

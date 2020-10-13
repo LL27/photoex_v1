@@ -43,7 +43,7 @@ const Card = styled.div`
 
 const StyledLink = styled((props) => <Link {...props} />)`
   display: block;
-  background: #ffffff;
+  background: rgb(250, 250, 250);
   margin-bottom: 0px;
   transition: all 0.3s ease 0s;
   border-radius: 3px;
@@ -51,7 +51,7 @@ const StyledLink = styled((props) => <Link {...props} />)`
 
   &:hover {
     text-decoration: none;
-    color: rgb(239, 90, 82);
+    color: #e86f58;
   }
 `;
 

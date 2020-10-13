@@ -20,16 +20,25 @@ const PageHeader = ({ children, image, title, description, height }) => {
     <Jumbotron>
       <h2
         css={mq({
-          "font-size": ["24px", "32px", "32px", "48px"],
+          "font-size": ["2em", "2.2em", "2.4em"],
           "text-align": ["center"],
           width: "fit-content",
           "margin": "0 auto",
-          "padding-bottom": "10px",
-          "border-bottom": "3px solid #e5e5e0",
+          "padding-bottom": [".5em"],
+          "border-bottom": "3px solid #4c4c4a"
         })}
       >
         {t}
       </h2>
+      <p css={mq({
+          "font-size": ["1em", "1.2em"],
+          "text-align": ["center"],
+          width: "fit-content",
+          "margin": "0 auto",
+          "padding-top": ["1em"],
+          "max-width": "600px"
+
+        })}>{d}</p>
       {children}
     </Jumbotron>
   );

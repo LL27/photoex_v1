@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import mapbg from "../img/map-bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
-import { Container, Row, Col } from "reactstrap";
+import { Navbar, Container, Row, Col } from "reactstrap";
 
 const Footer = class extends React.Component {
   render() {
@@ -14,17 +14,18 @@ const Footer = class extends React.Component {
       list-style-type: none;
       background-color: #333331;
       padding: 30px 0;
-      color: #ccccc7;
     `
 
     const NavItem = styled.li`
       font-weight: 400;
       list-style-type: none;
       padding-left: 0;
+      color: #e5e5e0;
     `;
     const FooterLink = styled((props) => <Link {...props} />)`
       text-decoration: none;
             padding-left: 0;
+            color: #e5e5e0;
 
       &:hover {
         text-decoration: none;
@@ -33,20 +34,21 @@ const Footer = class extends React.Component {
     const FooterNav = styled.div`
       list-style-type: none;
             padding-left: 0;
+            margin-bottom: 25px;
 
     `;
     return (
-      <FooterContainer id="footer">
+      <Navbar color="dark" id="footer">
 
-          <Container fluid="lg">
+          <Container className="pt-5 pb-5" fluid="lg">
             <Row>
               <Col sm="12" md="3">
                 <ul style={{listStyleType: "none", paddingLeft: 0}}>
-                <FontAwesomeIcon icon={faCamera} style={{fontSize: "1.5rem", marginBottom: "1rem", display: "inline"}}/>
+                <FontAwesomeIcon icon={faCamera} style={{fontSize: "1.5rem", marginBottom: "1rem", display: "inline", color: "#e5e5e0"}}/>
                   <NavItem>
-                    <h6>
+                    <p style={{fontWeight: 100}}>
                     Votre photographe portraitiste au 12ème arrondissement de Paris
-                    </h6>
+                    </p>
                   </NavItem>
                   <NavItem>2 rue Beccaria, 75012 Paris</NavItem>
                   <NavItem>
@@ -61,38 +63,37 @@ const Footer = class extends React.Component {
                   </a>
                 </ul>
               </Col>
-
               <Col sm="4" md="3">
                 <FooterNav>
-                  <h4 style={{color: "hsl(3, 83%, 63%)"}}>SERVICES</h4>
+                  <h4 style={{color: "#add8e6"}}>Services</h4>
                   <li>
-                    <FooterLink to="/photoID">PHOTO D'IDENTITÉ</FooterLink>
+                    <FooterLink to="/photoID">Photo d'identité</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/portrait">PORTRAIT</FooterLink>
+                    <FooterLink to="/portrait">Portrait</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/labo">LABORATOIRE</FooterLink>
+                    <FooterLink to="/labo">Labo</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/encadrement">ENCADREMENT</FooterLink>
+                    <FooterLink to="/encadrement">Encadrement</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/transfervideo">TRANSDER VIDEO</FooterLink>
+                    <FooterLink to="/transfervideo">Transfer Vidéo</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/boutique">EN BOUTIQUE</FooterLink>
+                    <FooterLink to="/boutique">En Boutique</FooterLink>
                   </li>
                 </FooterNav>
               </Col>
               <Col sm="4" md="3">
                 <FooterNav>
-                  <h4 style={{color: "hsl(3, 83%, 63%)"}}>HORAIRES</h4>
+                  <h4  style={{color: "#add8e6"}}>Horaires</h4>
                   <NavItem>
                     Mardi au samedi  <br />
                     9h15-13h et 14h-19h
@@ -103,7 +104,7 @@ const Footer = class extends React.Component {
 
               <Col sm="4" md="3">
                 <FooterNav>
-                  <h4 style={{color: "hsl(3, 83%, 63%)"}}>{`MOYEN D'ACCÈS`}</h4>
+                  <h4  style={{color: "#add8e6"}}>Moyens d'accès</h4>
                   <NavItem>
                     Bus ligne 29, arrêt Daumesnil-Diderot
                   </NavItem>
@@ -121,7 +122,7 @@ const Footer = class extends React.Component {
               </Col>
             </Row>
           </Container>
-      </FooterContainer>
+      </Navbar>
     );
   }
 };

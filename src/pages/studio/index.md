@@ -8,12 +8,12 @@ description: Photo Expression réalise de très beaux portraits artistiques, ret
 studioIntro:
   blurbs:
     - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
+      title: Photo d'identité
       path: /photoID
       text: >
         Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
+      title: Portrait d'art
       path: /portrait
       text: >
         Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.

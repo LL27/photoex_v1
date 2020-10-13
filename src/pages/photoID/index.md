@@ -3,10 +3,9 @@ templateKey: 'photoID-page'
 path: /photoID
 title: Photo d'identité
 image: /img/photoID.png
-description: Faites le choix d’un photographe agréé pour des photos garanties aux toutes normes, tous pays.
+description: Photos de qualité, en quelques minutes.
 main:
-  heading: Photos de qualité, en quelques minutes
-  description: some text
+  heading: Les Formats
   formats:
     - image: /img/id-nourisson.jpg
       heading: Nourrisson

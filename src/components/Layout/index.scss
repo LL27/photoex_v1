@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
-// Config vars
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
 // colors:
 $black: #191918;
 $grey-darker: #333331;
@@ -10,18 +8,18 @@ $grey-light: #b2b2ae;
 $grey-lighter: #ccccc7;
 $grey-lightest: #e5e5e0;
 $white-ter: #fffffb;
-$white-bis: #fffff9;
+$white-bis: rgb(250, 250, 250);
 $white: hsl(0, 0%, 100%);
 $light-yellow: #fffff9;
-
+$light-blue: #add8e6;
 $radius-large: 6px;
 $radius-small: 2px;
-$site-red: rgb(239, 90, 82);
+$site-red:#e86f58;
 $site-red-invert: hsl(0, 0%, 96%);
 
 
 $primary:       $site-red;
-$secondary:     $grey;
+$secondary:     $light-blue;
 $light:         $grey-lighter;
 $dark:          $grey-darker;
 
@@ -38,24 +36,28 @@ $link-decoration:                         none;
 $link-hover-color:                        $primary;
 $link-hover-decoration:                   none;
 
+$navbar-dark-color: $grey-lightest;
+
 $navbar-light-color: $grey;
 $navbar-light-hover-color: $site-red;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 20%;
 $jumbotron-color: $body-color;
-$jumbotron-bg: $body-bg;
+$jumbotron-bg: $secondary;
 
 // Tooltips
 $tooltip-padding-y: 10px;
  $tooltip-padding-x: 10px;
 $tooltip-color: $grey-lightest;
+$font-family-base: 'Roboto', sans-serif;
+$headings-font-family: 'Oswald', sans-serif;
 
 body {
         padding-top: 80px;
 
   margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: $font-family-base;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -98,6 +100,7 @@ $navbar-light-toggler-border-color: transparent;
 .navbar-link
  {
   color: $navbar-light-color;
+  font-family: $font-family-base;
   font-size: .9em;
   transition: color 0.2s ease-in-out;
   text-decoration: none;
