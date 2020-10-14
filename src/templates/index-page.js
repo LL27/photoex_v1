@@ -12,6 +12,7 @@ import PageTransition from "gatsby-v2-plugin-page-transitions";
 import styled from "@emotion/styled";
 import reviewBG from "../img/review-bg.jpg";
 
+
 const Hero = styled.div`
   margin-bottom: 24px;
   color: #e5e5e0;
