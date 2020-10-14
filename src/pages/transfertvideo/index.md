@@ -7,16 +7,9 @@ description: Nous réalisons des transferts vidéo et audio
 intro:
   blurbs:
     - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
-      text: >
-        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+      title: Transfert de films super 8-8-16mm etc
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
-      text: >
-        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
+      title: Tout modèle de cassettes vidéo en DVD
+    - image: /img/portrait.jpg
+      title: Cassettes audio en CD
 ---
-### Transfert de films super 8-8-16mm etc...
-
-### Transfert de tout modèle de cassettes vidéo en DVD
-
-### Transfert de cassettes audio en CD

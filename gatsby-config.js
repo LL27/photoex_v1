@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-smoothscroll`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
@@ -23,11 +24,11 @@ module.exports = {
       },
     },
     {
-     resolve: 'gatsby-v2-plugin-page-transitions',
-     options: {
-      transitionTime: 500
-     }
-   },
+      resolve: "gatsby-v2-plugin-page-transitions",
+      options: {
+        transitionTime: 500,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -41,6 +42,12 @@ module.exports = {
         path: `${__dirname}/src/img`,
         name: "images",
       },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

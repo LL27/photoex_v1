@@ -95,7 +95,6 @@ export const transfertVideoPageQuery = graphql`
               }
             }
             title
-            text
           }
         }
       }

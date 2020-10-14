@@ -3,7 +3,7 @@ templateKey: 'labo-page'
 path: /labo
 title: Laboratoire
 image: /img/pellicule-2.jpg
-description: Tirage et aggrandisement expres
+description: Tirage et aggrandisement express
 intro:
   blurbs:
     - image: /img/photoID.png

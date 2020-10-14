@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
@@ -63,21 +63,22 @@ export const IndexPageTemplate = ({
   testimonials,
   intro,
 }) => (
+
+
   <React.Fragment>
 
     <IndexPageHeader image={image} description={description} />
 
-    <Container fluid>
+
+    <Container fluid id="features">
       <Row
         style={{
-          backgroundColor: "#1d2528",
-          backgroundImage: "linear-gradient(15deg,#232526 0%,#414345 74%)",
+          backgroundColor: "#4c4c4a",
           paddingTop: "10%",
           paddingBottom: "10%",
         }}
       >
-        <Col>
-          <Container>
+        <Col md={{ size: 4 }}>
             <Hero>
               <HeroTitle>
                 <span style={{ color: "rgb(250, 250, 250)" }}>{title1}</span>{" "}
@@ -91,11 +92,10 @@ export const IndexPageTemplate = ({
               <Button color="secondary" size="md">Voir La Carte</Button>
               </HeroButtons>
             </Hero>
-          </Container>
         </Col>
 
-        <Col md={{ size: 7 }}>
-            <Features gridItems={intro.blurbs} />
+        <Col md={{ size: 8 }}>
+            <Features  gridItems={intro.blurbs} />
         </Col>
       </Row>
       <Container>

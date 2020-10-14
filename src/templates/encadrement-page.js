@@ -92,7 +92,6 @@ export const encadrementPageQuery = graphql`
               }
             }
             title
-            text
           }
         }
       }
