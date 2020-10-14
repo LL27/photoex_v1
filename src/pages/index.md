@@ -4,7 +4,7 @@ path: '/'
 title1: Votre
 title2: Labo & Studio Photo
 title3: à Paris 12
-heading: Implanté depuis plus de 30 ans dans le 12ème arrondissement de Paris, Photo Expression réalise des photos d'identité et des portraits pour les particuliers comme pour les professionnels.
+heading: Depuis plus de 30 ans, Photo Expression réalise des photos d'identité et des portraits pour les particuliers comme pour les professionnels.
 description: Nous sommes à votre service pour la réalisation de photos officielles biométriques pour vos passeports, cartes d'identité, cartes Vitale, permis de conduire, titres de passeport et visas.
 image: /img/storefront_site.png
 intro:

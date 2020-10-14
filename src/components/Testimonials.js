@@ -32,18 +32,23 @@ const Title = styled.h2`
   margin-bottom: 24px;
   min-width: 230px;
   text-align: center;
+                    color: #fff;
+
 `
 const Icon = styled.span`
   display: inline-block;
                   font-size: 2rem;
                   padding: 1.5rem;
                   text-align: center;
+                                    color: #fff;
+
 `
 const Quote = styled.div`
        font-size: 1.5rem;
                   font-style: italic;
                   padding-bottom: 1.5rem;
                   text-align: center;
+                  color: #fff;
 `
 class Testimonials extends React.Component {
   render() {
@@ -56,7 +61,7 @@ class Testimonials extends React.Component {
       slidesToScroll: 1,
     };
     return (
-      <Container style={{marginBottom: "25px"}}>
+      <Container>
         <Slider {...settings}>
 
           {testimonials.map((testimonial) => (
@@ -80,7 +85,7 @@ class Testimonials extends React.Component {
                 </div>
               </div>
 
-              <cite style={{marginBottom: 30}}> – {testimonial.author}</cite>
+              <cite style={{marginBottom: 30, color: "#FFF"}}> – {testimonial.author}</cite>
                                     </InnerContainer>
 
             </div>

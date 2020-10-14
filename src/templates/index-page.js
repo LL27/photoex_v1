@@ -76,7 +76,7 @@ export const IndexPageTemplate = ({
         style={{
           backgroundColor: "#4c4c4a",
           paddingTop: "10%",
-          paddingBottom: "10%",
+          paddingBottom: 0,
         }}
       >
         <Col md={{ size: 4 }}>
@@ -97,11 +97,12 @@ export const IndexPageTemplate = ({
 
         <Col md={{ size: 8 }}>
             <Features  gridItems={intro.blurbs} />
+        </Col >
+          <Col style={{marginBottom: 0, backgroundImage: `url(${reviewBG})`, backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover'}}>
+        <Testimonials testimonials={testimonials} />
         </Col>
       </Row>
-      <Container>
-        <Testimonials testimonials={testimonials} />
-      </Container>
     </Container>
   </React.Fragment>
 );
