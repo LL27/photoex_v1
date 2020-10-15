@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
@@ -12,7 +12,6 @@ import PageTransition from "gatsby-v2-plugin-page-transitions";
 import styled from "@emotion/styled";
 import reviewBG from "../img/review-bg.jpg";
 
-
 const Hero = styled.div`
   margin-bottom: 24px;
   color: #e5e5e0;
@@ -21,7 +20,8 @@ const Hero = styled.div`
   margin: 0 auto;
   max-width: 800px;
   @media (min-width: 768px) {
-    text-align: left;
+      text-align: left;
+
   }
 `;
 
@@ -43,7 +43,7 @@ const HeroHeading = styled.p`
 
 const HeroText = styled.p`
   color: #e5e5e0;
-    font-weight: 200;
+  font-weight: 200;
 
   @media (min-width: 768px) {
   }
@@ -52,7 +52,6 @@ const HeroButtons = styled.div`
   padding: 30px 0;
   margin: 0 auto;
 `;
-
 
 export const IndexPageTemplate = ({
   title1,
@@ -64,46 +63,60 @@ export const IndexPageTemplate = ({
   testimonials,
   intro,
 }) => (
-
-
   <React.Fragment>
-
     <IndexPageHeader image={image} description={description} />
 
-
-    <Container fluid id="features">
-      <Row
-        style={{
+    <Container fluid style={{
           backgroundColor: "#4c4c4a",
-          paddingTop: "10%",
-          paddingBottom: 0,
-        }}
-      >
-        <Col md={{ size: 4 }}>
-            <Hero>
-              <HeroTitle>
-                <span style={{ color: "rgb(250, 250, 250)" }}>{title1}</span>{" "}
-                <span style={{ color: "#e86f58" }}>{title2}</span>{" "}
-                <span style={{ color: "rgb(250, 250, 250)" }}>{title3}</span>
-              </HeroTitle>
-              <HeroHeading>{heading}</HeroHeading>
-              <HeroText>{description}</HeroText>
-              <HeroButtons>
-              <Button color="primary" size="md">Contacter</Button>{' '}
-              <Button color="secondary" size="md">Voir La Carte</Button>
-              </HeroButtons>
-            </Hero>
-        </Col>
+          paddingTop: "5%",
+          paddingBottom: "5%",
+          position: 'relative'
 
-        <Col md={{ size: 8 }}>
-            <Features  gridItems={intro.blurbs} />
-        </Col >
-          <Col style={{marginBottom: 0, backgroundImage: `url(${reviewBG})`, backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover'}}>
-        <Testimonials testimonials={testimonials} />
-        </Col>
-      </Row>
-    </Container>
+        }}>
+        <div id="features" style={{
+          position: "absolute",
+          top: '-80px',
+        }}></div>
+        <Container fluid="xl">
+        <Row>
+
+          <Col>
+          <Hero>
+            <HeroTitle>
+              <span style={{ color: "rgb(250, 250, 250)" }}>{title1}</span>{" "}
+              <span style={{ color: "#e86f58" }}>{title2}</span>{" "}
+              <span style={{ color: "rgb(250, 250, 250)" }}>{title3}</span>
+            </HeroTitle>
+
+            <HeroHeading>{heading}</HeroHeading>
+            <HeroText>{description}</HeroText>
+            <HeroButtons>
+              <Button color="primary" size="md">
+                Contacter
+              </Button>{" "}
+              <Button color="secondary" size="md">
+                Voir La Carte
+              </Button>
+            </HeroButtons>
+          </Hero>
+          </Col>
+          <Col md="7">
+             <Features gridItems={intro.blurbs} />
+          </Col>
+          </Row>
+          </Container>
+        </Container>
+
+
+      <Container fluid style={{
+            marginBottom: 0,
+            backgroundImage: `url(${reviewBG})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}>
+
+          <Testimonials testimonials={testimonials} />
+        </Container>
   </React.Fragment>
 );
 

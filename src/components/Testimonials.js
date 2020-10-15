@@ -54,9 +54,9 @@ class Testimonials extends React.Component {
   render() {
     const { testimonials } = this.props;
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
-      speed: 500,
+      speed: 200,
       slidesToShow: 1,
       slidesToScroll: 1,
     };

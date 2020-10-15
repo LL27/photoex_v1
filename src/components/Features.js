@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
@@ -31,6 +31,7 @@ const Card = styled.div`
   padding: 6px;
   border-radius: 2px;
   width: 95%;
+  height: 100%;
   transition: all 0.3s ease 0s;
 
   @media screen and (min-width: 576px) {
@@ -56,11 +57,19 @@ const StyledLink = styled((props) => <Link {...props} />)`
 `;
 
 const CardText = styled.div`
-  padding: 18px 14px 0;
-  font-size: 12px;
+  padding: 1.1em 0;
+  font-size: 10px;
   border-radius: 0 3px 3px;
-`;
+    text-align: center;
 
+`;
+const CardTitle = styled.span`
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 0 3px 3px;
+    text-align: center;
+
+`;
 const CardImage = styled.div``;
 const Divider = styled.hr`
   border-top: 2px solid;
@@ -83,15 +92,12 @@ const FeatureGrid = ({ gridItems }) => (
             />
           </CardImage>
           <CardText>
-            <h6>{item.title}</h6>
-            <Divider />
-            <p>{item.text}</p>
+            <CardTitle>{item.title}</CardTitle>
           </CardText>
         </StyledLink>
       </Card>
     ))}
   </Grid>
-
 );
 
 FeatureGrid.propTypes = {
