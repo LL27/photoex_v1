@@ -6,76 +6,52 @@ import { jsx, css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 import facepaint from "facepaint";
-import { Container, Col, Row, Jumbotron } from "reactstrap";
+import { Container } from "reactstrap";
 
 const breakpoints = [576, 768, 992, 1200];
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
-const Jumbo = styled.div`
-background-color: #b2b2ae;
-`;
 const TextOverlay = styled.div`
-height: 100%;
-display: flex;
-text-align:center;
-flex-direction: column;
+display:flex;
+width: 100%;
+height: 250px;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+position: absolute;
+z-index: 1000;
 justify-content: center;
-padding-left: 25px;
-padding-top: 25px;
-padding-bottom: 25px;
 align-items: center;
-
-color: rgb(250, 250, 250);
+color: #FFFFFF;
 @media (min-width: 768px) {
-  text-align: left;
-  align-items: flex-start;
 
 
  }
 `;
 
-const PageHeader = ({ children, image, title, description, height }) => {
+const PageHeader = ({ image, title, description, height }) => {
   let t = title || "";
   let d = description || "";
 
   return (
-    <Jumbo>
-      <Row>
-        <Col md="4">
-          <TextOverlay>
+    <Container fluid style={{padding: 0, position: "reltive"}}>
+       <TextOverlay>
               <h2
                 css={mq({
-                  "font-size": ["2em", "2.2em", "2.4em"],
+                  "font-size": ["2.4em", "3em"],
                   width: "fit-content",
-                  "padding-bottom": [".5em"],
-                  "text-align": ["left", "center"],
-                  "border-bottom": "3px solid #4c4c4a",
+                  textTransform: "uppercase"
                 })}
               >
                 {t}
               </h2>
-              <p
-                css={mq({
-                  "font-size": ["1em"],
-                  width: "fit-content",
-                  "padding-top": [".5em"],
-                  "max-width": "600px",
-                })}
-              >
-                {d}
-              </p>
-          </TextOverlay>
-        </Col>
 
-        <Col md="8">
-          <PreviewCompatibleImage
+          </TextOverlay>
+       <PreviewCompatibleImage
             imageInfo={image}
+            imageStyle={{height: 250}}
           />
-        </Col>
-      </Row>
-      {children}
-    </Jumbo>
+
+      </Container>
   );
 };
 

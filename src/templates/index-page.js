@@ -100,7 +100,7 @@ export const IndexPageTemplate = ({
             </HeroButtons>
           </Hero>
           </Col>
-          <Col md="7">
+          <Col md="8" lg="7">
              <Features gridItems={intro.blurbs} />
           </Col>
           </Row>
