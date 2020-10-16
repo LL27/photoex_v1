@@ -2,7 +2,7 @@
 templateKey: 'portrait-page'
 path: /portrait
 title: Portrait
-image: /img/portrait.jpg
+image: /img/studio.jpeg
 description: Spécialiste du portrait, Photo Expression prend des photos individuelles ou de groupe
 services:
   - icon: /img/icons/icon-portrait-cv

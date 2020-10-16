@@ -29,7 +29,7 @@ const HeroTitle = styled.h1`
   font-weight: 600;
   font-size: 2.4em;
   @media (min-width: 768px) {
-    font-size: 2.4em;
+    font-size: 3.2em;
   }
 `;
 const HeroHeading = styled.p`

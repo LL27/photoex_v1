@@ -7,7 +7,6 @@ import PhotoFormats from "../components/PhotoFormats";
 import PageTransition from "gatsby-v2-plugin-page-transitions";
 import PageContent from "../components/PageContent";
 
-import { Container, Row, Col } from "reactstrap";
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -25,15 +24,11 @@ export const PhotoIDPageTemplate = ({
   return (
     <React.Fragment>
       <PageHeader title={title} description={description} />
-      <Container>
-        <PhotoFormats heading={main.heading} formats={main.formats} />
-        <Row>
-          <Col>
+
           <PageContent image={image} intro={intro.blurbs}/>
+          <PhotoFormats title={main.title}  subtitle={main.subtitle} formats={main.formats} />
       <PageCMSContent className="content" content={content} />
-          </Col>
-        </Row>
-      </Container>
+
     </React.Fragment>
   );
 };
@@ -48,7 +43,8 @@ PhotoIDPageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   main: PropTypes.shape({
-    heading: PropTypes.string,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
     formats: PropTypes.array,
   }),
 };
@@ -108,7 +104,8 @@ export const photoIDPageQuery = graphql`
           }
         }
         main {
-          heading
+          title
+          subtitle
           formats {
             image {
               childImageSharp {

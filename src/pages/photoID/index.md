@@ -15,7 +15,8 @@ intro:
       text: >
         Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
 main:
-  heading: Les Formats
+  title: Les Formats
+  subtitle: Nous vous proposons des photos d'identités aux normes en vigueur
   formats:
     - image: /img/id-nourisson.jpg
       heading: Nourrisson
