@@ -20,12 +20,10 @@ const Footer = class extends React.Component {
       font-weight: 400;
       list-style-type: none;
       padding-left: 0;
-      color: #e5e5e0;
     `;
     const FooterLink = styled((props) => <Link {...props} />)`
       text-decoration: none;
             padding-left: 0;
-            color: #e5e5e0;
 
       &:hover {
         text-decoration: none;
@@ -45,13 +43,13 @@ const Footer = class extends React.Component {
               <Col sm="12" md="3">
                 <ul style={{listStyleType: "none", paddingLeft: 0}}>
                 <FontAwesomeIcon icon={faCamera} style={{fontSize: "1.5rem", marginBottom: "1rem", display: "inline", color: "#e5e5e0"}}/>
-                  <NavItem>
+                  <NavItem className="color-dark">
                     <p style={{fontWeight: 100}}>
                     Votre photographe portraitiste au 12ème arrondissement de Paris
                     </p>
                   </NavItem>
-                  <NavItem>2 rue Beccaria, 75012 Paris</NavItem>
-                  <NavItem>
+                  <NavItem className="color-dark">2 rue Beccaria, 75012 Paris</NavItem>
+                  <NavItem className="color-dark">
                     Tél. : 01 46 28 65 16 <br />
                     Fax : 09 71 70 35 16
                   </NavItem>
@@ -65,57 +63,57 @@ const Footer = class extends React.Component {
               </Col>
               <Col sm="4" md="3">
                 <FooterNav>
-                  <h4 style={{color: "#add8e6"}}>Services</h4>
+                  <h4 className="site-blue" style={{color: "#add8e6"}}>Services</h4>
                   <li>
-                    <FooterLink to="/photoID">Photo d'identité</FooterLink>
+                    <FooterLink to="/photoID" className="color-dark" >Photo d'identité</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/portrait">Portrait</FooterLink>
+                    <FooterLink to="/portrait" className="color-dark">Portrait</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/labo">Labo</FooterLink>
+                    <FooterLink to="/labo" className="color-dark">Labo</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/encadrement">Encadrement</FooterLink>
+                    <FooterLink to="/encadrement" className="color-dark">Encadrement</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/transfervideo">Transfer Vidéo</FooterLink>
+                    <FooterLink to="/transfervideo" className="color-dark">Transfer Vidéo</FooterLink>
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/boutique">En Boutique</FooterLink>
+                    <FooterLink to="/boutique" className="color-dark">En Boutique</FooterLink>
                   </li>
                 </FooterNav>
               </Col>
               <Col sm="4" md="3">
                 <FooterNav>
-                  <h4  style={{color: "#add8e6"}}>Horaires</h4>
-                  <NavItem>
+                  <h4  className="site-blue">Horaires</h4>
+                  <NavItem className="color-dark">
                     Mardi au samedi  <br />
                     9h15-13h et 14h-19h
                   </NavItem>
-                  <NavItem>Avec ou Sans RDV</NavItem>
+                  <NavItem className="color-dark">Avec ou Sans RDV</NavItem>
                 </FooterNav>
               </Col>
 
               <Col sm="4" md="3">
                 <FooterNav>
-                  <h4  style={{color: "#add8e6"}}>Moyens d'accès</h4>
-                  <NavItem>
+                  <h4  className="site-blue">Moyens d'accès</h4>
+                  <NavItem className="color-dark">
                     Bus ligne 29, arrêt Daumesnil-Diderot
                   </NavItem>
-                  <NavItem>
+                  <NavItem className="color-dark">
                     Bus ligne 57, arrêt Daumesnil-Diderot
                   </NavItem>
-                  <NavItem >
+                  <NavItem className="color-dark">
                     Métro ligne 1, arrêt Gare de Lyon
                   </NavItem>
 
-                  <NavItem>
+                  <NavItem className="color-dark">
                     Métro ligne 1, arrêt Reuilly-Diderot
                   </NavItem>
                 </FooterNav>

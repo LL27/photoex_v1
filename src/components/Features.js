@@ -33,6 +33,10 @@ const Card = styled.div`
   width: 95%;
   height: 100%;
   transition: all 0.3s ease 0s;
+   
+:&hover {
+
+}
 
   @media screen and (min-width: 576px) {
     flex: 1 1 calc(50% - 1em);
@@ -49,25 +53,38 @@ const StyledLink = styled((props) => <Link {...props} />)`
   transition: all 0.3s ease 0s;
   border-radius: 3px;
   height: 100%;
-
+  padding: .8em;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   &:hover {
     text-decoration: none;
     color: #e86f58;
+     box-shadow:
+0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  @media screen and (min-width: 768px) {
+    padding: .5em;
+
   }
 `;
 
 const CardText = styled.div`
-  padding: 1.1em 0;
-  font-size: 10px;
-  border-radius: 0 3px 3px;
+  padding-top: .8em;
+  border-radius: 0 1px 1px;
     text-align: center;
+    @media screen and (min-width: 768px) {
+    padding-top: .5em;
+
+  }
 
 `;
 const CardTitle = styled.span`
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 1em;
+  font-weight: 400;
   border-radius: 0 3px 3px;
     text-align: center;
+    @media screen and (min-width: 768px) {
+
+  }
 
 `;
 const CardImage = styled.div``;
@@ -78,7 +95,7 @@ const FeatureGrid = ({ gridItems }) => (
   <Grid>
     {gridItems.map((item) => (
       <Card>
-        <StyledLink to={item.path} key={item.title}>
+        <StyledLink to={item.path} key={item.title}  className="body-bg body-color title-font">
           <CardImage>
             <PreviewCompatibleImage
               imageInfo={item}
@@ -87,7 +104,8 @@ const FeatureGrid = ({ gridItems }) => (
                 border: 0,
                 width: "100%",
                 height: "auto",
-                "border-radius": "3px 3px 0 0",
+                "border-radius": "3px",
+                boxShadow: "3px 3px 5px 6px #ccc;"
               }}
             />
           </CardImage>

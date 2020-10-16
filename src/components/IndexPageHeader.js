@@ -33,8 +33,6 @@ const HeaderContainer = styled.div`
 const MapLink = styled.a`
     width: 150px;
     height: 80px;
-    background: rgb(250, 250, 250);
-    color: #7f7f7c;
     position: absolute;
     top: 80px;
     right: 0;
@@ -52,21 +50,20 @@ const MapText = styled.p`
   left: 0;
   width: 90px;
   height: 80px;
-  font-size: 14px;
+  font-size: 1em;
   margin: 0;
   line-height: 16px;
   text-align: center;
   padding: 25px 10px 0 10px;
   cursor: pointer;
   border-radius: 3px 0 0 3px;
-  text-transform: uppercase;
   &:hover {
     color: #e86f58;
   }
 `;
 const MapIcon = styled.span`
-  width: 36px;
-  height: 36px;
+  width: 2em;
+  height: 2em;
   position: absolute;
   top: 28px;
   left: 110px;
@@ -91,6 +88,7 @@ const IndexPageHeader = ({ image }) => {
         <MapLink
           href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119"
           target="_blank"
+          className="body-color body-bg title-font"
         >
           <MapText>Voir sur la carte</MapText>
           <MapIcon>

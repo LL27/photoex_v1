@@ -19,6 +19,8 @@ import {
   faClock,
   faMapMarker,
 } from "@fortawesome/free-solid-svg-icons";
+import styled from "@emotion/styled";
+
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
 
@@ -38,7 +40,12 @@ const SiteNavigation = (props) => {
 
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
 
+  const tooltipColor = "#b2b2ae";
   const activeStyleColor = { color: "#e86f58" };
+
+  const tooltipLink = styled.a`
+    color: #b2b2ae;
+  `;
 
   return (
     <div>
@@ -61,18 +68,18 @@ const SiteNavigation = (props) => {
                   className="dropdown-link"
                   activeStyle={activeStyleColor}
                 >
-                  STUDIO
+                  Studio
                 </Link>
               </DropdownToggle>
               <DropdownMenu left>
                 <DropdownItem>
                   <Link to="/photoID" className="navbar-link">
-                    PHOTO ID
+                    Photo D'identité
                   </Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link to="/portrait" className="navbar-link">
-                    PORTRAIT
+                    Portrait
                   </Link>
                 </DropdownItem>
               </DropdownMenu>
@@ -83,7 +90,7 @@ const SiteNavigation = (props) => {
                 className="navbar-link"
                 activeStyle={activeStyleColor}
               >
-                LABO
+                Labo
               </Link>
             </NavItem>
             <NavItem>
@@ -92,7 +99,7 @@ const SiteNavigation = (props) => {
                 className="navbar-link"
                 activeStyle={activeStyleColor}
               >
-                ENCADREMENT
+                Encadrement
               </Link>
             </NavItem>
             <NavItem>
@@ -101,7 +108,7 @@ const SiteNavigation = (props) => {
                 className="navbar-link"
                 activeStyle={activeStyleColor}
               >
-                TRANSFER VIDÉO
+                Transfert vidéo
               </Link>
             </NavItem>
             <NavItem>
@@ -110,14 +117,14 @@ const SiteNavigation = (props) => {
                 className="navbar-link"
                 activeStyle={activeStyleColor}
               >
-                EN BOUTIQUE
+                En boutique
               </Link>
             </NavItem>
           </Nav>
 
           <NavbarText>
             <span className="nav-icon pr-3 border-right" id="popphone">
-              <FontAwesomeIcon icon={faPhone} style={activeStyleColor}/>
+              <FontAwesomeIcon icon={faPhone} style={activeStyleColor} />
             </span>
 
             <Tooltip
@@ -128,12 +135,14 @@ const SiteNavigation = (props) => {
               autohide={false}
             >
               <Container>
-                <a href="tel:0146286516">01 46 28 65 16</a>
+                <a href="tel:0146286516" style={{ color: tooltipColor }}>
+                  01 46 28 65 16
+                </a>
               </Container>
             </Tooltip>
 
             <span className="nav-icon pl-3 pr-3 border-right" id="popclock">
-              <FontAwesomeIcon icon={faClock} style={activeStyleColor}/>
+              <FontAwesomeIcon icon={faClock} style={activeStyleColor} />
             </span>
             <Tooltip
               placement="bottom"
@@ -150,7 +159,7 @@ const SiteNavigation = (props) => {
             </Tooltip>
 
             <span className="nav-icon pr-3 pl-3" id="popmap">
-              <FontAwesomeIcon icon={faMapMarker} style={activeStyleColor}/>
+              <FontAwesomeIcon icon={faMapMarker} style={activeStyleColor} />
             </span>
             <Tooltip
               placement="bottom"

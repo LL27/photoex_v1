@@ -11,36 +11,36 @@ intro:
   heading: Nos Services
   blurbs:
     - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
+      title: Photo  d'identité
       path: /photoID
       text: >
         Photo Expression, un photographe agréé pour des photos aux toutes
         normes, tous pays.
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
+      title: Portrait d'art
       path: /portrait
       text: >
         Individuels ou de groupe, retouchés pour CV et réseaux en adéquation
         avec votre profil.
     - image: /img/pellicule.jpg
-      title: LABORATOIRE
+      title: Laboratoire
       path: /labo
       text: >
         Tirages immediats sur borne photo ou developpement sur du papier photo
         argentique.
     - image: /img/boutique.jpeg
-      title: EN BOUTIQUE
+      title: En boutique
       path: /boutique
       text: >
         Conseils et vente d'appareils photos, films couleurs et N&B et des
         accessoires.
     - image: /img/encadrement.jpg
-      title: ENCADREMENT
+      title: Encadrement
       path: /encadrement
       text: |
         Plus de 200 baguettes, caches et passe partout standards et sur-mesures.
     - image: /img/videotransfer.jpg
-      title: TRANSFÉR T VIDEO
+      title: Transfert vidéo
       path: /transfertvideo
       text: >
         Nous réalisons des transferts vidéo et audio vers CD de tout modèle de

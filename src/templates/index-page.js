@@ -14,7 +14,7 @@ import reviewBG from "../img/review-bg.jpg";
 
 const Hero = styled.div`
   margin-bottom: 24px;
-  color: #e5e5e0;
+  color: #4c4c4a;
   min-width: 230px;
   text-align: center;
   margin: 0 auto;
@@ -27,8 +27,7 @@ const Hero = styled.div`
 
 const HeroTitle = styled.h1`
   font-weight: 600;
-  font-size: 2em;
-  margin-bottom: 25px;
+  font-size: 2.4em;
   @media (min-width: 768px) {
     font-size: 2.4em;
   }
@@ -36,20 +35,17 @@ const HeroTitle = styled.h1`
 const HeroHeading = styled.p`
   font-weight: 400;
   font-size: 1em;
-  margin-bottom: 25px;
   @media (min-width: 768px) {
   }
 `;
 
 const HeroText = styled.p`
-  color: #e5e5e0;
   font-weight: 200;
 
   @media (min-width: 768px) {
   }
 `;
 const HeroButtons = styled.div`
-  padding: 30px 0;
   margin: 0 auto;
 `;
 
@@ -67,29 +63,25 @@ export const IndexPageTemplate = ({
     <IndexPageHeader image={image} description={description} />
 
     <Container fluid style={{
-          backgroundColor: "#4c4c4a",
-          paddingTop: "5%",
-          paddingBottom: "5%",
           position: 'relative'
 
-        }}>
+        }} className="pb-5">
         <div id="features" style={{
           position: "absolute",
-          top: '-80px',
+          top: '-100px',
         }}></div>
         <Container fluid="xl">
         <Row>
 
           <Col>
-          <Hero>
+          <Hero className="pb-5">
             <HeroTitle>
-              <span style={{ color: "rgb(250, 250, 250)" }}>{title1}</span>{" "}
-              <span style={{ color: "#e86f58" }}>{title2}</span>{" "}
-              <span style={{ color: "rgb(250, 250, 250)" }}>{title3}</span>
+              <span style={{ color: "#4c4c4a" }}>{title1}</span>{" "}
+              <span className="site-red">{title2}</span>{" "}
+              <span style={{ color: "#4c4c4a" }}>{title3}</span>
             </HeroTitle>
-
-            <HeroHeading>{heading}</HeroHeading>
-            <HeroText>{description}</HeroText>
+            <hr/>
+            <HeroHeading className="pb-3">{heading}</HeroHeading>
             <HeroButtons>
               <Button color="primary" size="md">
                 Contacter
@@ -100,7 +92,7 @@ export const IndexPageTemplate = ({
             </HeroButtons>
           </Hero>
           </Col>
-          <Col md="8" lg="7">
+          <Col md="8">
              <Features gridItems={intro.blurbs} />
           </Col>
           </Row>

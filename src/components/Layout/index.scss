@@ -1,30 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
 // colors:
-$black: #191918;
+$black: #333333;
 $grey-darker: #333331;
 $grey-dark: #4c4c4a;
 $grey: #7f7f7c;
 $grey-light: #b2b2ae;
 $grey-lighter: #ccccc7;
-$grey-lightest: #e5e5e0;
+$grey-lightest: #EBEBEB;
 $white-ter: #fffffb;
 $white-bis: rgb(250, 250, 250);
 $white: hsl(0, 0%, 100%);
 $light-yellow: #fffff9;
-$light-blue: #d7e7ec;
 $radius-large: 6px;
 $radius-small: 2px;
 $site-red:#e86f58;
-$site-red-invert: hsl(0, 0%, 96%);
+$site-red-invert: #FFF8F0;
+$site-yellow: #F4D06F;
+$site-purple: #392F5A;
+$site-blue: #add8e6;
 
 
 $primary:       $site-red;
-$secondary:     $light-blue;
+$secondary:     $site-blue;
 $light:         $grey-lighter;
 $dark:          $grey-darker;
 
 $body-bg:                $white-bis;
-$body-color:                $grey-dark;
+$body-color:                $grey-darker;
 
 
 // Links
@@ -38,7 +40,7 @@ $link-hover-decoration:                   none;
 
 $navbar-dark-color: $grey-lightest;
 
-$navbar-light-color: $grey;
+$navbar-light-color: $grey-dark;
 $navbar-light-hover-color: $site-red;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
@@ -67,6 +69,8 @@ body {
 
 }
 
+// Utilities
+
 .border-right {
   border-right: 1px solid $link-color;
 }
@@ -74,20 +78,40 @@ body {
 .border-left {
   border-left: 1px solid $link-color;
 }
+.site-red {
+  color: $site-red;
+}
 
-.nav-icon {
-  display: inline-block;
+.site-blue {
+  color: $site-blue;
+}
+.site-yellow {
+  color: $site-yellow;
+}
+.body-bg {
+  background-color: $body-bg;
+}
+.body-color {
+  color: $body-color;
+}
+.bg-dark {
+  background-color: $grey-dark;
+}
+.color-dark {
+  color: $grey-lightest;
+}
+
+.title-font {
+  font-family: 'Oswald', sans-serif;
 }
 
 
-//== Navbar
-//
-//##
-
-// Basics of a navbar
 
 
-// Navbar toggle
+// Navbar
+.nav-icon {
+  display: inline-block;
+}
 
 $navbar-light-toggler-border-color: transparent;
 
@@ -97,11 +121,12 @@ $navbar-light-toggler-border-color: transparent;
 
 
 .home-link,
-.navbar-link
+.navbar-link,
+.dropdown-toggle.nav-link
  {
   color: $navbar-light-color;
-  font-family: $font-family-base;
-  font-size: .9em;
+  font-family: $headings-font-family;
+  font-size: 1em;
   transition: color 0.2s ease-in-out;
   text-decoration: none;
   display: flex;
@@ -109,18 +134,17 @@ $navbar-light-toggler-border-color: transparent;
   padding: .5rem .5rem;
 }
 .dropdown-link {
+    font-family: $headings-font-family;
+  font-size: 1em;
+
   color: $navbar-light-color;
-  font-size: .9em;
   transition: color 0.2s ease-in-out;
   text-decoration: none;
   align-items: center;
   align-self: center;
 
 }
-.dropdown-toggle.nav-link {
-  padding: .4rem .5rem;
-  transition: color 0.2s ease-in-out;
-}
+
 
 .navbar-link:focus,
 .navbar-link:hover,
@@ -130,6 +154,7 @@ $navbar-light-toggler-border-color: transparent;
 .dropdown-link:active
  {
   color: $navbar-light-hover-color;
+  background-color: transparent;
   text-decoration: none;
 
 }
@@ -143,7 +168,7 @@ $navbar-light-toggler-border-color: transparent;
 
 .dropdown-menu.show {
   min-width: 7rem;
-  border-radius: 0;
+  border-radius: 3px;
 }
 .dropdown-item {
   font-size: .9rem;
