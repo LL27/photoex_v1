@@ -19,16 +19,16 @@ const Hero = styled.div`
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
-  @media (min-width: 768px) {
-      text-align: left;
-
+  @media (min-width: 992px) {
+    text-align: left;
   }
 `;
 
 const HeroTitle = styled.h1`
   font-weight: 600;
   font-size: 2.4em;
-  @media (min-width: 768px) {
+  line-height: 1.1;
+  @media (min-width: 992px) {
     font-size: 3.2em;
   }
 `;
@@ -48,7 +48,16 @@ const HeroText = styled.p`
 const HeroButtons = styled.div`
   margin: 0 auto;
 `;
-
+const DividerTop = styled.div`
+  width: 100%;
+  height: 5em;
+  margin: 0 0 1em 0;
+`;
+const DividerBottom = styled.div`
+  width: 100%;
+  height: 5em;
+  margin: 1em 0 0 0;
+`;
 export const IndexPageTemplate = ({
   title1,
   title2,
@@ -61,54 +70,64 @@ export const IndexPageTemplate = ({
 }) => (
   <React.Fragment>
     <IndexPageHeader image={image} description={description} />
+    <DividerTop className="bg-grey-lightest" />
+    <Container
+      fluid
+      className="pb-5"
+      style={{
+        position: "relative",
+      }}
 
-    <Container fluid style={{
-          position: 'relative'
+    >
 
-        }} className="pb-5">
-        <div id="features" style={{
+      <div
+        id="features"
+        style={{
           position: "absolute",
-          top: '-100px',
-        }}></div>
-        <Container fluid="xl">
+          top: "-100px",
+        }}
+      ></div>
+      <Container fluid="xl" className="pt-5 pb-5">
         <Row>
-
           <Col>
-          <Hero className="pb-5">
-            <HeroTitle>
-              <span style={{ color: "#4c4c4a" }}>{title1}</span>{" "}
-              <span className="site-red">{title2}</span>{" "}
-              <span style={{ color: "#4c4c4a" }}>{title3}</span>
-            </HeroTitle>
-            <hr/>
-            <HeroHeading className="pb-3">{heading}</HeroHeading>
-            <HeroButtons>
-              <Button color="primary" size="md">
-                Contacter
-              </Button>{" "}
-              <Button color="secondary" size="md">
-                Voir La Carte
-              </Button>
-            </HeroButtons>
-          </Hero>
+            <Hero>
+              <HeroTitle>
+                <span className="body-color">{title1}</span>{" "}
+                <span className="site-red">{title2}</span>{" "}
+                <span className="body-color">{title3}</span>
+              </HeroTitle>
+              <HeroHeading className="pt-3 pb-3 text-grey-dark">
+                {heading}
+              </HeroHeading>
+              <HeroButtons className="pb-5">
+                <Button color="primary" size="md" className="mr-2">
+                  Contacter
+                </Button>{" "}
+                <Button color="secondary" size="md">
+                  Voir La Carte
+                </Button>
+              </HeroButtons>
+            </Hero>
           </Col>
-          <Col md="8">
-             <Features gridItems={intro.blurbs} />
+          <Col lg="7">
+            <Features gridItems={intro.blurbs} />
           </Col>
-          </Row>
-          </Container>
-        </Container>
+        </Row>
+      </Container>
 
+    </Container>
 
-      <Container fluid style={{
-            marginBottom: 0,
-            backgroundImage: `url(${reviewBG})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}>
-
-          <Testimonials testimonials={testimonials} />
-        </Container>
+    <Container
+      fluid
+      style={{
+        marginBottom: 0,
+        backgroundImage: `url(${reviewBG})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <Testimonials testimonials={testimonials} />
+    </Container>
   </React.Fragment>
 );
 
@@ -168,7 +187,7 @@ export const pageQuery = graphql`
         title3
         image {
           childImageSharp {
-            fluid(maxWidth: 1024, maxHeight: 600, quality: 100) {
+            fluid(maxWidth: 1024, maxHeight: 700, quality: 100) {
               ...GatsbyImageSharpFluid
               ...GatsbyImageSharpFluidLimitPresentationSize
             }

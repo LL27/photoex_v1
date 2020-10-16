@@ -41,10 +41,11 @@ const SiteNavigation = (props) => {
   const togglePhone = () => setPopoverPhoneOpen(!popoverPhoneOpen);
 
   const tooltipColor = "#b2b2ae";
-  const activeStyleColor = { color: "#e86f58" };
+  const activeStyleColor = { color: "#E35E53" };
 
   const tooltipLink = styled.a`
-    color: #b2b2ae;
+    color: #E35E53;
+    text-decoration: underline;
   `;
 
   return (
@@ -132,7 +133,7 @@ const SiteNavigation = (props) => {
               autohide={false}
             >
               <Container>
-                <a href="tel:0146286516" style={{ color: tooltipColor }}>
+                <a href="tel:0146286516" style={{ color: tooltipColor, textDecoration: "underline" }}>
                   01 46 28 65 16
                 </a>
               </Container>
@@ -149,9 +150,11 @@ const SiteNavigation = (props) => {
               autohide={false}
             >
               <Container>
-                Mardi-Samedi
+                <span style={{ color: tooltipColor}}>
+                  Mardi-Samedi
                 <br />
                 9h15-13h et 14h-19h 
+                </span>
               </Container>
             </Tooltip>
 
@@ -170,6 +173,8 @@ const SiteNavigation = (props) => {
                   href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119"
                   target="_blank"
                   rel="noreferrer"
+                  style={{ color: tooltipColor, textDecoration: "underline" }}
+
                 >
                   2 rue Beccaria <br /> 75012 Paris
                 </a>

@@ -79,8 +79,9 @@ export const transfertVideoPageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 1024, maxHeight: 400, quality: 100) {
+            fluid(maxWidth: 500, maxHeight: 400, quality: 100) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }

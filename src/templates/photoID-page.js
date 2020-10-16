@@ -85,8 +85,9 @@ export const photoIDPageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 1024, maxHeight: 400, quality: 100) {
+            fluid(maxWidth: 500, maxHeight: 400, quality: 100) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
         }
@@ -96,6 +97,7 @@ export const photoIDPageQuery = graphql`
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {
                   ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
                 }
               }
             }

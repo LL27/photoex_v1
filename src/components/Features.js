@@ -21,10 +21,9 @@ const Grid = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  @media screen and (min-width: 992px) {
     flex: 0 1 calc(33.3333% - 1em);
   }
+
 `;
 
 const Card = styled.div`
@@ -33,15 +32,8 @@ const Card = styled.div`
   width: 95%;
   height: 100%;
   transition: all 0.3s ease 0s;
-   
-:&hover {
-
-}
 
   @media screen and (min-width: 576px) {
-    flex: 1 1 calc(50% - 1em);
-  }
-  @media screen and (min-width: 992px) {
     flex: 1 1 calc(33.3333% - 1em);
   }
 `;

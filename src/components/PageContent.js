@@ -49,12 +49,16 @@ const ItemHeader = styled.p`
   }
 `;
 const PageContent = ({ image, intro }) => (
-  <Container>
+  <Container className="pb-5">
     <Row>
-      <Col sm="12" md={{ size: 10, offset: 1 }}>
-            <PreviewCompatibleImage imageInfo={image} />
+      <Col sm="12">
+      <Row>
+        <Col sm="12" md={{ size: 6  }}>
+                      <PreviewCompatibleImage imageInfo={image} />
 
-  <Items>
+        </Col>
+        <Col sm="12" md={{ size: 6}}>
+        <Items>
     {intro.map((item, index) => (
 
           <Item key={item.title}>
@@ -69,7 +73,10 @@ const PageContent = ({ image, intro }) => (
           </ItemText>
           </Item>
     ))}
-  </Items>
+  </Items></Col>
+      </Row>
+
+
   </Col>
     </Row>
     </Container>

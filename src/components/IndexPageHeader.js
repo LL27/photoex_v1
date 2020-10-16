@@ -38,9 +38,11 @@ const MapLink = styled.a`
     right: 0;
     border-radius: 10px 0 0 10px;
     background-size: cover;
+    transition: color 0.2s ease-in-out;
+
     cursor: pointer;
     &:hover {
-      color: #e86f58;
+      color: #E35E53;
     }
 }
 `;
@@ -57,9 +59,7 @@ const MapText = styled.p`
   padding: 25px 10px 0 10px;
   cursor: pointer;
   border-radius: 3px 0 0 3px;
-  &:hover {
-    color: #e86f58;
-  }
+
 `;
 const MapIcon = styled.span`
   width: 2em;
@@ -68,9 +68,7 @@ const MapIcon = styled.span`
   top: 28px;
   left: 110px;
   cursor: pointer;
-  &:hover {
-    color: #e86f58;
-  }
+
 `;
 
 const bounce = keyframes`
