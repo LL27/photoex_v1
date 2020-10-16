@@ -89,7 +89,7 @@ const Footer = class extends React.Component {
                   </li>
                   <li>
                     {" "}
-                    <FooterLink to="/transfervideo" className="color-dark">Transfer Vidéo</FooterLink>
+                    <FooterLink to="/transfertvideo" className="color-dark">Transfert Vidéo</FooterLink>
                   </li>
                   <li>
                     {" "}
