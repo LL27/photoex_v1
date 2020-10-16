@@ -48,18 +48,17 @@ const ItemHeader = styled.p`
     font-size: 1.2rem;
   }
 `;
-const PageContent = ({ intro }) => (
+const PageContent = ({ image, intro }) => (
   <Container>
     <Row>
       <Col sm="12" md={{ size: 10, offset: 1 }}>
-
+            <PreviewCompatibleImage imageInfo={image} />
 
   <Items>
     {intro.map((item, index) => (
 
           <Item key={item.title}>
           <ItemImage>
-            <PreviewCompatibleImage imageInfo={item} />
           </ItemImage>
 
           <ItemText>
@@ -78,6 +77,7 @@ const PageContent = ({ intro }) => (
 );
 
 PageContent.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   intro: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

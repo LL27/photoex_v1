@@ -61,36 +61,33 @@ const SiteNavigation = (props) => {
         <NavbarToggler onClick={toggleNav} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                <Link
-                  to="/studio"
-                  className="dropdown-link"
-                  activeStyle={activeStyleColor}
-                >
-                  Studio
-                </Link>
-              </DropdownToggle>
-              <DropdownMenu left>
-                <DropdownItem>
-                  <Link to="/photoID" className="navbar-link">
-                    Photo D'identité
-                  </Link>
-                </DropdownItem>
-                <DropdownItem>
-                  <Link to="/portrait" className="navbar-link">
-                    Portrait
-                  </Link>
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             <NavItem>
+              <Link
+                to="/photoID"
+                className="navbar-link"
+                activeStyle={activeStyleColor}
+              >
+                                    Photo D'identité
+
+              </Link>
+            </NavItem>
+
+            <NavItem>
+              <Link
+                to="/portrait"
+                className="navbar-link"
+                activeStyle={activeStyleColor}
+              >
+                Portrait
+              </Link>
+            </NavItem>
+                    <NavItem>
               <Link
                 to="/labo"
                 className="navbar-link"
                 activeStyle={activeStyleColor}
               >
-                Labo
+                Laboratoire
               </Link>
             </NavItem>
             <NavItem>

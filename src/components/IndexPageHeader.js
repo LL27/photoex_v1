@@ -100,7 +100,7 @@ const IndexPageHeader = ({ image }) => {
           css={css`
             animation: ${bounce} 3s infinite;
             position: relative;
-  bottom: 10%;
+  bottom: 25%;
   left: 50%;
   margin-left:-20px;
   width: 46px;

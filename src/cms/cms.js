@@ -5,7 +5,6 @@ import { fr } from 'netlify-cms-locales';
 
 
 import IndexPagePreview from './preview-templates/IndexPagePreview'
-import StudioPagePreview from './preview-templates/StudioPagePreview'
 import PhotoIDPagePreview from './preview-templates/PhotoIDPagePreview'
 import PortraitPagePreview from './preview-templates/PortraitPagePreview'
 import LaboPagePreview from './preview-templates/LaboPagePreview'
@@ -20,7 +19,6 @@ CMS.registerMediaLibrary(cloudinary)
 CMS.registerLocale('fr', fr);
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('studio', StudioPagePreview)
 CMS.registerPreviewTemplate('photoID', PhotoIDPagePreview)
 CMS.registerPreviewTemplate('portrait', PortraitPagePreview)
 CMS.registerPreviewTemplate('labo', LaboPagePreview)

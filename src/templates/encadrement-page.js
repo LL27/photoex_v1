@@ -18,9 +18,9 @@ export const EncadrementPageTemplate = ({
   const PageCMSContent = contentComponent || Content;
   return (
     <React.Fragment>
-      <PageHeader image={image} title={title} description={description} />
+      <PageHeader title={title} description={description} />
 
-             <PageContent intro={intro.blurbs}/>
+             <PageContent image={image} intro={intro.blurbs}/>
       <PageCMSContent className="content" content={content} />
     </React.Fragment>
   );

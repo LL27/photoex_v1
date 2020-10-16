@@ -5,6 +5,8 @@ import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import PhotoFormats from "../components/PhotoFormats";
 import PageTransition from "gatsby-v2-plugin-page-transitions";
+import PageContent from "../components/PageContent";
+
 import { Container, Row, Col } from "reactstrap";
 
 import Content, { HTMLContent } from "../components/Content";
@@ -13,19 +15,22 @@ export const PhotoIDPageTemplate = ({
   title,
   description,
   image,
+  intro,
   main,
   content,
   contentComponent,
 }) => {
-  const PageContent = contentComponent || Content;
+    const PageCMSContent = contentComponent || Content;
+
   return (
     <React.Fragment>
-      <PageHeader image={image} title={title} description={description} />
+      <PageHeader title={title} description={description} />
       <Container>
         <PhotoFormats heading={main.heading} formats={main.formats} />
         <Row>
           <Col>
-            <PageContent className="content" content={content} />
+          <PageContent image={image} intro={intro.blurbs}/>
+      <PageCMSContent className="content" content={content} />
           </Col>
         </Row>
       </Container>
@@ -39,6 +44,9 @@ PhotoIDPageTemplate.propTypes = {
   description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
   main: PropTypes.shape({
     heading: PropTypes.string,
     formats: PropTypes.array,
@@ -58,6 +66,7 @@ const PhotoIDPage = ({ data }) => {
             content={post.html}
             image={post.frontmatter.image}
             main={post.frontmatter.main}
+            intro={post.frontmatter.intro}
           />
         </React.Fragment>
       </PageTransition>
@@ -83,6 +92,19 @@ export const photoIDPageQuery = graphql`
             fluid(maxWidth: 1024, maxHeight: 400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
+            text
           }
         }
         main {

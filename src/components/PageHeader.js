@@ -25,7 +25,7 @@ align-items: center;
  }
 `;
 
-const PageHeader = ({ image, title, description, height }) => {
+const PageHeader = ({ title, description, height }) => {
   let t = title || "";
   let d = description || "";
 
@@ -52,7 +52,6 @@ const PageHeader = ({ image, title, description, height }) => {
 };
 
 PageHeader.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   description: PropTypes.string,
 };

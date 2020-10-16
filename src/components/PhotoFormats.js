@@ -5,10 +5,13 @@ import { Container, Row, Col } from "reactstrap";
 
 const PhotoFormats = ({ heading, description, formats }) => (
     <React.Fragment>
-
+  <Row>
+    <Col sm="12" md={{ size: 10, offset: 1 }}>
       {formats.map((item) => (
         <div key={item.heading} style={{margin:"1.5em 0"}}>
- <Row>
+
+
+         <Row>
             <Col md={4}>
               <PreviewCompatibleImage imageInfo={item} imageStyle={{maxWidth: "320px", marginBottom: ".5em"}} />
             </Col>
@@ -20,7 +23,8 @@ const PhotoFormats = ({ heading, description, formats }) => (
 
         </div>
       ))}
-
+      </Col>
+      </Row>
     </React.Fragment>
 );
 

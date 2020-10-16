@@ -3,7 +3,17 @@ templateKey: 'photoID-page'
 path: /photoID
 title: Photo d'identité
 image: /img/photoID.png
-description: Photos de qualité, en quelques minutes.
+description: Photos d'identité conformes et de qualité, en quelques minutes.
+intro:
+  blurbs:
+    - image: /img/photoID.png
+      title: PHOTO  D’IDENTITÉ
+      text: >
+        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+    - image: /img/portrait.jpg
+      title: PORTRAIT  D’ART
+      text: >
+        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
 main:
   heading: Les Formats
   formats:

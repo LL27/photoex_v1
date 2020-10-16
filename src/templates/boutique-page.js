@@ -20,8 +20,8 @@ export const BoutiquePageTemplate = ({
   return (
     <React.Fragment>
 
-      <PageHeader image={image} title={title} description={description} />
-          <PageContent intro={intro.blurbs}/>
+      <PageHeader title={title} description={description} />
+          <PageContent image={image} intro={intro.blurbs}/>
           <PageCMSContent className="content" content={content} />
 
     </React.Fragment>

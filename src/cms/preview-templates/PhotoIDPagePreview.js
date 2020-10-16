@@ -16,6 +16,8 @@ const PhotoIDPagePreview = ({getAsset, entry }) => {
         description: entry.getIn(['data', 'main', 'description']),
         formats
         }}
+      intro={ entry.getIn(['data']).toJS().intro || { blurbs: [] }}
+
     />
   )
 }
