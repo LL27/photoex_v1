@@ -3,7 +3,16 @@ templateKey: 'portrait-page'
 path: /portrait
 title: Portrait
 image: /img/portrait.jpg
-description: Portrait Photo Expression, spécialiste du portrait , prend des photos individuelles ou de groupe. Il effectue notamment des photos pour les réseaux sociaux, les CVs, pour les compagnies aériennes ainsi que des photos médicales pour chirurgie esthétique..
+description: Spécialiste du portrait, Photo Expression prend des photos individuelles ou de groupe
+services:
+  - icon: /img/icons/icon-portrait-cv
+    title: Portrait pour réseaux sociaux et CV
+  - icon: /img/icons/icon-portrait-medic
+    title: Photos médicales pour chirurgie esthétique
+  - icon: /img/icons/icon-portrait-group
+    title: Photos de groupe
+  - icon: /img/icons/icon-portrait-aerienne
+    title: Photos de groupe
 intro:
   blurbs:
     - image: /img/photoID.png

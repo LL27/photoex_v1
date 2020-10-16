@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import mapbg from "../img/map-bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
-import { Navbar, Container, Row, Col } from "reactstrap";
+import { Navbar, Container, Row, Col, Button } from "reactstrap";
 
 const Footer = class extends React.Component {
   render() {
@@ -20,10 +20,13 @@ const Footer = class extends React.Component {
       font-weight: 400;
       list-style-type: none;
       padding-left: 0;
+      font-size: .8em;
     `;
     const FooterLink = styled((props) => <Link {...props} />)`
       text-decoration: none;
             padding-left: 0;
+      font-size: .8em;
+
 
       &:hover {
         text-decoration: none;
@@ -46,16 +49,21 @@ const Footer = class extends React.Component {
                   <NavItem className="color-dark">
                     <p style={{fontWeight: 100}}>
                     Votre photographe portraitiste au 12ème arrondissement de Paris
+                    <br/>
+<strong>2 rue Beccaria, 75012 Paris</strong>
                     </p>
                   </NavItem>
-                  <NavItem className="color-dark">2 rue Beccaria, 75012 Paris</NavItem>
+                  <NavItem className="color-dark"></NavItem>
                   <NavItem className="color-dark">
-                    Tél. : 01 46 28 65 16 <br />
-                    Fax : 09 71 70 35 16
+                    <Button color="primary" size="sm">
+                Contacter
+              </Button>{" "}<Button color="secondary" size="sm">
+                Voir La Carte
+              </Button>
                   </NavItem>
                   <a
                     href="mailto:photo.expression@orange.fr"
-                    className="footer-nav-item"
+                    style={{fontSize: ".8em"}}
                   >
                     photo.expression@orange.fr
                   </a>
@@ -92,7 +100,7 @@ const Footer = class extends React.Component {
               <Col sm="4" md="3">
                 <FooterNav>
                   <h4  className="site-blue">Horaires</h4>
-                  <NavItem className="color-dark">
+                  <NavItem className="color-dark" style={{fontWeight: "100"}}>
                     Mardi au samedi  <br />
                     9h15-13h et 14h-19h
                   </NavItem>
@@ -103,17 +111,17 @@ const Footer = class extends React.Component {
               <Col sm="4" md="3">
                 <FooterNav>
                   <h4  className="site-blue">Moyens d'accès</h4>
-                  <NavItem className="color-dark">
+                  <NavItem className="color-dark" style={{fontWeight: "100"}}>
                     Bus ligne 29, arrêt Daumesnil-Diderot
                   </NavItem>
-                  <NavItem className="color-dark">
+                  <NavItem className="color-dark" style={{fontWeight: "100"}}>
                     Bus ligne 57, arrêt Daumesnil-Diderot
                   </NavItem>
-                  <NavItem className="color-dark">
+                  <NavItem className="color-dark" style={{fontWeight: "100"}}>
                     Métro ligne 1, arrêt Gare de Lyon
                   </NavItem>
 
-                  <NavItem className="color-dark">
+                  <NavItem className="color-dark" style={{fontWeight: "100"}}>
                     Métro ligne 1, arrêt Reuilly-Diderot
                   </NavItem>
                 </FooterNav>

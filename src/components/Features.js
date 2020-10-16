@@ -104,9 +104,8 @@ const FeatureGrid = ({ gridItems }) => (
                 border: 0,
                 width: "100%",
                 height: "auto",
-                "border-radius": "3px",
-                boxShadow: "3px 3px 5px 6px #ccc;"
-              }}
+                "border-radius": "3px"
+                              }}
             />
           </CardImage>
           <CardText>
