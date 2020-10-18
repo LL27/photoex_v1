@@ -52,12 +52,12 @@ const ItemText = styled.div`
 const ItemHeader = styled.p`
   margin-bottom: 0.2rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.6;
   @media (min-width: 670px) {
   }
 `;
 const PageContent = ({ image, title, description, intro }) => (
-  <Container className="pb-2 pt-2">
+  <Container className="pb-4 pt-4">
     <PageHeader title={title} description={description} />
     <Row>
       <Col sm="12" lg={{ size: 6 }}>
@@ -75,7 +75,7 @@ const PageContent = ({ image, title, description, intro }) => (
                 <ItemHeader>
                   {item.title}
                 </ItemHeader>
-                <p className="" style={{ fontSize: "14px" }}>
+                <p className="" style={{ fontSize: "14px", lineHeight: "1.6" }}>
                   {item.text}
                 </p>
               </ItemText>

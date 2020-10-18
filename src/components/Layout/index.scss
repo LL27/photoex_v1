@@ -227,4 +227,90 @@ $navbar-light-toggler-border-color: transparent;
   align-items: center !important;
 }
 
+// Action Buttons
 
+.action-button-primary {
+  box-shadow: 0px 5px 0px 0px #d9554e;
+  background-color:#e35f53;
+  border-radius:6px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Verdana;
+  font-size:16px;
+  padding:8px 22px;
+  text-decoration:none;
+}
+.action-button-primary:hover {
+  background-color:#d9554e;
+    color:#ffffff;
+
+}
+.action-button-primary:active {
+  position:relative;
+  top:1px;
+}
+
+
+.action-button-secondary {
+  box-shadow: 0px 5px 0px 0px #6ea5b8;
+  background-color:#76b2c6;
+  border-radius:6px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Verdana;
+  font-size:16px;
+  padding:8px 22px;
+  text-decoration:none;
+}
+.action-button-secondary:hover {
+  background-color:#6ea5b8;
+    color:#ffffff;
+
+}
+.action-button-secondary:active {
+  position:relative;
+  top:1px;
+}
+
+.action-button-secondary-small {
+  background-color:#76b2c6;
+  border-radius:6px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:12px;
+  padding:4px 11px;
+  text-decoration:none;
+}
+.action-button-secondary-small:hover {
+  background-color:#6ea5b8;
+    color:#ffffff;
+
+}
+.action-button-secondary-small:active {
+  position:relative;
+  top:1px;
+}
+
+
+.action-button-primary-small {
+  background-color:#e35f53;
+  border-radius:6px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:12px;
+  padding:4px 11px;
+  text-decoration:none;
+}
+.action-button-primary-small:hover {
+  background-color:#d9554e;
+    color:#ffffff;
+
+}
+.action-button-primary-small:active {
+  position:relative;
+  top:1px;
+}

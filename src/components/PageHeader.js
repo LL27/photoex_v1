@@ -26,18 +26,17 @@ const PageHeader = ({ title, description, height }) => {
   let d = description || "";
 
   return (
-       <TextOverlay>
+       <TextOverlay className="mb-3">
               <h2
                 css={mq({
                   "font-size": ["2.4em", "2.8em"],
                   textTransform: "uppercase",
+                  marginBottom: 0,
                 })}
               >
                 {t}
               </h2>
               <p className="text-grey" style={{maxWidth: 600}}>{d}</p>
-                            <hr/>
-
           </TextOverlay>
 
   );

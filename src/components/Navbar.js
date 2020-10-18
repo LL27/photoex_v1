@@ -122,7 +122,7 @@ const SiteNavigation = (props) => {
 
           <NavbarText>
             <span className="nav-icon pr-3 border-right" id="popphone">
-              <FontAwesomeIcon icon={faPhone} style={activeStyleColor} />
+              <FontAwesomeIcon icon={faPhone} style={{color: "#76b2c6"}} />
             </span>
 
             <Tooltip
@@ -140,7 +140,7 @@ const SiteNavigation = (props) => {
             </Tooltip>
 
             <span className="nav-icon pl-3 pr-3 border-right" id="popclock">
-              <FontAwesomeIcon icon={faClock} style={activeStyleColor} />
+              <FontAwesomeIcon icon={faClock} style={{color: "#76b2c6"}} />
             </span>
             <Tooltip
               placement="bottom"
@@ -159,7 +159,7 @@ const SiteNavigation = (props) => {
             </Tooltip>
 
             <span className="nav-icon pr-3 pl-3" id="popmap">
-              <FontAwesomeIcon icon={faMapMarker} style={activeStyleColor} />
+              <FontAwesomeIcon icon={faMapMarker} style={{color: "#76b2c6"}} />
             </span>
             <Tooltip
               placement="bottom"

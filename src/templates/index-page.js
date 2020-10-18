@@ -28,6 +28,8 @@ const HeroTitle = styled.h1`
   font-weight: 600;
   font-size: 2.4em;
   line-height: 1.1;
+  letter-spacing: -1.5px;
+
   @media (min-width: 992px) {
     font-size: 3.2em;
   }
@@ -77,9 +79,7 @@ export const IndexPageTemplate = ({
       style={{
         position: "relative",
       }}
-
     >
-
       <div
         id="features"
         style={{
@@ -100,12 +100,12 @@ export const IndexPageTemplate = ({
                 {heading}
               </HeroHeading>
               <HeroButtons className="pb-5">
-                <Button color="primary" size="md" className="mr-2">
+                <a href="tel:0146286516" className="action-button-primary mr-2">
                   Contacter
-                </Button>{" "}
-                <Button color="secondary" size="md">
+                </a>{" "}
+                <a className="action-button-secondary" href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119" color="secondary" size="md">
                   Voir La Carte
-                </Button>
+                </a>
               </HeroButtons>
             </Hero>
           </Col>
@@ -114,14 +114,16 @@ export const IndexPageTemplate = ({
           </Col>
         </Row>
       </Container>
-
     </Container>
 
     <Container
       fluid
       style={{
         marginBottom: 0,
-        backgroundImage: `url(${reviewBG})`,
+        backgroundImage: `linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(${reviewBG})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
