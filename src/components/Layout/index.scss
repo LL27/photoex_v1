@@ -18,7 +18,7 @@ $site-red:#E35E53;
 $site-red-invert: #FFF8F0;
 $site-yellow: #E3D06B;
 $site-purple: #392F5A;
-$site-blue: #99ccdd;
+$site-blue: #76b2c6;
 
 
 
@@ -98,6 +98,10 @@ body {
 }
 .bg-dark {
   background-color: $grey-dark;
+}
+.bg-white {
+    background-color: $white;
+
 }
 .text-grey-dark {
   color: $grey-dark;

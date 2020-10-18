@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PageHeader from "../components/PageHeader";
 import PageContent from "../components/PageContent";
-import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import PageTransition from "gatsby-v2-plugin-page-transitions";
 
 import Content, { HTMLContent } from "../components/Content";
 
@@ -14,24 +13,24 @@ export const BoutiquePageTemplate = ({
   description,
   content,
   contentComponent,
-  intro
+  intro,
 }) => {
   const PageCMSContent = contentComponent || Content;
   return (
     <React.Fragment>
-
-      <PageHeader title={title} description={description} />
-          <PageContent image={image} intro={intro.blurbs}/>
-          <PageCMSContent className="content" content={content} />
-
+      <PageContent
+        title={title}
+        description={description}
+        image={image}
+        intro={intro.blurbs}
+      />
+      <PageCMSContent className="content" content={content} />
     </React.Fragment>
   );
 };
 
 BoutiquePageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   intro: PropTypes.shape({
@@ -43,18 +42,17 @@ const BoutiquePage = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
     <Layout>
-              <PageTransition>
-      <React.Fragment>
-      <BoutiquePageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-        image={post.frontmatter.image}
-        description={post.frontmatter.description}
-        intro={post.frontmatter.intro}
-
-      />
-      </React.Fragment>
+      <PageTransition>
+        <React.Fragment>
+          <BoutiquePageTemplate
+            contentComponent={HTMLContent}
+            title={post.frontmatter.title}
+            content={post.html}
+            image={post.frontmatter.image}
+            description={post.frontmatter.description}
+            intro={post.frontmatter.intro}
+          />
+        </React.Fragment>
       </PageTransition>
     </Layout>
   );
@@ -79,10 +77,8 @@ export const boutiquePageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 500, maxHeight: 400, quality: 100) {
+            fluid(maxWidth: 1024, maxHeight: 600, quality: 100) {
               ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluidLimitPresentationSize
-
             }
           }
         }
@@ -90,8 +86,8 @@ export const boutiquePageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, maxHeight: 150, quality: 64) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 25, height: 25) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

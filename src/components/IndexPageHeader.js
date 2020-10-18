@@ -96,9 +96,9 @@ const IndexPageHeader = ({ image }) => {
         <div
           onClick={() => scrollTo("#features")}
           css={css`
-            animation: ${bounce} 3s infinite;
+            animation: ${bounce} 2s infinite;
             position: relative;
-  bottom: 25%;
+  bottom: 5%;
   left: 50%;
   margin-left:-20px;
   width: 46px;

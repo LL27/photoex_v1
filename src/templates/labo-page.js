@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PageHeader from "../components/PageHeader";
 import PageContent from "../components/PageContent";
 import PageTransition from 'gatsby-v2-plugin-page-transitions'
 
@@ -19,9 +18,8 @@ export const LaboPageTemplate = ({
   const PageCMSContent = contentComponent || Content;
   return (
     <React.Fragment>
-      <PageHeader title={title} description={description} />
 
-     <PageContent image={image} intro={intro.blurbs}/>
+     <PageContent title={title} description={description} image={image} intro={intro.blurbs}/>
 
       <PageCMSContent className="content" content={content} />
 
@@ -82,7 +80,7 @@ export const laboPageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 500, maxHeight: 400, quality: 100) {
+            fluid(maxWidth: 1024, maxHeight: 600, quality: 100) {
               ...GatsbyImageSharpFluid
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -92,8 +90,8 @@ export const laboPageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 25, height: 25) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

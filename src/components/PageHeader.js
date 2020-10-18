@@ -19,10 +19,6 @@ z-index: 1000;
 text-align: center;
 justify-content: flex-end;
 align-items: center;
-@media (min-width: 768px) {
-
-
- }
 `;
 
 const PageHeader = ({ title, description, height }) => {
@@ -30,23 +26,19 @@ const PageHeader = ({ title, description, height }) => {
   let d = description || "";
 
   return (
-    <Container>
        <TextOverlay>
-                                   <hr/>
-
               <h2
                 css={mq({
-                  "font-size": ["2.4em", "3em"],
+                  "font-size": ["2.4em", "2.8em"],
                   textTransform: "uppercase",
                 })}
               >
                 {t}
               </h2>
-              <p style={{maxWidth: 600}}>{d}</p>
+              <p className="text-grey" style={{maxWidth: 600}}>{d}</p>
                             <hr/>
 
           </TextOverlay>
-</Container>
 
   );
 };

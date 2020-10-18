@@ -24,6 +24,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/static/img\/.*\.svg/,`,
+          omitKeys: ['xmlnsDc', 'xmlnsCc', 'xmlnsRdf', 'xmlnsSvg', 'xmlnsSodipodi', 'xmlnsInkscape'],
+        }
+      }
+    },
+    {
       resolve: "gatsby-v2-plugin-page-transitions",
       options: {
         transitionTime: 500,
