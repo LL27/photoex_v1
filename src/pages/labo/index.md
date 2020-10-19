@@ -7,11 +7,13 @@ description: Tirage et aggrandisement express
 intro:
   blurbs:
     - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
+      title: Tirages photo en quelques minutes
       text: >
-        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+        Tirage à partir des clés USB, CD et DVD, cartes mémoire SD et Smartphones.
+    - image: /img/photoID.png
+      title: Travaux photos
+      text: >
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
+      title: Agrandissements
       text: >
-        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
 ---

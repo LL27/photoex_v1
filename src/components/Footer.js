@@ -54,31 +54,40 @@ const Footer = class extends React.Component {
                   }}
                 />
                 <NavItem className="text-grey-lighter">
-                  <p style={{ fontWeight: 100 }}>
+                  <p style={{ fontWeight: 300 }}>
                     Votre photographe portraitiste au 12ème arrondissement de
                     Paris
                     <br />
                     <strong>2 rue Beccaria, 75012 Paris</strong>
+                                        <br />
+
+                     <a href="mailto:photo.expression@orange.fr" className="text-grey-lighter">
+                    photo.expression@orange.fr
+                  </a>
                   </p>
+
                 </NavItem>
-                <NavItem className="text-grey-lighter"></NavItem>
+
                 <NavItem className="text-grey-lighter">
-                  <a href="tel:0146286516" className="action-button-primary-small">                    Contacter
-</a>
+                  <a
+                    href="tel:0146286516"
+                    className="action-button-primary-small mr-1"
+                  >
+                    {" "}
+                    Contacter
+                  </a>
 
-                  <a                  href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119"
-                  target="_blank"
-                  rel="noreferrer" className="action-button-secondary-small">                     Voir La Carte
-
-</a>
-
+                  <a
+                    href="https://www.google.fr/maps/place/Photo+Expression/@48.8462198,2.3773179,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6720fcffb1acd:0x875bd3af8586dc20!8m2!3d48.8462163!4d2.3795119"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="action-button-secondary-small"
+                  >
+                    {" "}
+                    Voir La Carte
+                  </a>
                 </NavItem>
-                <a
-                  href="mailto:photo.expression@orange.fr"
-                  style={{ fontSize: ".8em" }}
-                >
-                  photo.expression@orange.fr
-                </a>
+
               </ul>
             </Col>
             <Col sm="4" lg="3">
