@@ -52,7 +52,7 @@ const ItemText = styled.div`
 const ItemHeader = styled.p`
   margin-bottom: 0.2rem;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.2;
   @media (min-width: 670px) {
   }
 `;

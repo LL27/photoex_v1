@@ -6,14 +6,21 @@ image: /img/photoID.png
 description: Photos d'identité conformes et de qualité, en quelques minutes.
 intro:
   blurbs:
-    - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
-      text: >
-        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
+      title: Toutes normes, tous pays
       text: >
-        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
+        Photo d’identité bébé et adulte, sans rendez-vous
+    - image: /img/photoID.png
+      title: Agrée ANTS pour le permis de conduire
+      text: >
+        Services en ligne
+    - image: /img/photoID.png
+      title: Tous documents
+      text: >
+        Carte d'identité, permis de conduire, passeport, carte vitale, CV, etc.
+    - image: /img/portrait.jpg
+      title: Passeport biométrique
+      text: >
 main:
   title: Les Formats
   subtitle: Nous vous proposons des photos d'identités aux normes en vigueur

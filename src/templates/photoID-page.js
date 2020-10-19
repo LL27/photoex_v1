@@ -6,7 +6,6 @@ import PhotoFormats from "../components/PhotoFormats";
 import PageTransition from "gatsby-v2-plugin-page-transitions";
 import PageContent from "../components/PageContent";
 
-
 import Content, { HTMLContent } from "../components/Content";
 
 export const PhotoIDPageTemplate = ({
@@ -18,16 +17,22 @@ export const PhotoIDPageTemplate = ({
   content,
   contentComponent,
 }) => {
-    const PageCMSContent = contentComponent || Content;
+  const PageCMSContent = contentComponent || Content;
 
   return (
     <React.Fragment>
-
-
-          <PageContent title={title} description={description} image={image} intro={intro.blurbs}/>
-          <PhotoFormats title={main.title}  subtitle={main.subtitle} formats={main.formats} />
+      <PageContent
+        title={title}
+        description={description}
+        image={image}
+        intro={intro.blurbs}
+      />
+      <PhotoFormats
+        title={main.title}
+        subtitle={main.subtitle}
+        formats={main.formats}
+      />
       <PageCMSContent className="content" content={content} />
-
     </React.Fragment>
   );
 };
@@ -44,7 +49,7 @@ PhotoIDPageTemplate.propTypes = {
   main: PropTypes.shape({
     title: PropTypes.string,
     subtitle: PropTypes.string,
-    formats: PropTypes.array,
+    formats: PropTypes.array
   }),
 };
 
@@ -60,8 +65,8 @@ const PhotoIDPage = ({ data }) => {
             description={post.frontmatter.description}
             content={post.html}
             image={post.frontmatter.image}
-            main={post.frontmatter.main}
             intro={post.frontmatter.intro}
+            main={post.frontmatter.main}
           />
         </React.Fragment>
       </PageTransition>

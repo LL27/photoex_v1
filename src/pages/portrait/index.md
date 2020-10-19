@@ -3,24 +3,19 @@ templateKey: 'portrait-page'
 path: /portrait
 title: Portrait
 image: /img/studio.jpeg
-description: Spécialiste du portrait, Photo Expression prend des photos individuelles ou de groupe
-services:
-  - icon: /img/icons/icon-portrait-cv
-    title: Portrait pour réseaux sociaux et CV
-  - icon: /img/icons/icon-portrait-medic
-    title: Photos médicales pour chirurgie esthétique
-  - icon: /img/icons/icon-portrait-group
-    title: Photos de groupe
-  - icon: /img/icons/icon-portrait-aerienne
-    title: Photos de groupe
+description: Spécialiste du portrait, Photo Expression prend des photos individuelles ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
 intro:
   blurbs:
     - image: /img/photoID.png
-      title: PHOTO  D’IDENTITÉ
+      title: Portrait pour réseaux sociaux et CV
       text: >
-        Faites le choix d’un photographe agréé pour des photos aux toutes normes, tous pays.
+    - image: /img/photoID.png
+      title: Portrait pour réseaux sociaux et CV
+      text: >
     - image: /img/portrait.jpg
-      title: PORTRAIT  D’ART
+      title: Photos médicales pour chirurgie esthétique
       text: >
-        Individuels ou de groupe, retouchés pour CV et réseaux en adéquation avec votre profil.
+    - image: /img/portrait.jpg
+      title: Photos de groupe
+      text: >
 ---
